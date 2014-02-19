@@ -10,7 +10,8 @@ module.exports = function(grunt) {
               },
                 files: {
                     'scss/type.css': 'scss/type.scss',
-                    'scss/layout.css': 'scss/layout.scss'
+                    'scss/layout.css': 'scss/layout.scss',
+                    'scss/app.css': 'scss/app.scss'
                 }
             }
         },
@@ -18,20 +19,19 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    'css/reset.css',
-                    'css/type.css',
-                    'css/layout.css',
-                    'css/app.css'
+                    'scss/type.css',
+                    'scss/layout.css',
+                    'scss/app.css'
                 ],
 
-                dest: 'css/build.css',
+                dest: 'scss/build.css',
             }
         },
 
         cssmin: {
             minify: {
-                src: ['css/build.css'],
-                dest: 'css/build.min.css'
+                src: ['scss/build.css'],
+                dest: 'scss/build.min.css'
             }
         }
 
@@ -43,6 +43,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'cssmin', 'sass']);
+    grunt.registerTask('default', ['sass', 'concat', 'cssmin']);
 
 };

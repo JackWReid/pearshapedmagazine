@@ -204,7 +204,7 @@ sup, .superscript{
 
 hr{
     border: none;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $light;
 }
 
 //					//
@@ -285,11 +285,11 @@ header{
 
 		border-bottom: $pline $psgreen solid;
 
-		@media sceeen and (max-width: $tabletb){
+		@media screen and (max-width: $tabletb){
 			font-size: $baseline * 10 * $tableter;
 		}
 
-		@media sceeen and (max-width: $mobileb){
+		@media screen and (max-width: $mobileb){
 			font-size: $baseline * 10 * $mobiler;
 		}
 	}
@@ -297,11 +297,11 @@ header{
 	h2{
 		font-size: $baseline * 5;
 
-		@media sceeen and (max-width: $tabletb){
+		@media screen and (max-width: $tabletb){
 			font-size: $baseline * 5 * $tableter;
 		}
 
-		@media sceeen and (max-width: $mobileb){
+		@media screen and (max-width: $mobileb){
 			font-size: $baseline * 5 * $mobiler;
 		}
 	}

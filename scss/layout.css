@@ -52,6 +52,15 @@
   clear: both;
 }
 
+@media screen and (max-width: 640px) {
+  .columns .columns {
+    float: none;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
 img {
   width: 100%;
 }
