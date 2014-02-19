@@ -66,3 +66,9 @@ Grunt & Sass
 ------------
 
 The PearShaped stylesheets are written in [Sass](http://sass-lang.com/), a CSS preprocessor. Each of the underscored .scss files are libraries of reusable components and variables, which are then used by the non-underscored stylesheets. The .scss files are compiled by a Node-based task runner: [Grunt](http://gruntjs.com/). Grunt works by parsing gruntfile.js, a set of instructions for the command line tool 'grunt'. Grunt first renders the Sass into normal CSS, then it sews all the files end to end into one file (or concatenates them) and then it compresses all of the unecessary space out of it to make it a smaller file. The end result is called build.min.css.
+
+To Do List
+----------
+
+- Add Grunt watch task
+- Catch Sass version up to vanilla CSS
