@@ -9,9 +9,9 @@ module.exports = function(grunt) {
                 style: 'expanded'
               },
                 files: {
-                    'scss/type.css': 'scss/type.scss',
-                    'scss/layout.css': 'scss/layout.scss',
-                    'scss/app.css': 'scss/app.scss'
+                    'scss/css/type.css': 'scss/type.scss',
+                    'scss/css/layout.css': 'scss/layout.scss',
+                    'scss/css/app.css': 'scss/app.scss'
                 }
             }
         },
@@ -19,19 +19,19 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    'scss/type.css',
-                    'scss/layout.css',
-                    'scss/app.css'
+                    'scss/css/type.css',
+                    'scss/css/layout.css',
+                    'scss/css/app.css'
                 ],
 
-                dest: 'scss/build.css',
+                dest: 'scss/css/build.css',
             }
         },
 
         cssmin: {
             minify: {
-                src: ['scss/build.css'],
-                dest: 'scss/build.min.css'
+                src: ['scss/css/build.css'],
+                dest: 'scss/build/build.min.css'
             }
         }
 
