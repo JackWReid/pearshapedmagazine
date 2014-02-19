@@ -180,24 +180,6 @@ blockquote:before{
     opacity:.3;
 }
 
-.cite{
-    display:block;
-    text-transform:uppercase;
-    letter-spacing:.2em;
-    margin-top:1.5em;
-    margin-left:1em;
-    font-weight:900;
-    font-style:normal;
-    font-size:.8em;
-}
-
-.cite:before{
-    content:"— ";
-    margin-left:-3.4em;
-    margin-right:.9em;
-    opacity:.3;
-}
-
 pre{
     margin:1.5em;
 }
