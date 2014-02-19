@@ -43,6 +43,9 @@ ul#nav li {
 ul#nav li:hover {
   background-color: #498c34;
 }
+ul#nav li a {
+  color: #222222;
+}
 
 .album {
   margin-bottom: 40px;
