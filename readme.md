@@ -13,9 +13,9 @@ The CSS cascade goes as follows:
 - layout.css
 - app.css
 
-# reset.css #
+## reset.css ##
 This is just the standard Meyer CSS Reset. It goes at the top so as to stop user agent stylesheets ruining the fun further down the cascade.
 
-# type.css #
+## type.css ##
 
 TO BE CONTINUED

@@ -1,10 +1,13 @@
+// Import Mixins & Variables
+@import 'basics';
 @import 'fonts';
-//
-//	STACK DEFINITION
-//
 
+// Fonts & Formatting
 body{
+	font-size: $baseline;
+	line-height: $lineheight;
 	font-family: $bodyfont;
+	color: $text;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -13,4 +16,34 @@ h1, h2, h3, h4, h5, h6{
 
 .title, #nav, .cards, .date{
 	@include title;
+}
+
+// Header Proportions
+h1, h2, h3, h4, h5, h6{
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+h1{
+	font-size: 50px;
+}
+
+h2{
+	font-size: 40px;
+}
+
+h3{
+	font-size: 30px;
+}
+
+h4{
+	font-size: 24px;
+}
+
+h5{
+	font-size: 20px;
+}
+
+h6{
+	font-size: 18px;
 }
