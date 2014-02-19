@@ -22,16 +22,18 @@
     font-style: normal;
 }
 
-$bodyfont{
-    font-family: Georgia, serif;
-}
+$bodyfont: Georgia, serif;
 
-$headerfont{
-    font-family: 'aleo', 'helvetica', arial, sans-serif;
+$headerfont: 'aleo', 'helvetica', arial, sans-serif;
+
+$titlefont: 'futura', 'helvetica', arial, sans-serif;
+
+@mixin header{
+    font-family: $headerfont;
     font-weight: bold;
 }
 
-$titlefont{
-    font-family: 'futura', 'helvetica', arial, sans-serif;
+@mixin title{
+    font-family: $titlefont;
     text-transform: uppercase;
 }

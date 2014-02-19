@@ -1,0 +1,16 @@
+@import 'fonts';
+//
+//	STACK DEFINITION
+//
+
+body{
+	font-family: $bodyfont;
+}
+
+h1, h2, h3, h4, h5, h6{
+	@include header;
+}
+
+.title, #nav, .cards, .date{
+	@include title;
+}
