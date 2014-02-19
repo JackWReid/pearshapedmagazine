@@ -226,6 +226,9 @@ header {
   margin: 0 auto;
 }
 header h1, header h2 {
+  font-family: "futura", "helvetica", arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1em;
   text-align: center;
   font-weight: normal;
   margin-top: 0;

@@ -65,12 +65,10 @@
 // Mobile Squash
 .columns{
 	@media screen and (max-width: $mobileb){
-		.columns{
-			float: none;
-			margin: 0;
-			width: 100%;
-			margin-bottom: $bumpdown;
-		}
+		float: none;
+		margin: 0;
+		width: 100%;
+		margin-bottom: $bumpdown;
 	}
 }
 

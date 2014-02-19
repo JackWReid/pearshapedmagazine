@@ -266,6 +266,8 @@ header{
 	margin: 0 auto;
 
 	h1, h2{
+		@include title;
+		line-height: 1em;
 		text-align: center;
 		font-weight: normal;
 		margin-top: 0;

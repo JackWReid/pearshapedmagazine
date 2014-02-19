@@ -53,7 +53,7 @@
 }
 
 @media screen and (max-width: 640px) {
-  .columns .columns {
+  .columns {
     float: none;
     margin: 0;
     width: 100%;
