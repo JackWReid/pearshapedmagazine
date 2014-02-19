@@ -1,8 +1,31 @@
+// Colours
 $psgreen: #498c34;
 $text: #222;
 
+// Greyed out
+$fuzz: 0.8;
+
+// The width of the PearShaped line
+$pline: 10px;
+
+// Breakpoints
+$tabletb: 1063px;
+$mobileb: 640px;
+
+// Font Baselines
 $baseline: 14px;
 $lineheight: 1.5em;
+$headmargin: 10px;
+$headmarginb: 15px;
 
+// Font Multipliers
 $mobiler: 0.5;
 $tableter: 0.7;
+
+// Layout
+$bumpdown: 60px;
+$leadout: 100px;
+$fullwidth: 960px;
+
+// Grid
+$gutter: 5%;

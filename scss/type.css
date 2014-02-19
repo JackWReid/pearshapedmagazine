@@ -35,6 +35,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 10px;
   margin-bottom: 15px;
 }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #222222;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  color: #498c34;
+}
 
 h1 {
   font-size: 50px;
@@ -58,4 +64,203 @@ h5 {
 
 h6 {
   font-size: 18px;
+}
+
+@media screen and (max-width: 1063px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  h4 {
+    font-size: 16.8px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  h6 {
+    font-size: 12.6px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 7px;
+    margin-bottom: 10.5px;
+  }
+}
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  h5 {
+    font-size: 10px;
+  }
+
+  h6 {
+    font-size: 9px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 5px;
+    margin-bottom: 7.5px;
+  }
+}
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+a {
+  color: #498c34;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  color: #222222;
+}
+
+small {
+  display: block;
+  font-size: 9.8px;
+  margin: 14px;
+  font-style: italic;
+}
+
+blockquote {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  hyphenate: auto;
+  orphans: 4;
+}
+
+ul, ol, form {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+
+sup, .superscript {
+  font-size: xx-small;
+  vertical-align: top;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+.kicker {
+  font-size: 17.5px;
+  line-height: 17.5px;
+}
+.kicker .run-in {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.drop-cap {
+  display: block;
+  font-size: 70px;
+  float: left;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+}
+.title h1 {
+  font-size: 98px;
+}
+.title h1 a {
+  color: #222222;
+}
+.title h1 a:hover {
+  color: #498c34;
+}
+@media screen and (max-width: 1063px) {
+  .title h1 {
+    font-size: 68.6px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .title h1 {
+    font-size: 49px;
+  }
+}
+
+header {
+  width: 85%;
+  margin: 0 auto;
+}
+header h1, header h2 {
+  text-align: center;
+  font-weight: normal;
+  margin-top: 0;
+  padding: 0;
+}
+header h1 a, header h2 a {
+  color: #222222;
+}
+header h1 a:hover, header h2 a:hover {
+  color: #498c34;
+}
+header h1 {
+  font-size: 140px;
+  border-bottom: 10px #498c34 solid;
+}
+@media sceeen and (max-width: 1063px) {
+  header h1 {
+    font-size: 98px;
+  }
+}
+@media sceeen and (max-width: 640px) {
+  header h1 {
+    font-size: 70px;
+  }
+}
+header h2 {
+  font-size: 70px;
+}
+@media sceeen and (max-width: 1063px) {
+  header h2 {
+    font-size: 49px;
+  }
+}
+@media sceeen and (max-width: 640px) {
+  header h2 {
+    font-size: 35px;
+  }
 }

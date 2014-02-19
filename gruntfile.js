@@ -9,7 +9,8 @@ module.exports = function(grunt) {
                 style: 'expanded'
               },
                 files: {
-                    'scss/type.css': 'scss/type.scss'
+                    'scss/type.css': 'scss/type.scss',
+                    'scss/layout.css': 'scss/layout.scss'
                 }
             }
         },
