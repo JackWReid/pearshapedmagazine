@@ -25,6 +25,17 @@ module.exports = function(grunt) {
                 ],
 
                 dest: 'scss/css/build.css',
+            },
+
+            dist: {
+                src: [
+                    'css/reset.css',
+                    'css/type.css',
+                    'css/layout.css',
+                    'css/app.css'
+                ],
+
+                dest: 'css/build/build.css',
             }
         },
 
@@ -32,6 +43,11 @@ module.exports = function(grunt) {
             minify: {
                 src: ['scss/css/build.css'],
                 dest: 'scss/build/build.min.css'
+            },
+
+            minify: {
+                src: ['css/build/build.css'],
+                dest: 'css/build/build.min.css'
             }
         }
 
