@@ -199,7 +199,7 @@ ul.cards li {
 
 #entry h1, #entry h2, #entry h3, #entry h4, #entry h5, #entry h6{
 	margin-top: 10px;
-	margin-bottom: 0.5em;
+	margin-bottom: 5px;
 }
 
 #entry h1{
@@ -235,6 +235,10 @@ ul.cards li {
 
 .title.final a:hover{
 	color: #498c34;
+}
+
+ul#nav{
+	left: auto;
 }
 
 #featured{

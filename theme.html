@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="shortcut icon" href="{Favicon}">
 
-	<link rel="stylesheet" href="http://static.tumblr.com/gjd1903/CEcn17nlf/concat.css">
+	<link rel="stylesheet" href="http://static.tumblr.com/gjd1903/DzTn1bbw8/build.min.css">
 	<!--<link rel="stylesheet" href="http://static.tumblr.com/gjd1903/gVUn1947q/build.min.css">-->
 
 	<!-- Page Bounce to /home (horrible for SEO, but Tumblr doesn't do HTTP redirects)  -->
@@ -25,16 +25,34 @@
 			border-top: 8px #498c34 solid;
 			padding-top: 4px;
 		}
+
 		.social{
 			display: inline-block;
 			margin: 10px 0px 0px 0px;
 			padding: 0px;
 		}
-		@media screen and (max-width: 1064px){
-			.social{
-				display: none;
+			@media screen and (max-width: 1064px){
+				.social{
+					display: none;
+				}
 			}
+
+		#entry h1, #entry h2, #entry h3, #entry h4, #entry h5, #entry h6{
+			margin-top: 20px;
+			margin-bottom: 10px;
 		}
+		
+		ul#nav{
+			position: fixed;
+			top: 0;
+			margin: 0 auto;
+		}
+
+		p{
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+
 	</style>
 
 </head>
@@ -87,9 +105,6 @@
 					{/block:Title}
 					{Body}
 					{block:More}<h4><a href="{Permalink}" class="readmore">{lang:Read more}</a></h4>{/block:More}
-					{block:PostNotes}
-						{PostNotes}
-					{/block:PostNotes}
 					<hr>
 				</div>
 

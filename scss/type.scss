@@ -77,6 +77,11 @@ h6{
 	font-size: $h6;
 }
 
+h1, h2, h3, h4, h5, h6{
+	margin-top: $headmargin;
+	margin-bottom: $headmarginb;
+}
+
 //					//
 //	TABLET HEADERS 	//
 //					//
@@ -114,36 +119,36 @@ h6{
 //					//
 //	MOBILE HEADERS 	//
 //					//
-@media screen and (max-width: $mobileb){
-	h1{
-		font-size: $h1 * $mobiler;
-	}
-
-	h2{
-		font-size: $h2 * $mobiler;
-	}
-
-	h3{
-		font-size: $h3 * $mobiler;
-	}
-
-	h4{
-		font-size: $h4 * $mobiler;
-	}
-
-	h5{
-		font-size: $h5 * $mobiler;
-	}
-
-	h6{
-		font-size: $h6 * $mobiler;
-	}
-
-	h1, h2, h3, h4, h5, h6{
-		margin-top: $headmargin * $mobiler;
-		margin-bottom: $headmarginb * $mobiler;
-	}
-}
+//@media screen and (max-width: $mobileb){
+//	h1{
+//		font-size: $h1 * $mobiler;
+//	}
+//
+//	h2{
+//		font-size: $h2 * $mobiler;
+//	}
+//
+//	h3{
+//		font-size: $h3 * $mobiler;
+//	}
+//
+//	h4{
+//		font-size: $h4 * $mobiler;
+//	}
+//
+//	h5{
+//		font-size: $h5 * $mobiler;
+//	}
+//
+//	h6{
+//		font-size: $h6 * $mobiler;
+//	}
+//
+//	h1, h2, h3, h4, h5, h6{
+//		margin-top: $headmargin * $mobiler;
+//		margin-bottom: $headmarginb * $mobiler;
+//	}
+//}
 
 
 //					//
