@@ -32,8 +32,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #222222;
@@ -67,40 +67,11 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  line-height: 1.2em;
 }
 
-@media screen and (max-width: 1063px) {
-  h1 {
-    font-size: 35px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 21px;
-  }
-
-  h4 {
-    font-size: 16.8px;
-  }
-
-  h5 {
-    font-size: 14px;
-  }
-
-  h6 {
-    font-size: 12.6px;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 7px;
-    margin-bottom: 10.5px;
-  }
-}
 strong, b {
   font-weight: bold;
 }
@@ -131,7 +102,7 @@ blockquote {
 }
 
 p {
-  margin-top: 1em;
+  margin-top: 0;
   margin-bottom: 1em;
   hyphenate: auto;
   orphans: 4;
@@ -159,7 +130,6 @@ hr {
 
 .kicker {
   font-size: 17.5px;
-  line-height: 17.5px;
 }
 .kicker .run-in {
   text-transform: uppercase;
@@ -175,39 +145,32 @@ hr {
 .title {
   text-align: center;
   font-weight: bold;
+  font-size: 30px !important;
 }
-.title h1 {
-  font-size: 98px;
-}
-.title h1 a {
+.title a {
   color: #222222;
 }
-.title h1 a:hover {
+.title a:hover {
   color: #498c34;
 }
 @media screen and (max-width: 1063px) {
-  .title h1 {
-    font-size: 68.6px;
+  .title {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 640px) {
-  .title h1 {
-    font-size: 49px;
+  .title {
+    font-size: 18px;
   }
 }
 
 header {
-  width: 85%;
-  margin: 0 auto;
+  font-size: 100px;
+  text-align: center;
 }
 header h1, header h2 {
   font-family: "futura", "helvetica", arial, sans-serif;
   text-transform: uppercase;
-  line-height: 1em;
-  text-align: center;
-  font-weight: normal;
-  margin-top: 0;
-  padding: 0;
 }
 header h1 a, header h2 a {
   color: #222222;
@@ -216,29 +179,8 @@ header h1 a:hover, header h2 a:hover {
   color: #498c34;
 }
 header h1 {
-  font-size: 140px;
   border-bottom: 10px #498c34 solid;
 }
-@media screen and (max-width: 1063px) {
-  header h1 {
-    font-size: 98px;
-  }
-}
-@media screen and (max-width: 640px) {
-  header h1 {
-    font-size: 70px;
-  }
-}
 header h2 {
-  font-size: 70px;
-}
-@media screen and (max-width: 1063px) {
-  header h2 {
-    font-size: 49px;
-  }
-}
-@media screen and (max-width: 640px) {
-  header h2 {
-    font-size: 35px;
-  }
+  font-size: 40px;
 }

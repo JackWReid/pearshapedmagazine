@@ -30,6 +30,13 @@ h1, h2, h3, h4, h5, h6{
 //	  PROPORTIONS   //
 //					//
 
+$h1: 50px;
+$h2: 40px;
+$h3: 30px;
+$h4: 24px;
+$h5: 20px;
+$h6: 18px;
+
 h1, h2, h3, h4, h5, h6{
 	margin-top: $headmargin;
 	margin-bottom: $headmarginb;
@@ -42,13 +49,6 @@ h1, h2, h3, h4, h5, h6{
 		}
 	}
 }
-
-$h1: 50px;
-$h2: 40px;
-$h3: 30px;
-$h4: 24px;
-$h5: 20px;
-$h6: 18px;
 
 //					//
 //	FULL HEADERS 	//
@@ -80,75 +80,8 @@ h6{
 h1, h2, h3, h4, h5, h6{
 	margin-top: $headmargin;
 	margin-bottom: $headmarginb;
+	line-height: 1.2em;
 }
-
-//					//
-//	TABLET HEADERS 	//
-//					//
-@media screen and (max-width: $tabletb){
-	h1{
-		font-size: $h1 * $tableter;
-	}
-
-	h2{
-		font-size: $h2 * $tableter;
-	}
-
-	h3{
-		font-size: $h3 * $tableter;
-	}
-
-	h4{
-		font-size: $h4 * $tableter;
-	}
-
-	h5{
-		font-size: $h5 * $tableter;
-	}
-
-	h6{
-		font-size: $h6 * $tableter;
-	}
-
-	h1, h2, h3, h4, h5, h6{
-		margin-top: $headmargin * $tableter;
-		margin-bottom: $headmarginb * $tableter;
-	}
-}
-
-//					//
-//	MOBILE HEADERS 	//
-//					//
-//@media screen and (max-width: $mobileb){
-//	h1{
-//		font-size: $h1 * $mobiler;
-//	}
-//
-//	h2{
-//		font-size: $h2 * $mobiler;
-//	}
-//
-//	h3{
-//		font-size: $h3 * $mobiler;
-//	}
-//
-//	h4{
-//		font-size: $h4 * $mobiler;
-//	}
-//
-//	h5{
-//		font-size: $h5 * $mobiler;
-//	}
-//
-//	h6{
-//		font-size: $h6 * $mobiler;
-//	}
-//
-//	h1, h2, h3, h4, h5, h6{
-//		margin-top: $headmargin * $mobiler;
-//		margin-bottom: $headmarginb * $mobiler;
-//	}
-//}
 
 
 //					//
@@ -186,7 +119,7 @@ blockquote{
 }
 
 p{
-	margin-top: 1em;
+	margin-top: 0;
 	margin-bottom: 1em;
 	hyphenate: auto;
 	orphans: 4;
@@ -218,7 +151,6 @@ hr{
 
 .kicker{
 	font-size: $baseline * 1.25;
-	line-height: $baseline * 1.25;
 
 	.run-in{
 		text-transform: uppercase;
@@ -240,25 +172,22 @@ hr{
 .title{
 	text-align: center;
 	font-weight: bold;
+	font-size: 30px !important;
 
-	h1{
-		font-size: $baseline * 7;
+	a{
+		color: $text;
 
-		a{
-			color: $text;
-
-			&:hover{
-				color: $psgreen;
-			}
+		&:hover{
+			color: $psgreen;
 		}
+	}
+	
+	@media screen and (max-width: $tabletb){
+		font-size: 20px;
+	}
 
-		@media screen and (max-width: $tabletb){
-			font-size: $baseline * 7 * $tableter;
-		}
-
-		@media screen and (max-width: $mobileb){
-			font-size: $baseline * 7 * $mobiler;
-		}
+	@media screen and (max-width: $mobileb){
+		font-size: 18px;
 	}
 }
 
@@ -267,50 +196,27 @@ hr{
 //					//
 
 header{
-	width: 85%;
-	margin: 0 auto;
+	font-size: 100px;
+	text-align: center;
 
 	h1, h2{
 		@include title;
-		line-height: 1em;
-		text-align: center;
-		font-weight: normal;
-		margin-top: 0;
-		padding: 0;
 
 		a{
 			color: $text;
 
 			&:hover{
-			color: $psgreen;
+				color: $psgreen;
 			}
 		}
 	}
 
 	h1{
-		font-size: $baseline * 10;
-
 		border-bottom: $pline $psgreen solid;
-
-		@media screen and (max-width: $tabletb){
-			font-size: $baseline * 10 * $tableter;
-		}
-
-		@media screen and (max-width: $mobileb){
-			font-size: $baseline * 10 * $mobiler;
-		}
 	}
 
 	h2{
-		font-size: $baseline * 5;
-
-		@media screen and (max-width: $tabletb){
-			font-size: $baseline * 5 * $tableter;
-		}
-
-		@media screen and (max-width: $mobileb){
-			font-size: $baseline * 5 * $mobiler;
-		}
+		font-size: 40px;
 	}
 }
 

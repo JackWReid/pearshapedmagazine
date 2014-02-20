@@ -15,7 +15,7 @@ ul#nav{
 	list-style: none;
 	background-color: white;
 
-	border: 1px $light;
+	border: 1px $light solid;
 
 	@media screen and (max-width: $tabletb){
 		width: 30%;
@@ -57,6 +57,19 @@ ul#nav{
 		a{
 			color: $text;
 		}
+	}
+}
+
+// Social Buttons
+.social{
+	img{
+		max-width: 20px;
+	}
+	display: inline-block;
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+	@media screen and (max-width: $tabletb){
+		display: none;
 	}
 }
 

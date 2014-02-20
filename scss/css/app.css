@@ -6,7 +6,7 @@ ul#nav {
   margin: 0px 10px;
   list-style: none;
   background-color: white;
-  border: 1px #eeeeee;
+  border: 1px #eeeeee solid;
 }
 @media screen and (max-width: 1063px) {
   ul#nav {
@@ -45,6 +45,20 @@ ul#nav li:hover {
 }
 ul#nav li a {
   color: #222222;
+}
+
+.social {
+  display: inline-block;
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+}
+.social img {
+  max-width: 20px;
+}
+@media screen and (max-width: 1063px) {
+  .social {
+    display: none;
+  }
 }
 
 .album {
