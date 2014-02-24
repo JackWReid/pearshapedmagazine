@@ -32,8 +32,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #222222;
@@ -67,8 +67,8 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   line-height: 1.2em;
 }
 
@@ -103,7 +103,7 @@ blockquote {
 
 p {
   margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: 15px;
   hyphenate: auto;
   orphans: 4;
 }
@@ -130,6 +130,7 @@ hr {
 
 .kicker {
   font-size: 17.5px;
+  padding: 1em;
 }
 .kicker .run-in {
   text-transform: uppercase;
@@ -145,7 +146,9 @@ hr {
 .title {
   text-align: center;
   font-weight: bold;
-  font-size: 30px !important;
+  font-size: 64px;
+  line-height: 1.2em;
+  margin-bottom: 10px;
 }
 .title a {
   color: #222222;
@@ -155,24 +158,27 @@ hr {
 }
 @media screen and (max-width: 1063px) {
   .title {
-    font-size: 20px;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 640px) {
   .title {
-    font-size: 18px;
+    font-size: 30px;
   }
 }
 
 header {
-  font-size: 100px;
   text-align: center;
+  margin: 0 auto;
+  width: 80%;
 }
 header h1, header h2 {
   font-family: "futura", "helvetica", arial, sans-serif;
   text-transform: uppercase;
+  font-weight: normal;
 }
 header h1 a, header h2 a {
+  font-weight: normal;
   color: #222222;
 }
 header h1 a:hover, header h2 a:hover {
@@ -180,7 +186,31 @@ header h1 a:hover, header h2 a:hover {
 }
 header h1 {
   border-bottom: 10px #498c34 solid;
+  font-size: 120px;
+}
+@media screen and (max-width: 1063px) {
+  header h1 {
+    border-bottom: 7.5px #498c34 solid;
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 640px) {
+  header h1 {
+    border-bottom: 5px #498c34 solid;
+    font-size: 60px;
+  }
 }
 header h2 {
+  margin-top: 10px;
   font-size: 40px;
+}
+@media screen and (max-width: 1063px) {
+  header h2 {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 640px) {
+  header h2 {
+    font-size: 30px;
+  }
 }

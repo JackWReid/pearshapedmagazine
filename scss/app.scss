@@ -5,9 +5,10 @@
 //					//
 
 ul#nav{
-	position: fixed;
-	top: 0px;
 	z-index: 5;
+	position: fixed;
+	top: 0;
+	margin: 0 auto;
 
 	padding: 15px;
 	margin: 0px 10px;
@@ -62,9 +63,6 @@ ul#nav{
 
 // Social Buttons
 .social{
-	img{
-		max-width: 20px;
-	}
 	display: inline-block;
 	margin: 10px 0px 0px 0px;
 	padding: 0px;
@@ -100,6 +98,10 @@ ul#nav{
 .hero{
 	line-height: 0.8em;
 	margin: 0.1em;
+}
+
+#featured{
+	margin: 0 auto;
 }
 
 

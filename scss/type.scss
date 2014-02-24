@@ -120,7 +120,7 @@ blockquote{
 
 p{
 	margin-top: 0;
-	margin-bottom: 1em;
+	margin-bottom: 15px;
 	hyphenate: auto;
 	orphans: 4;
 }
@@ -151,6 +151,7 @@ hr{
 
 .kicker{
 	font-size: $baseline * 1.25;
+	padding: 1em;
 
 	.run-in{
 		text-transform: uppercase;
@@ -172,7 +173,9 @@ hr{
 .title{
 	text-align: center;
 	font-weight: bold;
-	font-size: 30px !important;
+	font-size: 64px;
+	line-height: 1.2em;
+	margin-bottom: 10px;
 
 	a{
 		color: $text;
@@ -182,12 +185,13 @@ hr{
 		}
 	}
 	
+	// Responsive headlines and page titles
 	@media screen and (max-width: $tabletb){
-		font-size: 20px;
+		font-size: 40px;
 	}
 
 	@media screen and (max-width: $mobileb){
-		font-size: 18px;
+		font-size: 30px;
 	}
 }
 
@@ -196,13 +200,16 @@ hr{
 //					//
 
 header{
-	font-size: 100px;
 	text-align: center;
+	margin: 0 auto;
+	width: 80%;
 
 	h1, h2{
 		@include title;
+		font-weight: normal;
 
 		a{
+			font-weight: normal;
 			color: $text;
 
 			&:hover{
@@ -211,12 +218,29 @@ header{
 		}
 	}
 
+	// Responsive header to stop ugly overflow
 	h1{
 		border-bottom: $pline $psgreen solid;
+		font-size: 120px;
+		@media screen and (max-width: $tabletb){
+			border-bottom: $pline*0.75 $psgreen solid;
+			font-size: 80px;
+		}
+		@media screen and (max-width: $mobileb){
+			border-bottom: $pline*0.5 $psgreen solid;
+			font-size: 60px;
+		}
 	}
 
 	h2{
+		margin-top: 10px;
 		font-size: 40px;
+		@media screen and (max-width: $tabletb){
+			font-size: 34px;
+		}
+		@media screen and (max-width: $mobileb){
+			font-size: 30px;
+		}
 	}
 }
 

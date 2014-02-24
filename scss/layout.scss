@@ -63,7 +63,7 @@
 }
 
 // Mobile Squash
-.columns{
+.twelve.columns, .eight.columns, .six.columns, .four.columns, .three.columns{
 	@media screen and (max-width: $mobileb){
 		float: none;
 		margin: 0;
@@ -79,6 +79,10 @@
 
 img{
 	width: 100%;
+}
+
+p>img{
+	margin: 0;
 }
 
 .big{

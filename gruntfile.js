@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         },
 
         concat: {
-            dist: {
+            sass: {
                 src: [
                     'scss/css/type.css',
                     'scss/css/layout.css',
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                 dest: 'scss/css/build.css',
             },
 
-            dist: {
+            vanilla: {
                 src: [
                     'css/reset.css',
                     'css/type.css',
@@ -36,16 +36,25 @@ module.exports = function(grunt) {
                 ],
 
                 dest: 'css/build/build.css',
+            },
+
+            javascript: {
+                src: [
+                    'js/stroll.min.js',
+                    'js/slidr.min.js'
+                ],
+
+                dest: 'js/app.js',
             }
         },
 
         cssmin: {
-            minify: {
+            sass: {
                 src: ['scss/css/build.css'],
                 dest: 'scss/build/build.min.css'
             },
 
-            minify: {
+            vanilla: {
                 src: ['css/build/build.css'],
                 dest: 'css/build/build.min.css'
             }

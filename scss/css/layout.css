@@ -53,7 +53,7 @@
 }
 
 @media screen and (max-width: 640px) {
-  .columns {
+  .twelve.columns, .eight.columns, .six.columns, .four.columns, .three.columns {
     float: none;
     margin: 0;
     width: 100%;
@@ -63,6 +63,10 @@
 
 img {
   width: 100%;
+}
+
+p > img {
+  margin: 0;
 }
 
 @media screen and (max-width: 640px) {
