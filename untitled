@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+
+	<title>Jack Reid - {block:PostTitle}{PostTitle}{/block:PostTitle}</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="shortcut icon" href="{Favicon}">
+	<link rel="alternate" type="application/rss+xml" title="Jack Reid" href="{RSS}"/>
+	<meta name="description" content="{MetaDescription}"/>
+
+	<link rel="stylesheet" href="app.css">
+	<style>
+		{CustomCSS}
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<h1>{Title}</h1>
+		<p>{Description}</p>
+	</header>
+</body>
