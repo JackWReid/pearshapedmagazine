@@ -72,6 +72,42 @@
 	}
 }
 
+//					//
+//	     CARDS    	//
+//					//
+
+.column { float: left; }
+.size-1of1 { width: 100%; }
+.size-1of2 { width: 50%; }
+.size-1of3 { width: 33.333%; }
+
+.size-1of3, .size-1of2, .size-1of1{
+	h1, h2, h3, h4, h5, h6{
+	text-align: center;
+	margin-top: 0px;
+	}
+}
+
+.card{
+	padding: 10px;
+	border: 1px $light solid;
+	margin: 20px 10px;
+	overflow: hidden;
+}
+
+#grid[data-columns]::before {
+	@media screen and (max-width: $mobileb){
+		content: '1 .column.size-1of1';
+	}
+	@media screen and (min-width: $tableter) {
+		content: '2 .column.size-1of2';
+	}
+	@media screen and (min-width: $tableter) {
+		content: '3 .column.size-1of3';
+	}
+}
+
+
 
 //					//
 //	     MODS    	//

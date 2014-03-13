@@ -5,7 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'aleo';
   src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot");
@@ -13,7 +12,6 @@
   font-weight: bold;
   font-style: normal;
 }
-
 body {
   font-size: 14px;
   line-height: 1.5em;
@@ -275,6 +273,50 @@ header h2 {
     margin: 0;
     width: 100%;
     margin-bottom: 60px;
+  }
+}
+
+.column {
+  float: left;
+}
+
+.size-1of1 {
+  width: 100%;
+}
+
+.size-1of2 {
+  width: 50%;
+}
+
+.size-1of3 {
+  width: 33.333%;
+}
+
+.size-1of3 h1, .size-1of3 h2, .size-1of3 h3, .size-1of3 h4, .size-1of3 h5, .size-1of3 h6, .size-1of2 h1, .size-1of2 h2, .size-1of2 h3, .size-1of2 h4, .size-1of2 h5, .size-1of2 h6, .size-1of1 h1, .size-1of1 h2, .size-1of1 h3, .size-1of1 h4, .size-1of1 h5, .size-1of1 h6 {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.card {
+  padding: 10px;
+  border: 1px #eeeeee solid;
+  margin: 20px 10px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 640px) {
+  #grid[data-columns]::before {
+    content: '1 .column.size-1of1';
+  }
+}
+@media screen and (min-width: 0.7) {
+  #grid[data-columns]::before {
+    content: '2 .column.size-1of2';
+  }
+}
+@media screen and (min-width: 0.7) {
+  #grid[data-columns]::before {
+    content: '3 .column.size-1of3';
   }
 }
 

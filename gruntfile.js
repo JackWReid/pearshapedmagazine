@@ -41,7 +41,8 @@ module.exports = function(grunt) {
             javascript: {
                 src: [
                     'js/stroll.min.js',
-                    'js/slidr.min.js'
+                    'js/slidr.min.js',
+                    'js/salvattore.min.js'
                 ],
 
                 dest: 'js/app.js',
