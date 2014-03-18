@@ -207,6 +207,7 @@ header{
 	h1, h2{
 		@include title;
 		font-weight: normal;
+		overflow: hidden;
 
 		a{
 			font-weight: normal;
@@ -228,7 +229,7 @@ header{
 		}
 		@media screen and (max-width: $mobileb){
 			border-bottom: $pline*0.5 $psgreen solid;
-			font-size: 60px;
+			font-size: 40px;
 		}
 	}
 
@@ -236,11 +237,12 @@ header{
 		margin-top: 10px;
 		font-size: 40px;
 		@media screen and (max-width: $tabletb){
-			font-size: 34px;
+			display: none;
+			font-size: 0px;
 		}
-		@media screen and (max-width: $mobileb){
+		/*@media screen and (max-width: $mobileb){
 			font-size: 30px;
-		}
+		}*/
 	}
 }
 

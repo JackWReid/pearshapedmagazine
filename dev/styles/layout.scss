@@ -16,7 +16,7 @@
 	max-width: $fullwidth;
 }
 
-// The Meat of the Grid
+// The Meat of the Grid//
 .row{
 	overflow:hidden;
 }
@@ -93,13 +93,20 @@
 	border: 1px $light solid;
 	margin: 20px 10px;
 	overflow: hidden;
+
+	&:hover{
+		background-color: white;
+		h4{
+			color: $psgreen;
+		}
+	}
 }
 
 #grid[data-columns]::before {
 	@media screen and (max-width: $mobileb){
 		content: '1 .column.size-1of1';
 	}
-	@media screen and (min-width: $tableter) {
+	@media screen and (max-width: $tableter) {
 		content: '2 .column.size-1of2';
 	}
 	@media screen and (min-width: $tableter) {
@@ -107,7 +114,13 @@
 	}
 }
 
-
+.card{
+	h4{
+		@media screen and (max-width: $mobileb){
+			font-size: 18px;
+		}
+	}
+}
 
 //					//
 //	     MODS    	//
@@ -133,4 +146,10 @@ p>img{
 
 #entry{
 	margin-bottom: $leadout;
+}
+
+#search{
+	@media screen and (max-width: $mobileb){
+		display: none;
+	}
 }

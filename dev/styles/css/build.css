@@ -174,6 +174,7 @@ header h1, header h2 {
   font-family: "futura", "helvetica", arial, sans-serif;
   text-transform: uppercase;
   font-weight: normal;
+  overflow: hidden;
 }
 header h1 a, header h2 a {
   font-weight: normal;
@@ -195,21 +196,20 @@ header h1 {
 @media screen and (max-width: 640px) {
   header h1 {
     border-bottom: 5px #498c34 solid;
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 header h2 {
   margin-top: 10px;
   font-size: 40px;
+  /*@media screen and (max-width: $mobileb){
+  	font-size: 30px;
+  }*/
 }
 @media screen and (max-width: 1063px) {
   header h2 {
-    font-size: 34px;
-  }
-}
-@media screen and (max-width: 640px) {
-  header h2 {
-    font-size: 30px;
+    display: none;
+    font-size: 0px;
   }
 }
 
@@ -303,13 +303,19 @@ header h2 {
   margin: 20px 10px;
   overflow: hidden;
 }
+.card:hover {
+  background-color: white;
+}
+.card:hover h4 {
+  color: #498c34;
+}
 
 @media screen and (max-width: 640px) {
   #grid[data-columns]::before {
     content: '1 .column.size-1of1';
   }
 }
-@media screen and (min-width: 0.7) {
+@media screen and (max-width: 0.7) {
   #grid[data-columns]::before {
     content: '2 .column.size-1of2';
   }
@@ -317,6 +323,12 @@ header h2 {
 @media screen and (min-width: 0.7) {
   #grid[data-columns]::before {
     content: '3 .column.size-1of3';
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .card h4 {
+    font-size: 18px;
   }
 }
 
@@ -340,6 +352,12 @@ p > img {
 
 #entry {
   margin-bottom: 100px;
+}
+
+@media screen and (max-width: 640px) {
+  #search {
+    display: none;
+  }
 }
 
 ul#nav {
@@ -409,6 +427,14 @@ ul#nav li a {
 }
 .album a:hover img {
   opacity: 0.5;
+}
+
+.tag {
+  text-align: right;
+  font-size: 10px;
+  font-weight: 900;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 ul.cards {
@@ -512,7 +538,7 @@ ul.cards li a:hover {
 
 #featured {
   list-style-type: none;
-  height: 450px;
+  height: 410px;
   width: 80%;
   margin: 0 auto;
 }
@@ -524,4 +550,13 @@ ul.cards li a:hover {
     width: 100%;
     height: 350px;
   }
+}
+@media screen and (max-width: 420px) {
+  #featured {
+    height: 255px;
+  }
+}
+
+.center {
+  margin: 0 auto;
 }

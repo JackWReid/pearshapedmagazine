@@ -88,13 +88,19 @@
   margin: 20px 10px;
   overflow: hidden;
 }
+.card:hover {
+  background-color: white;
+}
+.card:hover h4 {
+  color: #498c34;
+}
 
 @media screen and (max-width: 640px) {
   #grid[data-columns]::before {
     content: '1 .column.size-1of1';
   }
 }
-@media screen and (min-width: 0.7) {
+@media screen and (max-width: 0.7) {
   #grid[data-columns]::before {
     content: '2 .column.size-1of2';
   }
@@ -102,6 +108,12 @@
 @media screen and (min-width: 0.7) {
   #grid[data-columns]::before {
     content: '3 .column.size-1of3';
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .card h4 {
+    font-size: 18px;
   }
 }
 
@@ -125,4 +137,10 @@ p > img {
 
 #entry {
   margin-bottom: 100px;
+}
+
+@media screen and (max-width: 640px) {
+  #search {
+    display: none;
+  }
 }

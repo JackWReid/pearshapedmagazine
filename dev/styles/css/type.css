@@ -174,6 +174,7 @@ header h1, header h2 {
   font-family: "futura", "helvetica", arial, sans-serif;
   text-transform: uppercase;
   font-weight: normal;
+  overflow: hidden;
 }
 header h1 a, header h2 a {
   font-weight: normal;
@@ -195,20 +196,19 @@ header h1 {
 @media screen and (max-width: 640px) {
   header h1 {
     border-bottom: 5px #498c34 solid;
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 header h2 {
   margin-top: 10px;
   font-size: 40px;
+  /*@media screen and (max-width: $mobileb){
+  	font-size: 30px;
+  }*/
 }
 @media screen and (max-width: 1063px) {
   header h2 {
-    font-size: 34px;
-  }
-}
-@media screen and (max-width: 640px) {
-  header h2 {
-    font-size: 30px;
+    display: none;
+    font-size: 0px;
   }
 }

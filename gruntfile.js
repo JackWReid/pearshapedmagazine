@@ -3,15 +3,20 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        watch: {
+            files: ['dev/theme.html', 'dev/js/*', 'dev/styles/*'],
+            tasks: ['default'],
+        },
+
         sass: {
             dist: {
               options: {
                 style: 'expanded'
               },
                 files: {
-                    'scss/css/type.css': 'scss/type.scss',
-                    'scss/css/layout.css': 'scss/layout.scss',
-                    'scss/css/app.css': 'scss/app.scss'
+                    'dev/styles/css/type.css': 'dev/styles/type.scss',
+                    'dev/styles/css/layout.css': 'dev/styles/layout.scss',
+                    'dev/styles/css/app.css': 'dev/styles/app.scss'
                 }
             }
         },
@@ -19,56 +24,55 @@ module.exports = function(grunt) {
         concat: {
             sass: {
                 src: [
-                    'scss/css/type.css',
-                    'scss/css/layout.css',
-                    'scss/css/app.css'
+                    'dev/styles/css/type.css',
+                    'dev/styles/css/layout.css',
+                    'dev/styles/css/app.css'
                 ],
 
-                dest: 'scss/css/build.css',
-            },
-
-            vanilla: {
-                src: [
-                    'css/reset.css',
-                    'css/type.css',
-                    'css/layout.css',
-                    'css/app.css'
-                ],
-
-                dest: 'css/build/build.css',
+                dest: 'dev/styles/css/build.css',
             },
 
             javascript: {
                 src: [
-                    'js/stroll.min.js',
-                    'js/slidr.min.js',
-                    'js/salvattore.min.js'
+                    'dev/js/stroll.min.js',
+                    'dev/js/slidr.min.js',
+                    'dev/js/salvattore.min.js'
                 ],
 
-                dest: 'js/app.js',
+                dest: 'dist/app.js',
             }
         },
 
         cssmin: {
             sass: {
-                src: ['scss/css/build.css'],
-                dest: 'scss/build/build.min.css'
-            },
+                src: ['dev/styles/css/build.css'],
+                dest: 'dist/build.min.css'
+            }
+        },
 
-            vanilla: {
-                src: ['css/build/build.css'],
-                dest: 'css/build/build.min.css'
+        htmlmin: {
+            themesquash: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'dist/theme.html': 'dev/theme.html'
+                }
             }
         }
 
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass', 'concat', 'cssmin']);
+    grunt.registerTask('default', ['sass', 'concat', 'cssmin', 'htmlmin']);
+    grunt.registerTask('auto', ['watch']);
 
 };

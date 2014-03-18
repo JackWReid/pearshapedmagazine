@@ -9,9 +9,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="shortcut icon" href="{Favicon}">
 
-	<link rel="stylesheet" href="http://static.tumblr.com/gjd1903/SIUn2dnvx/build.min.css">
+	<link rel="stylesheet" href="http://static.tumblr.com/gjd1903/Fxbn2mx6j/build.min.css">
 
-	<!-- Page Bounce to /home (horrible for SEO, but Tumblr doesn't do HTTP redirects)  -->
+	<!-- Page Bounce to /home (horrible for SEO, but Tumblr doesn't do HTTP redirects!)  -->
 	<script type="text/javascript">
 		if(location.href == 'http://pearshapedexeter.com/') location.replace('/home');;
 	</script>
@@ -21,10 +21,6 @@
 	<style>
 		.center{
 			margin: 0 auto;
-			height: 470px;
-		}
-		#featured{
-			max-width: 100%;
 		}
 		{CustomCSS}
 	</style>
@@ -38,7 +34,7 @@
 		<header>
 			<h1><a href="/">PearShaped</a></h1>
 			<h2>Online Music Magazine</h2>
-			<div class="row">
+			<div id="search" class="row">
 				<div class="four columns">
 				<!--
 					<a class="social" href="https://www.facebook.com/PearShapedExeter"><img src="http://i.imgur.com/dd5hQEm.png" alt="Facebook"></a>
@@ -110,16 +106,18 @@
 		})();
 
 		// Slider
-		slidr.create('featured', {
-		  breadcrumbs: true,
-		  controls: 'border',
-		  keyboard: true,
-		  theme: '#498c34',
-		  touch: true,
-		  transition: 'cube'
-		}).start();
+		if(location.href == 'http://pearshapedexeter.com/home')
+			slidr.create('featured', {
+			  breadcrumbs: true,
+			  controls: 'border',
+			  keyboard: true,
+			  theme: '#498c34',
+			  touch: true,
+			  transition: 'cube'
+			}).start();;
 
-		// Stroll (wish I could load conditionally)
-		stroll.bind( '#swish ul' );
+		// Stroll (Conditional load)
+		if(location.href == 'http://pearshapedexeter.com/events')
+			stroll.bind( '#swish ul' );;
 	</script>
 </body>

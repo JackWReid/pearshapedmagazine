@@ -67,6 +67,14 @@ ul#nav li a {
   opacity: 0.5;
 }
 
+.tag {
+  text-align: right;
+  font-size: 10px;
+  font-weight: 900;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 ul.cards {
   position: relative;
   width: 100%;
@@ -168,7 +176,7 @@ ul.cards li a:hover {
 
 #featured {
   list-style-type: none;
-  height: 450px;
+  height: 410px;
   width: 80%;
   margin: 0 auto;
 }
@@ -180,4 +188,13 @@ ul.cards li a:hover {
     width: 100%;
     height: 350px;
   }
+}
+@media screen and (max-width: 420px) {
+  #featured {
+    height: 255px;
+  }
+}
+
+.center {
+  margin: 0 auto;
 }
