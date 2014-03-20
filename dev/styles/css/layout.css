@@ -87,12 +87,19 @@
   border: 1px #eeeeee solid;
   margin: 20px 10px;
   overflow: hidden;
+  cursor: pointer;
 }
 .card:hover {
   background-color: white;
 }
 .card:hover h4 {
   color: #498c34;
+}
+@media screen and (max-width: 640px) {
+  .card {
+    margin: 10px 5px;
+    padding: 5px;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -113,7 +120,7 @@
 
 @media screen and (max-width: 640px) {
   .card h4 {
-    font-size: 18px;
+    font-size: 12px;
   }
 }
 

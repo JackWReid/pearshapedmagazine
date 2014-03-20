@@ -11,13 +11,13 @@ ul#nav {
 }
 @media screen and (max-width: 1063px) {
   ul#nav {
-    width: 30%;
+    width: 35%;
     padding: 10px;
   }
 }
 @media screen and (max-width: 1063px) {
   ul#nav:before {
-    content: "Navigate PearShaped";
+    content: "Navigate";
   }
 }
 @media screen and (max-width: 1063px) {
@@ -73,6 +73,7 @@ ul#nav li a {
   font-weight: 900;
   margin-bottom: 0;
   padding-bottom: 0;
+  line-height: 11px;
 }
 
 ul.cards {

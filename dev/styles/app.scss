@@ -19,13 +19,13 @@ ul#nav{
 	border: 1px $light solid;
 
 	@media screen and (max-width: $tabletb){
-		width: 30%;
+		width: 35%;
 		padding: 10px;
 	}
 
 	&:before{
 		@media screen and (max-width: $tabletb){
-			content: "Navigate PearShaped";
+			content: "Navigate";
 		}
 	}
 
@@ -95,6 +95,7 @@ ul#nav{
 	font-weight: 900;
 	margin-bottom: 0;
 	padding-bottom: 0;
+	line-height: 11px;
 }
 
 //					//

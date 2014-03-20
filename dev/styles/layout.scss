@@ -93,12 +93,18 @@
 	border: 1px $light solid;
 	margin: 20px 10px;
 	overflow: hidden;
+	cursor: pointer;
 
 	&:hover{
 		background-color: white;
 		h4{
 			color: $psgreen;
 		}
+	}
+
+	@media screen and (max-width: $mobileb){
+		margin: 10px 5px;
+		padding: 5px;
 	}
 }
 
@@ -117,7 +123,7 @@
 .card{
 	h4{
 		@media screen and (max-width: $mobileb){
-			font-size: 18px;
+			font-size: 12px;
 		}
 	}
 }
