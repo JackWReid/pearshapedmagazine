@@ -1,0 +1,89 @@
+@import 'breakpoints';
+
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.row{
+	overflow:hidden;
+}
+
+.columns{
+	float: left;
+	overflow: hidden;
+	margin-left: 5px;
+	padding: 0 0.5em;
+	&:first-child{
+		margin-left: 0;
+	}
+}
+
+.twelve.columns{
+	width:100%;
+}
+
+.ten.columns{
+	width:80.334%;
+}
+
+.nine.columns{
+	width:72.5%;
+}
+
+.eight.columns{
+	width:65%;
+}
+
+.seven.columns{
+	width:55.834%;
+}
+
+.six.columns{
+	width:47.5%;
+}
+
+.five.columns{
+	width:39.167%;
+}
+ 
+.four.columns{
+	width:30%;
+}
+ 
+.three.columns{
+	width:21.25%;
+}
+
+.two.columns{
+	width:14.1556%;
+}
+
+.clearfix{
+	*zoom: 1;
+	&:before, &:after{
+		content:" ";
+		display:table;
+	}
+
+	&:after{
+		clear: both;
+	}
+}
+
+// Tablet Grid Collapse //
+.twelve.columns, .ten.columns, .nine.columns, .eight.columns, .six.columns, .four.columns, .three.columns, .two.columns{
+	@media screen and (max-width: $br-tablet){
+		margin-left: 2px;
+	}
+}
+
+// Mobile Grid Collapse //
+.twelve.columns, .ten.columns, .nine.columns, .eight.columns, .six.columns, .four.columns, .three.columns, .two.columns{
+	@media screen and (max-width: $br-mobile){
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+}

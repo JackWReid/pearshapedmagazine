@@ -1,0 +1,194 @@
+@import 'breakpoints';
+@import 'fonts';
+//							   //
+//     Global/General Use      //
+//							   //
+
+// An all round wrapper for basic pages
+.page-wrapper{
+	max-width: 60em;
+	margin: 2em auto;
+	padding: 1em;
+}
+
+
+
+
+
+
+
+//							   //
+//	        Front Page         //
+//							   //
+
+// Slider on the front page, content preview
+.frontpage-slider{
+	display: block;
+	position: relative;
+	float: left;
+	width: 65%;
+	padding-bottom: 40px;
+}
+
+// Layout for home section
+.home-content{
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+.preview-scroller{
+	display: block;
+	position: relative;
+
+	width: 33%;
+	float: left;
+
+	height: 500px;
+	overflow: scroll;
+
+	padding: 0.5em;
+
+	h2{
+		margin-top: 5px;
+		text-align: center;
+	}
+}
+
+.preview-scroller-item{
+	margin-bottom: 1em;
+}
+
+.preview-scroller-title{
+	@include header;
+	font-size: 2em;
+	padding: auto 20px;
+	border-bottom: 1px solid $grey;
+}
+
+.frontpage-slider, .preview-box{
+	float: left;
+	margin-left: 5px;
+	&:first-child{
+		margin-left: 0;
+	}
+}
+
+
+
+
+
+
+
+//							   //
+//	        Contact Us         //
+//							   //
+
+.contact-card{
+	max-width: 70em;
+	margin: 2em auto;
+
+	padding: 0.5em;
+}
+
+// The next three selectors primarily dictate columns of a grid //
+.contact-meta, .contact-bulk{
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.contact-meta{
+	width: 31%; // Left third
+	img{
+		max-width: 100%;
+	}
+}
+
+.contact-bulk{
+	width: 65%; // Right two thirds
+	padding: 0 0.5em;
+	h2{
+		font-size: 2em;
+		margin: 0 0 0.5em 0;
+	}
+	h3{
+		margin-top: 0;
+	}
+}
+
+// Mobile variation with collapsed columns //
+@media screen and (max-width: $br-mobile){
+	.contact-card img{
+		display: none;
+	}
+	.contact-meta, .contact-bulk{
+		width: 100%;
+		img{
+			display: block;
+			width: 50%; // Smaller image of committee member
+			margin: 0 auto;
+			text-align: center; // Centered image and details
+		}
+	}
+	.contact-title, .contact-incumbent{
+		text-align: center;
+	}
+	.contact-meta{
+		margin-bottom: 10px;
+	}
+	.contact-email{
+		display: none;
+	}
+}
+
+.contact-email{
+	margin-top: -10px;
+	img, p{
+		display: inline-block;
+		vertical-align: top;
+	}
+	img{
+		max-width: 25px;
+	}
+	p{
+		margin: 0 auto;
+		padding-bottom: 10px;
+		text-align: center;
+		font-style: italic;
+	}
+}
+
+.contact-title{
+	width: 100%;
+	border-bottom: 1px $grey solid;
+}
+
+
+
+
+
+
+//							   //
+//	           404             //
+//							   //
+
+.fourohfour{
+	text-align: center;
+	img{
+		width: 30%;
+		margin: 1em auto;
+	}
+	p{
+		@include header;
+		font-size: 1.5em;
+		@media screen and (max-width: $br-mobile){
+			margin: 0;
+		}
+	}
+}
+
+
+
+
+

@@ -1,0 +1,510 @@
+@import 'head'; // Wordpress Theme Information
+@import 'reset'; // CSS Normalise
+@import 'fonts'; // Font imports and basic definitions
+@import 'layout'; // Grid and image layout
+
+// Font family basics //
+body{
+	font-family: $bodyfont;
+	font-size: 14px; // Type baseline
+}
+
+h1, h2, h3, h4, h5, h6, .caption{
+	@include header;
+}
+
+.top-bar,
+.site-title,
+.site-sub-title,
+.category-toggler,
+.cards,
+#searchsubmit{
+	@include title;
+}
+
+
+
+
+//							   //
+// Standard Variables & Mixins //
+//							   //
+
+// Theme Colours //
+$white: #fff;
+$black: #222;
+$green: #498c34;
+$grey: #ddd;
+$charcoal: #363636;
+
+// Standard Border Mixin //
+@mixin faint-border{
+	border-bottom: 1px solid $grey;
+}
+
+
+
+
+//							   //
+//   Standard Type Elements    //
+//							   //
+
+b, strong{
+	font-weight: bold;
+}
+
+i, em{
+	font-style: italic;
+}
+
+p{
+	font-size: 1.1em;
+	line-height: 1.25em;
+}
+
+hr{
+	border: 0;
+	height: 1px;
+	color: $grey;
+	background: $grey;
+}
+
+blockquote{
+	margin: 0;
+	padding: 0em 0em 0em 1em;
+
+	font-size: 1.05em;
+	font-style: italic;
+	color: $charcoal;
+	border-left: 3px $green solid;
+}
+
+// Overriding gross styling //
+.simplePullQuote{
+	border: none !important;
+	background: none !important;
+	box-shadow: none !important;
+	p{
+		text-indent: 0 !important;
+	}
+
+	font-style: italic;
+	font-size: 1.4em;
+	color: $charcoal;
+
+	border-top: 1px $green solid !important;
+	border-bottom: 1px $green solid !important;
+
+	margin: 0 1em !important;
+}
+
+
+
+
+
+
+//							   //
+//	Top Bar Navigation Module  //
+//							   //
+
+.top-bar{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+
+	font-size: 1.2em;
+	background-color: $white;
+	@include faint-border;
+}
+
+// To center all the top bar elements //
+.top-bar-wrap{
+	text-align: center;
+}
+
+// Vertically align all of the top bar elements //
+.nav, #searchform, .social{
+	vertical-align: middle;
+}
+
+.nav{
+	list-style-type: none;
+	margin: 5px 0;
+	padding-left: -40px; // Reset bullet point space
+	display: inline-block;
+
+	li{
+		display: inline-block;
+		margin-right: 0.5em;
+		a:hover{
+			color: $green; // Hovering over nav links makes them go green
+		}
+	}
+}
+
+// PearShaped title in nav bar //
+.top-bar-title{
+	font-size: 1.2em;
+	color: $green;
+}
+
+#searchform{
+	display: inline-block;
+	// The 'Search for' label is redundant //
+	.screen-reader-text{
+		display: none;
+	}
+	// The search input field //
+	#s{
+		width: 7em;
+	}
+	// The search button //
+	#searchsubmit{
+		border-radius: 0;
+	}
+}
+
+.social{
+	display: inline-block;
+	img{
+		max-width: 25px;
+		margin-bottom: -3px; // For some reason the icons are a little high
+	}
+}
+
+// Hiding the search box and social links when they start to overflow //
+@media screen and (max-width: $br-fullwidth){
+	#searchform, .social{
+		display: none;
+	}
+}
+
+/* Switching to non-fixed vertical nav
+@media screen and (max-width: $br-tablet){
+	.top-bar{
+		position: relative;
+	}
+	.nav li{
+		display: block;
+	}
+}*/
+
+
+
+
+
+
+//							   //
+//	     Footer Styling        //
+//							   //
+
+.footer{
+	text-align: center;
+	border-top: 1px solid $grey;
+	margin-bottom: 2em;
+	@media screen and (max-width: $br-mobile){
+		margin: 0;
+	}
+}
+
+
+
+
+
+
+
+//							   //
+//		Front Page Header      //
+//							   //
+
+.site-header{
+	margin-top: 45px; // Offsets from the fixed top bar
+	text-align: center;
+	@include faint-border;
+}
+
+h1.site-title{
+	font-size: 8em;
+	font-weight: 500;
+	line-height: 0.9em;
+	
+	margin: 0 auto;
+	padding: 0;
+
+	width: 7em;
+	border-bottom: 10px solid $green;
+}
+
+.site-sub-title{
+	font-size: 4em;
+}
+
+// Scaling down the header for mobile screens
+@media screen and (max-width: 796px){
+	h1.site-title{
+		font-size: 4em;
+		border-bottom: 5px solid $green;
+	}
+	.site-sub-title{
+		font-size: 2em;
+	}
+}
+
+// Knocking down the header to avoid taller top bar
+.site-header{
+	@media screen and (max-width: $br-top2rows){
+		margin-top: 72px; // When the nav stacks up to 2 rows, the header is nudged down
+	}
+	@media screen and (max-width: $br-top3rows){
+		margin-top: 90px; // When the nav stacks up to 3 rows, the header is nudged down
+	}
+}
+
+
+
+
+
+
+
+//							   //
+//   Section/Category Header   //
+//							   //
+
+.section-header{
+	margin-top: 37px; // Offsets from the fixed top bar
+	border-bottom: 1px solid $grey;
+}
+
+.section-title{
+	@include title;
+	font-size: 5em;
+	font-weight: 500;
+	text-align: center;
+
+	border-top: 10px solid $green;
+	width: 10em;
+	margin: 0 auto;
+
+	// Scaling header for smaller screens //
+	@media screen and (max-width: $br-fullwidth){
+		font-size: 4em;
+	}
+	@media screen and (max-width: $br-fullwidth){
+		font-size: 3.2em;
+	}
+	@media screen and (max-width: $br-mobile){
+		font-size: 3em;
+	}
+}
+
+// Knocking down the header to avoid taller top bar
+.section-header{
+	@media screen and (max-width: $br-top2rows){
+		margin-top: 59px; // When the nav stacks up to 2 rows, the header is nudged down
+	}
+	@media screen and (max-width: $br-top3rows){
+		margin-top: 81px; // When the nav stacks up to 3 rows, the header is nudged down
+	}
+}
+
+
+
+
+
+
+//							   //
+//    Sub-Category Toggler     //
+//							   //
+
+.category-toggler{
+	list-style-type: none;
+	text-align: center;
+	font-size: 2em;
+	margin: 10px;
+	padding-left: 0;
+}
+
+.button, .button-active{
+	padding: 2px 5px;
+	display: inline-block;
+	a:hover{
+		color: $green; // Other categories hover green
+	}
+}
+
+.button-active a{
+	color: $green;
+}
+
+
+
+
+
+
+//							   //
+//   Category Preview Stream   //
+//							   //
+
+.preview-stream{
+	max-width: 70em; // The stream is a centered column
+	margin: 0 auto;
+}
+
+.preview-item{
+	padding: 1em;
+	.columns{
+		padding: 0.2em;
+	}
+	p{
+		font-size: 1.1em;
+	}
+	@media screen and (max-width: $br-mobile){
+		img{
+			display: none;
+	}
+	}
+}
+
+.preview-title{
+	margin-top: 0; // Brings the title up the top of the padding
+	margin-bottom: 10px;
+	width: 100%;
+	border-bottom: 1px $grey solid;
+}
+
+.preview-author{
+	margin: 0;
+	padding: 0;
+}
+
+.preview-content{
+
+	.kicker, h1, h2, h3, h4, h5, h6{
+		font-size: 14px;
+		font-weight: normal;
+		font-style: normal;
+		font-family: georgia;
+	}
+
+	img{
+		display: none;
+	}
+}
+
+.more-link{
+	color: $green;
+}
+
+
+
+
+
+
+
+//							   //
+//  Centered Big Link Section  //
+//							   //
+
+.link-section{
+	padding: 0.5em;
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px $grey solid;
+}
+
+.link-title{
+	@include title;
+	font-size: 2em;
+	a{
+		color: $green;
+		&:hover{
+			color: $black;
+		}
+	}
+}
+
+// Variant that only shows up on mobile //
+.link-section-mobile{
+	@extend .link-section;
+	display: none;
+	@media screen and (max-width: $br-mobile){
+		display: block;
+	}
+}
+
+
+
+
+
+
+
+
+//							   //
+//	   Standard Thumb Grid     //
+//							   //
+
+.thumbnail-grid{
+	text-align: center;
+	h2{
+		text-align: center;
+		font-size: 2em;
+		margin-bottom: 0.2em;
+	}
+}
+
+.thumbnail-card{
+	display: inline-block;
+	width: 23%;
+	vertical-align: top;
+
+	padding: 5px;
+	margin: 6px 3px;
+	border: 1px solid $grey;
+
+	a:hover{
+		color: $green;
+	}
+}
+
+.thumbnail-title{
+	@include header
+}
+
+// Tighter spacing for mobile screens //
+@media screen and (max-width: $br-mobile){
+	.thumbnail-card{
+	width: 22%;
+	margin: 4px 2px;
+	padding: 3px;
+	}
+	.thumbnail-title{
+		display: none; // Post titles look gross when squished up
+	}
+}
+
+
+
+
+
+//							   //
+//  Directory Grid Variation   //
+//							   //
+
+.directory-card{
+	@extend .thumbnail-card;
+	width: 30%;
+	margin: 20px 10px;
+	.thumbnail-title{
+		font-size: 2em;
+	}
+}
+
+.directory-links{
+	margin-top: 0;
+	a:hover{
+		color: $black;
+	}
+}
+
+@import 'pages';
+@import 'posts';

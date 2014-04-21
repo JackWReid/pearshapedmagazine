@@ -1,0 +1,107 @@
+@import 'breakpoints';
+@import 'fonts';
+
+//							   //
+//    Post Header Elements     //
+//							   //
+
+.post-header{
+	display: block;
+	max-width: 45em;
+	margin: 80px auto 15px auto !important;
+	@media screen and (max-width: $br-top2rows){
+		margin-top: 40px;
+	}
+}
+
+.post-title{
+	font-family: 'futura';
+	font-size: 3em;
+	margin-bottom: 5px;
+}
+
+.author{
+	color: $green;
+	font-weight: 900;
+	border-bottom: 1px $grey solid;
+}
+
+.sidebar{
+	margin-top: -3px;
+	padding: 0;
+	max-height: 160px;
+	overflow: scroll;
+	iframe{
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.post-thumbnail{
+	display: block;
+}
+
+
+
+
+
+//							   //
+//         Post Content        //
+//							   //
+
+.post-content{
+	display: block;
+	max-width: 45em;
+
+	margin: 50px auto;
+}
+
+
+
+//							   //
+//      Mobile Breakdowns      //
+//							   //
+
+@media screen and (max-width: 45em){
+	.post-content{
+		margin: 50px 1em;
+	}
+}
+
+
+//							   //
+//        Meta Elements        //
+//							   //
+
+.kicker{
+	@include header;
+	margin-top: 20px;
+	font-size: 1.5em;
+	width: 100%;
+}
+
+.rating{
+	@extend .kicker;
+	margin-bottom: 40px;
+}
+
+.picks{
+	display: block;
+	margin-bottom: 20px;
+}
+
+.picks-title{
+	font-weight: bold;
+}
+
+.related-posts{
+	border-top: 1px $grey solid;
+}
+
+ul.related_post{
+	list-style: none;
+	padding: 0 !important;
+	a{
+		color: $green;
+	}
+}
