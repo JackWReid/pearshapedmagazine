@@ -3,9 +3,9 @@
 	<h1 class="section-title"><?php single_cat_title(); ?></h1>
 	
 	<ul class="category-toggler">
-		<li class="button"><a href="http://localhost:8888/category/reviews">All</a></li>
-		<li class="button"><a href="http://localhost:8888/category/local-reviews">Local</a></li>
-		<li class="button-active"><a href="http://localhost:8888/category/global-reviews">Global</a></li>
+		<li class="button"><a href="http://pearshapedexeter.com/category/reviews">All</a></li>
+		<li class="button"><a href="http://pearshapedexeter.com/category/local-reviews">Local</a></li>
+		<li class="button-active"><a href="http://pearshapedexeter.com/category/global-reviews">Global</a></li>
 	</ul>
 </div>
 

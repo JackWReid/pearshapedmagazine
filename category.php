@@ -21,7 +21,9 @@
 					}
 				?>
 			</h3>
-			<?php the_excerpt(); ?>
+			<div class="preview-content">
+				<?php the_content(); ?>
+			</div>
 		</div>
 		</a>
 	</div>

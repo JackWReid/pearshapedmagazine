@@ -3,9 +3,9 @@
     <h1 class="section-title">Events</h1>
 </div>
 <ul class="category-toggler">
-    <li class="button"><a href="http://localhost:8888/category/listings-2">Listings</a></li>
-    <li class="button-active"><a href="http://localhost:8888/category/event-previews">Upcoming</a></li>
-    <li class="button"><a href="http://localhost:8888/category/event-reviews">Reviews</a></li>
+    <li class="button"><a href="http://pearshapedexeter.com/category/listings">Listings</a></li>
+    <li class="button-active"><a href="http://pearshapedexeter.com/category/event-previews">Upcoming</a></li>
+    <li class="button"><a href="http://pearshapedexeter.com/category/event-reviews">Reviews</a></li>
 </ul>
 <div class="preview-stream">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -25,7 +25,9 @@
                     }
                 ?>
             </h3>
-            <?php the_excerpt(); ?>
+            <div class="preview-content">
+                <?php the_content(); ?>
+            </div>
         </div>
         </a>
     </div>
