@@ -293,6 +293,9 @@ h1.site-title { font-size: 8em; font-weight: 500; line-height: 0.9em; margin: 0 
 .frontpage-slider, .preview-box { float: left; margin-left: 5px; }
 .frontpage-slider:first-child, .preview-box:first-child { margin-left: 0; }
 
+.frontpage-body { max-width: 45em; margin: 25px auto; }
+@media screen and (max-width: 650px) { .frontpage-body { margin: 25px 1em; } }
+
 .contact-card { max-width: 70em; margin: 2em auto; padding: 0.5em; }
 
 .contact-meta, .contact-bulk { display: inline-block; vertical-align: top; overflow: hidden; }

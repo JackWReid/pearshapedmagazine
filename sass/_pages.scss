@@ -74,6 +74,14 @@
 	}
 }
 
+.frontpage-body{
+	max-width: 45em;
+	margin: 25px auto;
+	@media screen and (max-width: $br-mobile){
+		margin: 25px 1em;
+	}
+}
+
 
 
 
