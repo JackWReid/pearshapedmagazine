@@ -281,7 +281,7 @@ h1.site-title { font-size: 8em; font-weight: 500; line-height: 0.9em; margin: 0 
 
 .frontpage-slider { display: block; position: relative; float: left; width: 66.6%; padding-bottom: 40px; }
 
-.home-content { display: block; position: relative; overflow: hidden; }
+.home-content { display: block; position: relative; overflow: hidden; border-bottom: 1px solid #dddddd; padding-bottom: 20px; }
 
 .preview-scroller { display: block; position: relative; width: 33.3%; float: left; height: 466px; overflow: scroll; padding: 0.5em; }
 .preview-scroller h2 { margin-top: 5px; text-align: center; }
