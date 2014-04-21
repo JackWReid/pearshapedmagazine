@@ -279,16 +279,16 @@ h1.site-title { font-size: 8em; font-weight: 500; line-height: 0.9em; margin: 0 
 @font-face { font-family: 'aleo'; src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/rDin0zqbx/aleo-bold-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/s9Mn0zqc9/aleo-bold-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/yfTn0zqcq/aleo-bold-webfont.svgg#aleo") format("svg"); font-weight: bold; font-style: normal; }
 .page-wrapper { max-width: 60em; margin: 2em auto; padding: 1em; }
 
-.frontpage-slider { display: block; position: relative; float: left; width: 65%; padding-bottom: 40px; }
+.frontpage-slider { display: block; position: relative; float: left; width: 66.6%; padding-bottom: 40px; }
 
 .home-content { display: block; position: relative; overflow: hidden; }
 
-.preview-scroller { display: block; position: relative; width: 33%; float: left; height: 500px; overflow: scroll; padding: 0.5em; }
+.preview-scroller { display: block; position: relative; width: 33.3%; float: left; height: 466px; overflow: scroll; padding: 0.5em; }
 .preview-scroller h2 { margin-top: 5px; text-align: center; }
 
 .preview-scroller-item { margin-bottom: 1em; }
 
-.preview-scroller-title { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; font-size: 2em; padding: auto 20px; border-bottom: 1px solid #dddddd; }
+.preview-scroller-title { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; font-size: 1.3em; padding: auto 20px; border-bottom: 1px solid #dddddd; }
 
 .frontpage-slider, .preview-box { float: left; margin-left: 5px; }
 .frontpage-slider:first-child, .preview-box:first-child { margin-left: 0; }

@@ -13,7 +13,7 @@
 	<div class="preview-scroller">
 		<h2>Recent Posts</h2>
 		<?php $cat_slug = '';
-		$latest_cat_post = new WP_Query( array('posts_per_page' => 16, 'category_name' => $cat_slug));
+		$latest_cat_post = new WP_Query( array('posts_per_page' => 24, 'category_name' => $cat_slug));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 		
 		<div class="preview-scroller-item">
