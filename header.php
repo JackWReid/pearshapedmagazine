@@ -16,7 +16,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php bloginfo( 'name' ); ?> <?php wp_title(); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
+
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
+
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
@@ -25,7 +27,7 @@
 <body>
 
 <div class="site-header">
-    <h1 class="site-title"><a href="<?php site_url(); ?>">PearShaped</a></h1>
+    <h1 class="site-title"><a href="<?php echo home_url(); ?>">PearShaped</a></h1>
 </div>
 
 <div class="top-bar">

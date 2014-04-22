@@ -173,9 +173,11 @@ blockquote { margin: 0; padding: 0em 0em 0em 1em; font-size: 1.05em; font-style:
 .simplePullQuote { border: none !important; background: none !important; box-shadow: none !important; font-style: italic; font-size: 1.4em; color: #363636; border-top: 1px #498c34 solid !important; border-bottom: 1px #498c34 solid !important; margin: 0 1em !important; }
 .simplePullQuote p { text-indent: 0 !important; }
 
-.top-bar { position: relative; width: 100%; z-index: 3; font-size: 1.2em; background-color: white; border-bottom: 1px solid #dddddd; margin-bottom: 25px; }
+.top-bar { position: relative; width: 100%; z-index: 3; position: -webkit-sticky; top: 0; font-size: 1.2em; background-color: white; border-bottom: 1px solid #dddddd; margin-bottom: 25px; }
 
 .top-bar-wrap { text-align: center; }
+
+.sticky { position: fixed; }
 
 .nav, #searchform, .social { vertical-align: middle; }
 
@@ -194,15 +196,6 @@ blockquote { margin: 0; padding: 0em 0em 0em 1em; font-size: 1.05em; font-style:
 .social img { max-width: 25px; margin-bottom: -3px; }
 
 @media screen and (max-width: 1200px) { #searchform, .social { display: none; } }
-/* Switching to non-fixed vertical nav
-@media screen and (max-width: $br-tablet){
-	.top-bar{
-		position: relative;
-	}
-	.nav li{
-		display: block;
-	}
-}*/
 .footer { text-align: center; border-top: 1px solid #dddddd; margin-bottom: 2em; }
 @media screen and (max-width: 650px) { .footer { margin: 0; } }
 

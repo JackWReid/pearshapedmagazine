@@ -111,6 +111,10 @@ blockquote{
 	width: 100%;
 	z-index: 3;
 
+	// Non-implemented sticky property
+	position: -webkit-sticky;
+	top: 0;
+
 	font-size: 1.2em;
 	background-color: $white;
 	@include faint-border;
@@ -121,6 +125,11 @@ blockquote{
 // To center all the top bar elements //
 .top-bar-wrap{
 	text-align: center;
+}
+
+// For jQuery sticky polyfill
+.sticky{  
+	position: fixed;
 }
 
 // Vertically align all of the top bar elements //
@@ -179,16 +188,6 @@ blockquote{
 		display: none;
 	}
 }
-
-/* Switching to non-fixed vertical nav
-@media screen and (max-width: $br-tablet){
-	.top-bar{
-		position: relative;
-	}
-	.nav li{
-		display: block;
-	}
-}*/
 
 
 
