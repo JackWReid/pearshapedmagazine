@@ -41,6 +41,9 @@
 	position: relative;
 	max-width: 850px;
 	padding-bottom: 40px;
+	ul li:first-child{
+		margin-left: -350px;
+	}
 }
 
 .caption{
@@ -62,12 +65,13 @@
 	max-width: 300px;
 	float: left;
 
-	height: 466px;
+	height: 468px;
 	overflow: scroll;
 
 	h2{
 		margin-top: 0px;
 		text-align: center;
+		color: $green;
 	}
 }
 

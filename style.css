@@ -273,13 +273,14 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 .home-content { display: block; position: relative; overflow: hidden; border-bottom: 1px solid #dddddd; padding-bottom: 20px; max-width: 1160px; margin: 0 auto; }
 
 .frontpage-slider { display: inline-block; float: left; position: relative; max-width: 850px; padding-bottom: 40px; }
+.frontpage-slider ul li:first-child { margin-left: -350px; }
 
 .caption { font-size: 16px; padding: 10px !important; }
 
 .caption-wrap { opacity: 1 !important; }
 
-.preview-scroller { display: inline-block; position: relative; margin-left: 10px; padding: 0 5px; max-width: 300px; float: left; height: 466px; overflow: scroll; }
-.preview-scroller h2 { margin-top: 0px; text-align: center; }
+.preview-scroller { display: inline-block; position: relative; margin-left: 10px; padding: 0 5px; max-width: 300px; float: left; height: 468px; overflow: scroll; }
+.preview-scroller h2 { margin-top: 0px; text-align: center; color: #498c34; }
 
 .preview-scroller-item { margin-bottom: 30px; text-align: center; }
 .preview-scroller-item img { max-width: 220px; }
