@@ -242,7 +242,6 @@ h1.site-title{
 @media screen and (max-width: 796px){
 	h1.site-title{
 		font-size: 4em;
-		border-bottom: 5px solid $green;
 	}
 	.site-sub-title{
 		font-size: 2em;
@@ -453,9 +452,7 @@ h1.site-title{
 // Tighter spacing for mobile screens //
 @media screen and (max-width: $br-mobile){
 	.thumbnail-card{
-	width: 22%;
-	margin: 4px 2px;
-	padding: 3px;
+	width: 48%;
 	}
 	.thumbnail-title{
 		display: none; // Post titles look gross when squished up

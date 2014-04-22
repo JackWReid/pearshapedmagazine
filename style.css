@@ -205,7 +205,7 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; margin: 0 
 
 .site-sub-title { font-size: 4em; }
 
-@media screen and (max-width: 796px) { h1.site-title { font-size: 4em; border-bottom: 5px solid #498c34; }
+@media screen and (max-width: 796px) { h1.site-title { font-size: 4em; }
   .site-sub-title { font-size: 2em; } }
 .section-header { margin-top: -15px; border-bottom: 1px solid #dddddd; }
 
@@ -254,7 +254,7 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; margin: 0 
 
 .thumbnail-title { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; }
 
-@media screen and (max-width: 650px) { .thumbnail-card, .directory-card { width: 22%; margin: 4px 2px; padding: 3px; }
+@media screen and (max-width: 650px) { .thumbnail-card, .directory-card { width: 48%; }
   .thumbnail-title { display: none; } }
 .directory-card { width: 30%; margin: 20px 10px; }
 .directory-card .thumbnail-title { font-size: 2em; }
