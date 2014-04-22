@@ -358,11 +358,12 @@ h1.site-title{
 
 .preview-content{
 
-	.kicker, h1, h2, h3, h4, h5, h6{
-		font-size: 14px;
-		font-weight: normal;
+	.kicker, h1, h2, h3, h4, h5, h6, strong{
+		font-size: 15.4px;
+		font-weight: 400 !important;
 		font-style: normal;
 		font-family: georgia;
+		line-height: 1.25em;
 	}
 
 	img{

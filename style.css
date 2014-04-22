@@ -232,7 +232,7 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; margin: 0 
 
 .preview-author { margin: 0; padding: 0; }
 
-.preview-content .kicker, .preview-content .rating, .preview-content h1, .preview-content h2, .preview-content h3, .preview-content h4, .preview-content h5, .preview-content h6 { font-size: 14px; font-weight: normal; font-style: normal; font-family: georgia; }
+.preview-content .kicker, .preview-content .rating, .preview-content h1, .preview-content h2, .preview-content h3, .preview-content h4, .preview-content h5, .preview-content h6, .preview-content strong { font-size: 15.4px; font-weight: 400 !important; font-style: normal; font-family: georgia; line-height: 1.25em; }
 .preview-content img { display: none; }
 
 .more-link { color: #498c34; }
