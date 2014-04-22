@@ -8,10 +8,6 @@
 .post-header{
 	display: block;
 	max-width: 45em;
-	margin: 80px auto 15px auto !important;
-	@media screen and (max-width: $br-top2rows){
-		margin-top: 40px;
-	}
 }
 
 .post-title{
@@ -53,7 +49,7 @@
 	display: block;
 	max-width: 45em;
 
-	margin: 50px auto;
+	margin: 60px auto;
 }
 
 
@@ -64,7 +60,13 @@
 
 @media screen and (max-width: 45em){
 	.post-content{
-		margin: 50px 1em;
+		margin: 70px 1em 40px 1em;
+	}
+}
+
+@media screen and (max-width: $br-top3rows){
+	h1.post-title{
+		margin-top: 20px;
 	}
 }
 
