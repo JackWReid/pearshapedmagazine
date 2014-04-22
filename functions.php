@@ -1,11 +1,9 @@
 <?php add_theme_support( 'post-thumbnails' ); ?>
-
 <?php add_action( 'wp_enqueue_script', 'load_jquery' );
 	function load_jquery() {
 	wp_enqueue_script( 'jquery' );
 	}
 ?>
-
 <?php function add_my_script() {
 	wp_enqueue_script(
 	    'sticky-top-bar', // name your script so that you can attach other scripts and de-register, etc.
@@ -14,5 +12,4 @@
 	);
 	}
 ?>
-
 <?php add_action( 'wp_enqueue_scripts', 'add_my_script' ); ?>
