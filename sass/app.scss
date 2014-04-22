@@ -118,6 +118,7 @@ blockquote{
 	font-size: 1.2em;
 	background-color: $white;
 	@include faint-border;
+	border-top: 5px solid $green;
 
 	margin-bottom: 25px;
 }
@@ -231,7 +232,6 @@ h1.site-title{
 	padding: 15px 0;
 
 	width: auto;
-	border-bottom: 5px solid $green;
 }
 
 .site-sub-title{
@@ -265,13 +265,13 @@ h1.site-title{
 }
 
 .section-title{
-	@include title;
-	font-size: 5em;
-	font-weight: 500;
+	font-family: Georgia;
+	font-size: 4em;
+	font-weight: bold;
+	font-style: italic;
 	text-align: center;
+	color: $green;
 
-	//border-top: 10px solid $green; Conflicts with persistent main header
-	width: 10em;
 	margin: 0 auto;
 
 	// Scaling header for smaller screens //
