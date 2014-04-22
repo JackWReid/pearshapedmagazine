@@ -107,14 +107,15 @@ blockquote{
 //							   //
 
 .top-bar{
-	position: fixed;
-	top: 0;
+	position: relative;
 	width: 100%;
 	z-index: 3;
 
 	font-size: 1.2em;
 	background-color: $white;
 	@include faint-border;
+
+	margin-bottom: 25px;
 }
 
 // To center all the top bar elements //
@@ -218,21 +219,20 @@ blockquote{
 //							   //
 
 .site-header{
-	margin-top: 45px; // Offsets from the fixed top bar
 	text-align: center;
 	@include faint-border;
 }
 
 h1.site-title{
-	font-size: 8em;
+	font-size: 6em;
 	font-weight: 500;
 	line-height: 0.9em;
 	
 	margin: 0 auto;
-	padding: 0;
+	padding: 15px 0;
 
-	width: 7em;
-	border-bottom: 10px solid $green;
+	width: auto;
+	border-bottom: 5px solid $green;
 }
 
 .site-sub-title{
@@ -250,16 +250,6 @@ h1.site-title{
 	}
 }
 
-// Knocking down the header to avoid taller top bar
-.site-header{
-	@media screen and (max-width: $br-top2rows){
-		margin-top: 72px; // When the nav stacks up to 2 rows, the header is nudged down
-	}
-	@media screen and (max-width: $br-top3rows){
-		margin-top: 90px; // When the nav stacks up to 3 rows, the header is nudged down
-	}
-}
-
 
 
 
@@ -271,7 +261,7 @@ h1.site-title{
 //							   //
 
 .section-header{
-	margin-top: 37px; // Offsets from the fixed top bar
+	margin-top: -15px; // Compensating for top-bar margin from front-page +10px
 	border-bottom: 1px solid $grey;
 }
 
@@ -281,7 +271,7 @@ h1.site-title{
 	font-weight: 500;
 	text-align: center;
 
-	border-top: 10px solid $green;
+	//border-top: 10px solid $green; Conflicts with persistent main header
 	width: 10em;
 	margin: 0 auto;
 
@@ -294,16 +284,6 @@ h1.site-title{
 	}
 	@media screen and (max-width: $br-mobile){
 		font-size: 3em;
-	}
-}
-
-// Knocking down the header to avoid taller top bar
-.section-header{
-	@media screen and (max-width: $br-top2rows){
-		margin-top: 59px; // When the nav stacks up to 2 rows, the header is nudged down
-	}
-	@media screen and (max-width: $br-top3rows){
-		margin-top: 81px; // When the nav stacks up to 3 rows, the header is nudged down
 	}
 }
 

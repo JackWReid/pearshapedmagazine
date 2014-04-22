@@ -173,7 +173,7 @@ blockquote { margin: 0; padding: 0em 0em 0em 1em; font-size: 1.05em; font-style:
 .simplePullQuote { border: none !important; background: none !important; box-shadow: none !important; font-style: italic; font-size: 1.4em; color: #363636; border-top: 1px #498c34 solid !important; border-bottom: 1px #498c34 solid !important; margin: 0 1em !important; }
 .simplePullQuote p { text-indent: 0 !important; }
 
-.top-bar { position: fixed; top: 0; width: 100%; z-index: 3; font-size: 1.2em; background-color: white; border-bottom: 1px solid #dddddd; }
+.top-bar { position: relative; width: 100%; z-index: 3; font-size: 1.2em; background-color: white; border-bottom: 1px solid #dddddd; margin-bottom: 25px; }
 
 .top-bar-wrap { text-align: center; }
 
@@ -206,26 +206,20 @@ blockquote { margin: 0; padding: 0em 0em 0em 1em; font-size: 1.05em; font-style:
 .footer { text-align: center; border-top: 1px solid #dddddd; margin-bottom: 2em; }
 @media screen and (max-width: 650px) { .footer { margin: 0; } }
 
-.site-header { margin-top: 45px; text-align: center; border-bottom: 1px solid #dddddd; }
+.site-header { text-align: center; border-bottom: 1px solid #dddddd; }
 
-h1.site-title { font-size: 8em; font-weight: 500; line-height: 0.9em; margin: 0 auto; padding: 0; width: 7em; border-bottom: 10px solid #498c34; }
+h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; margin: 0 auto; padding: 15px 0; width: auto; border-bottom: 5px solid #498c34; }
 
 .site-sub-title { font-size: 4em; }
 
 @media screen and (max-width: 796px) { h1.site-title { font-size: 4em; border-bottom: 5px solid #498c34; }
   .site-sub-title { font-size: 2em; } }
-@media screen and (max-width: 873px) { .site-header { margin-top: 72px; } }
-@media screen and (max-width: 500px) { .site-header { margin-top: 90px; } }
+.section-header { margin-top: -15px; border-bottom: 1px solid #dddddd; }
 
-.section-header { margin-top: 37px; border-bottom: 1px solid #dddddd; }
-
-.section-title { font-family: "futura", "helvetica", arial, sans-serif; text-transform: uppercase; font-weight: 500; font-size: 5em; font-weight: 500; text-align: center; border-top: 10px solid #498c34; width: 10em; margin: 0 auto; }
+.section-title { font-family: "futura", "helvetica", arial, sans-serif; text-transform: uppercase; font-weight: 500; font-size: 5em; font-weight: 500; text-align: center; width: 10em; margin: 0 auto; }
 @media screen and (max-width: 1200px) { .section-title { font-size: 4em; } }
 @media screen and (max-width: 1200px) { .section-title { font-size: 3.2em; } }
 @media screen and (max-width: 650px) { .section-title { font-size: 3em; } }
-
-@media screen and (max-width: 873px) { .section-header { margin-top: 59px; } }
-@media screen and (max-width: 500px) { .section-header { margin-top: 81px; } }
 
 .category-toggler { list-style-type: none; text-align: center; font-size: 2em; margin: 10px; padding-left: 0; }
 

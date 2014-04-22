@@ -21,37 +21,17 @@
     <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
     <link rel="alternate" type="application/rss+xml" title="PearShaped Exeter" href="<?php bloginfo('rss2_url'); ?>">
-    <style>
-        /* This needs to be assimilated into the scss structure and into minified CSS */
-        @media screen and (max-width: 650px){
-            .top-bar{
-                position: relative;
-                margin-bottom: 0;
-            }
-            /* Overriding app.scss */
-            .site-header, .section-header{
-                margin-top: 0;
-            }
-            h1.site-title{
-                font-size: 3em;
-            }
-            .section-title{
-                width: auto;
-            }
-            .post-header{
-                top: 0;
-            }
-            .post-content{
-                margin-top: 10px;
-            }
-        }
-    </style>
 </head>
 <body>
+
+<div class="site-header">
+    <h1 class="site-title"><a href="<?php site_url(); ?>">PearShaped</a></h1>
+</div>
+
 <div class="top-bar">
     <div class="top-bar-wrap">
         <ul class="nav">
-            <li class="top-bar-title"><a href="http://pearshapedexeter.com">PearShaped</a></li>
+            <!--<li class="top-bar-title"><a href="http://pearshapedexeter.com">PearShaped</a></li>-->
             <li><a href="http://pearshapedexeter.com/category/listings">Events</a></li>
             <li><a href="http://pearshapedexeter.com/category/reviews/">Reviews</a></li>
             <li><a href="http://pearshapedexeter.com/category/features/">Features</a></li>

@@ -1,8 +1,4 @@
 <?php get_header(); ?>
-<div class="site-header">
-	<h1 class="site-title"><a href="<?php site_url(); ?>">PearShaped</a></h1>
-	<span class="site-sub-title">Online Music Magazine</span>
-</div>
 
 <div class="home-content">
 
@@ -25,11 +21,6 @@
 	</div>
 
 </div>
-<!--
-<div class="link-section">
-	<span class="link-title"><a href="http://pearshapedexeter.com/about-us">About PearShaped</a></span>
-</div>
--->
 <div class="frontpage-body">
 	<h1>About PearShaped</h2>
 	<div class="kicker">PearShaped is an online music magazine run by students at the University of Exeter. Established to bring the city's music scene closer together, PearShaped is dedicated to keeping the student body informed of what's happening in the city.</div>
