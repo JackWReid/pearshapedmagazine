@@ -244,10 +244,10 @@ h1.site-title{
 }
 
 .social{
-	display: block;
-	text-align: right;
+	display: inline-block;
+	text-align: left;
 	margin-top: -30px;
-	margin-right: 10px;
+	margin-left: 10px;
 	img{
 		max-width: 25px;
 	}
@@ -430,8 +430,14 @@ h1.site-title{
 //	   Standard Thumb Grid     //
 //							   //
 
+// Keeps those pesky month headers in line
+.thumbnail-grid-wrapper{
+	max-width: 1204px;
+	margin: 0 auto;
+}
+
 .thumbnail-grid{
-	text-align: center;
+	text-align: left;
 	h2{
 		text-align: center;
 		font-size: 2em;

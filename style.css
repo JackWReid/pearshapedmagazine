@@ -247,7 +247,9 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 .link-section-mobile { display: none; }
 @media screen and (max-width: 650px) { .link-section-mobile { display: block; } }
 
-.thumbnail-grid { text-align: center; }
+.thumbnail-grid-wrapper { max-width: 1204px; margin: 0 auto; }
+
+.thumbnail-grid { text-align: left; }
 .thumbnail-grid h2 { text-align: center; font-size: 2em; margin-bottom: 0.2em; }
 
 .thumbnail-card, .directory-card { display: inline-block; width: 23%; vertical-align: top; padding: 5px; margin: 6px 3px; border: 1px solid #dddddd; }
@@ -267,7 +269,7 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 @font-face { font-family: 'aleo'; src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/rDin0zqbx/aleo-bold-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/s9Mn0zqc9/aleo-bold-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/yfTn0zqcq/aleo-bold-webfont.svgg#aleo") format("svg"); font-weight: bold; font-style: normal; }
 .page-wrapper { max-width: 60em; margin: 2em auto; padding: 1em; }
 
-.home-content { display: block; position: relative; overflow: hidden; border-bottom: 1px solid #dddddd; padding-bottom: 20px; max-width: 1150px; margin: 0 auto; }
+.home-content { display: block; position: relative; overflow: hidden; border-bottom: 1px solid #dddddd; padding-bottom: 20px; max-width: 1160px; margin: 0 auto; }
 
 .frontpage-slider { display: inline-block; float: left; position: relative; max-width: 850px; padding-bottom: 40px; }
 
@@ -275,13 +277,13 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 
 .caption-wrap { opacity: 1 !important; }
 
-.preview-scroller { display: inline-block; position: relative; padding: 0 5px; max-width: 300px; float: left; height: 466px; overflow: scroll; }
+.preview-scroller { display: inline-block; position: relative; margin-left: 10px; padding: 0 5px; max-width: 300px; float: left; height: 466px; overflow: scroll; }
 .preview-scroller h2 { margin-top: 0px; text-align: center; }
 
 .preview-scroller-item { margin-bottom: 30px; text-align: center; }
 .preview-scroller-item img { max-width: 220px; }
 
-.preview-scroller-title { font-family: georgia; font-size: 1.3em; font-weight: bold; font-style: italic; padding: auto 20px; }
+.preview-scroller-title { font-family: georgia; font-size: 1em; font-weight: bold; font-style: italic; opacity: 0.8em; padding: auto 20px; }
 
 .frontpage-body { max-width: 45em; margin: 25px auto; }
 @media screen and (max-width: 650px) { .frontpage-body { margin: 25px 1em; } }

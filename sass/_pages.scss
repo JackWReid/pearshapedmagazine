@@ -30,7 +30,7 @@
 	border-bottom: 1px solid $grey;
 	padding-bottom: 20px;
 
-	max-width: 1150px;
+	max-width: 1160px;
 	margin: 0 auto;
 }
 
@@ -56,6 +56,7 @@
 .preview-scroller{
 	display: inline-block;
 	position: relative;
+	margin-left: 10px;
 	padding: 0 5px;
 
 	max-width: 300px;
@@ -80,9 +81,11 @@
 
 .preview-scroller-title{
 	font-family: georgia;
-	font-size: 1.3em;
+	font-size: 1em;
 	font-weight: bold;
 	font-style: italic;
+
+	opacity: 0.8em;
 
 	padding: auto 20px;
 }

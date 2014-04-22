@@ -9,15 +9,20 @@
 	</ul>
 </div>
 
+<div class="thumbnail-grid-wrapper">
+<?php foreach(posts_by_month_local_reviews() as $month => $posts) : ?>
+  <h2><?php echo $month; ?></h2>
+	
+	<div class="thumbnail-grid">
+	    <?php foreach($posts as $post) : setup_postdata($post); ?>
+	      <div class="thumbnail-card">
+	        <a href="<?php the_permalink(); ?>">
+	        <?php the_post_thumbnail() ?>
+	        </a>
+	      </div>
+	    <?php endforeach; ?>
+	</div>
+<?php endforeach; ?>
 </div>
-<div class="thumbnail-grid">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<div class="thumbnail-card">
-			<a href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail() ?>
-		</div>
-	<?php endwhile; else: ?>
-	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-<?php endif; ?>
-</div>
+
 <?php get_footer(); ?>
