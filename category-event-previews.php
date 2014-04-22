@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <div class="section-header">
     <h1 class="section-title">Events</h1>
+    <ul class="category-toggler">
+        <li class="button"><a href="http://pearshapedexeter.com/category/listings">Listings</a></li>
+        <li class="button-active"><a href="http://pearshapedexeter.com/category/event-previews">Upcoming</a></li>
+        <li class="button"><a href="http://pearshapedexeter.com/category/event-reviews">Reviews</a></li>
+    </ul>
 </div>
-<ul class="category-toggler">
-    <li class="button"><a href="http://pearshapedexeter.com/category/listings">Listings</a></li>
-    <li class="button-active"><a href="http://pearshapedexeter.com/category/event-previews">Upcoming</a></li>
-    <li class="button"><a href="http://pearshapedexeter.com/category/event-reviews">Reviews</a></li>
-</ul>
 <div class="preview-stream">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <a href="<?php the_permalink(); ?>">
