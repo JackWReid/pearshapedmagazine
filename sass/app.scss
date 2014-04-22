@@ -177,14 +177,6 @@ blockquote{
 	}
 }
 
-.social{
-	display: inline-block;
-	img{
-		max-width: 25px;
-		margin-bottom: -3px; // For some reason the icons are a little high
-	}
-}
-
 // Hiding the search box and social links when they start to overflow //
 @media screen and (max-width: $br-fullwidth){
 	#searchform, .social{
@@ -221,7 +213,7 @@ blockquote{
 //							   //
 
 .site-header{
-	text-align: center;
+	text-align: right;
 	@include faint-border;
 }
 
@@ -229,6 +221,7 @@ h1.site-title{
 	font-size: 6em;
 	font-weight: 500;
 	line-height: 0.9em;
+	text-align: center;
 	
 	margin: 0 auto;
 	padding: 15px 0;
@@ -247,6 +240,19 @@ h1.site-title{
 	}
 	.site-sub-title{
 		font-size: 2em;
+	}
+}
+
+.social{
+	display: block;
+	text-align: right;
+	margin-top: -30px;
+	margin-right: 10px;
+	img{
+		max-width: 25px;
+	}
+	@media screen and (max-width: $br-fullwidth){
+		display: none;
 	}
 }
 

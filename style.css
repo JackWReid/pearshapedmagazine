@@ -192,21 +192,22 @@ blockquote { margin: 0; padding: 0em 0em 0em 1em; font-size: 1.05em; font-style:
 #searchform #s { width: 7em; }
 #searchform #searchsubmit { border-radius: 0; }
 
-.social { display: inline-block; }
-.social img { max-width: 25px; margin-bottom: -3px; }
-
 @media screen and (max-width: 1200px) { #searchform, .social { display: none; } }
 .footer { text-align: center; border-top: 1px solid #dddddd; margin-bottom: 2em; }
 @media screen and (max-width: 650px) { .footer { margin: 0; } }
 
-.site-header { text-align: center; border-bottom: 1px solid #dddddd; }
+.site-header { text-align: right; border-bottom: 1px solid #dddddd; }
 
-h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; margin: 0 auto; padding: 15px 0; width: auto; }
+h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align: center; margin: 0 auto; padding: 15px 0; width: auto; }
 
 .site-sub-title { font-size: 4em; }
 
 @media screen and (max-width: 796px) { h1.site-title { font-size: 4em; }
   .site-sub-title { font-size: 2em; } }
+.social { display: block; text-align: right; margin-top: -30px; margin-right: 10px; }
+.social img { max-width: 25px; }
+@media screen and (max-width: 1200px) { .social { display: none; } }
+
 .section-header { margin-top: -15px; border-bottom: 1px solid #dddddd; }
 
 .section-title { font-family: Georgia; font-size: 4em; font-weight: bold; font-style: italic; text-align: center; color: #498c34; margin: 0 auto; }
