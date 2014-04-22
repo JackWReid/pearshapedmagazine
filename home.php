@@ -14,6 +14,7 @@
 		
 		<div class="preview-scroller-item">
 			<a href="<?php the_permalink(); ?>">
+			<?php the_post_thumbnail() ?>
 			<div class="preview-scroller-title"><?php the_title(); ?></div>
 			</a>
 		</div>

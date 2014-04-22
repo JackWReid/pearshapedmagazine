@@ -21,15 +21,6 @@
 //	        Front Page         //
 //							   //
 
-// Slider on the front page, content preview
-.frontpage-slider{
-	display: block;
-	position: relative;
-	float: left;
-	width: 66.6%;
-	padding-bottom: 40px;
-}
-
 // Layout for home section
 .home-content{
 	display: block;
@@ -38,43 +29,62 @@
 
 	border-bottom: 1px solid $grey;
 	padding-bottom: 20px;
+
+	max-width: 1150px;
+	margin: 0 auto;
 }
 
-.preview-scroller{
-	display: block;
+// The carousel on the home page
+.frontpage-slider{
+	display: inline-block;
+	float: left;
 	position: relative;
+	max-width: 850px;
+	padding-bottom: 40px;
+}
 
-	width: 33.3%;
+.caption{
+	font-size: 16px;
+	padding: 10px !important;
+}
+
+.caption-wrap{
+	opacity: 1 !important;
+}
+
+// Recent posts side scroller
+.preview-scroller{
+	display: inline-block;
+	position: relative;
+	padding: 0 5px;
+
+	max-width: 300px;
 	float: left;
 
 	height: 466px;
 	overflow: scroll;
 
-	padding: 0.5em;
-
 	h2{
-		margin-top: 5px;
+		margin-top: 0px;
 		text-align: center;
 	}
 }
 
 .preview-scroller-item{
-	margin-bottom: 1em;
+	margin-bottom: 30px;
+	text-align: center;
+	img{
+		max-width: 220px;
+	}
 }
 
 .preview-scroller-title{
-	@include header;
+	font-family: georgia;
 	font-size: 1.3em;
-	padding: auto 20px;
-	border-bottom: 1px solid $grey;
-}
+	font-weight: bold;
+	font-style: italic;
 
-.frontpage-slider, .preview-box{
-	float: left;
-	margin-left: 5px;
-	&:first-child{
-		margin-left: 0;
-	}
+	padding: auto 20px;
 }
 
 .frontpage-body{

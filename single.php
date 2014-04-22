@@ -41,6 +41,16 @@ get_header(); ?>
 
 		<?php the_content(); ?>
 
+		<div class="fans-of">
+		<?php 
+		    $fansof = get_post_meta($post->ID, 'fansof', true); 
+
+			if ($fansof) {
+			    echo "<span class='fans-of-title'>Recommended for fans of: </span>" . $fansof;
+			}
+		?>
+		</div>
+
 		<div class="picks">
 		<?php 
 		    $picks = get_post_meta($post->ID, 'Picks', true); 
