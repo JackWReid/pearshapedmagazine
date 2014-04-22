@@ -203,12 +203,13 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 .social img { max-width: 25px; }
 @media screen and (max-width: 1200px) { .social { display: none; } }
 
-#searchform { display: block; }
+#searchform { display: block; margin-right: 10px; margin-top: -30px; padding-bottom: 10px; }
 #searchform .screen-reader-text { display: none; }
 #searchform #s { width: 7em; }
 #searchform #searchsubmit { border-radius: 0; }
+@media screen and (max-width: 1200px) { #searchform { display: none; } }
 
-.section-header { margin-top: -15px; border-bottom: 1px solid #dddddd; }
+.section-header { margin-bottom: 20px; }
 
 .section-title { font-family: Georgia; font-size: 4em; font-weight: bold; font-style: italic; text-align: center; color: #498c34; margin: 0 auto; }
 @media screen and (max-width: 1200px) { .section-title { font-size: 4em; } }
@@ -248,9 +249,9 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 @media screen and (max-width: 650px) { .link-section-mobile { display: block; } }
 
 .thumbnail-grid-wrapper { max-width: 1204px; margin: 0 auto; }
+.thumbnail-grid-wrapper h2 { margin-bottom: 5px; }
 
 .thumbnail-grid { text-align: left; }
-.thumbnail-grid h2 { text-align: center; font-size: 2em; margin-bottom: 0.2em; }
 
 .thumbnail-card, .directory-card { display: inline-block; width: 23%; vertical-align: top; padding: 5px; margin: 6px 3px; border: 1px solid #dddddd; }
 .thumbnail-card a:hover, .directory-card a:hover { color: #498c34; }

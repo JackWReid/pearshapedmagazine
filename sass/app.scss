@@ -241,6 +241,9 @@ h1.site-title{
 
 #searchform{
 	display: block;
+	margin-right: 10px;
+	margin-top: -30px;
+	padding-bottom: 10px;
 	.screen-reader-text{
 		display: none;
 	}
@@ -251,6 +254,9 @@ h1.site-title{
 	// The search button //
 	#searchsubmit{
 		border-radius: 0;
+	}
+	@media screen and (max-width: $br-fullwidth){
+		display: none;
 	}
 }
 
@@ -265,8 +271,8 @@ h1.site-title{
 //							   //
 
 .section-header{
-	margin-top: -15px; // Compensating for top-bar margin from front-page +10px
-	border-bottom: 1px solid $grey;
+	// margin-top: -15px; // Compensating for top-bar margin from front-page +10px
+	margin-bottom: 20px;
 }
 
 .section-title{
@@ -432,15 +438,13 @@ h1.site-title{
 .thumbnail-grid-wrapper{
 	max-width: 1204px;
 	margin: 0 auto;
+	h2{
+		margin-bottom: 5px;
+	}
 }
 
 .thumbnail-grid{
 	text-align: left;
-	h2{
-		text-align: center;
-		font-size: 2em;
-		margin-bottom: 0.2em;
-	}
 }
 
 .thumbnail-card{
