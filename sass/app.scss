@@ -161,22 +161,6 @@ blockquote{
 	color: $green;
 }
 
-#searchform{
-	display: inline-block;
-	// The 'Search for' label is redundant //
-	.screen-reader-text{
-		display: none;
-	}
-	// The search input field //
-	#s{
-		width: 7em;
-	}
-	// The search button //
-	#searchsubmit{
-		border-radius: 0;
-	}
-}
-
 // Hiding the search box and social links when they start to overflow //
 @media screen and (max-width: $br-fullwidth){
 	#searchform, .social{
@@ -244,8 +228,7 @@ h1.site-title{
 }
 
 .social{
-	display: inline-block;
-	text-align: left;
+	display: block;
 	margin-top: -30px;
 	margin-left: 10px;
 	img{
@@ -253,6 +236,21 @@ h1.site-title{
 	}
 	@media screen and (max-width: $br-fullwidth){
 		display: none;
+	}
+}
+
+#searchform{
+	display: block;
+	.screen-reader-text{
+		display: none;
+	}
+	// The search input field //
+	#s{
+		width: 7em;
+	}
+	// The search button //
+	#searchsubmit{
+		border-radius: 0;
 	}
 }
 
