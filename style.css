@@ -332,9 +332,9 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; margin: 0 
 
 .post-thumbnail { display: block; }
 
-.post-content { display: block; max-width: 45em; margin: 60px auto; }
+.post-content { display: block; max-width: 45em; margin: 0 auto; }
 
-@media screen and (max-width: 45em) { .post-content { margin: 70px 1em 40px 1em; } }
+@media screen and (max-width: 45em) { .post-content { margin: 0 1em 40px 1em; } }
 @media screen and (max-width: 500px) { h1.post-title { margin-top: 20px; } }
 .kicker, .rating { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; margin-top: 35px; font-size: 1.5em; width: 100%; }
 
