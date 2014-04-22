@@ -5,13 +5,14 @@ module.exports = function(grunt) {
 
         watch: {
             files: ['sass/*'],
-            tasks: ['default'],
+            tasks: ['default']
         },
 
         sass: {
             dist: {
               options: {
-                style: 'compact'
+                style: 'compact',
+                loadPath: require('node-bourbon').includePaths
               },
                 files: {
                     'style.css' : 'sass/app.scss'
