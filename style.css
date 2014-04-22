@@ -331,7 +331,7 @@ h1.site-title { font-size: 8em; font-weight: 500; line-height: 0.9em; margin: 0 
 
 .post-title { font-family: 'futura'; font-size: 3em; margin-bottom: 5px; }
 
-.author { color: #498c34; font-weight: 900; border-bottom: 1px #dddddd solid; }
+.author { color: #498c34; font-weight: 900; border-bottom: 1px #dddddd solid; margin-top: 10px; margin-bottom: 35px; }
 
 .sidebar { margin-top: -3px; padding: 0; max-height: 160px; overflow: scroll; }
 .sidebar iframe { margin: 0; padding: 0; }
@@ -342,7 +342,7 @@ h1.site-title { font-size: 8em; font-weight: 500; line-height: 0.9em; margin: 0 
 
 @media screen and (max-width: 45em) { .post-content { margin: 70px 1em 40px 1em; } }
 @media screen and (max-width: 500px) { h1.post-title { margin-top: 20px; } }
-.kicker, .rating { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; margin-top: 20px; font-size: 1.5em; width: 100%; }
+.kicker, .rating { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; margin-top: 35px; font-size: 1.5em; width: 100%; }
 
 .rating { margin-bottom: 40px; }
 
