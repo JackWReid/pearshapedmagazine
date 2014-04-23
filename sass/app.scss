@@ -97,6 +97,10 @@ blockquote{
 	margin: 0 1em !important;
 }
 
+input:focus, select:focus, textarea:focus {
+	outline-color: $green;
+}
+
 
 
 
@@ -375,6 +379,11 @@ h1.site-title{
 		font-style: normal;
 		font-family: georgia;
 		line-height: 1.25em;
+	}
+
+	.column, .columns{
+		width: 100%;
+		float: none;
 	}
 
 	img{
