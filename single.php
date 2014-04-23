@@ -91,8 +91,13 @@ get_header(); ?>
 		</div>
 
 	</div>
+	<div class="related-posts">
 
-	<div class="related-posts"><?php wp_related_posts()?></div>
+		<?php wp_related_posts()?>
+
+		<div class="post-tags"><?php the_tags(); ?></div>
+		
+	</div>
 </div>
 
 <?php endwhile; else: ?>

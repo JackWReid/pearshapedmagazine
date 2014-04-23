@@ -111,6 +111,15 @@
 	font-weight: bold;
 }
 
+.post-tags{
+	font-weight: bold;
+	margin: 20px auto;
+	a{
+		font-weight: normal;
+		color: $green;
+	}
+}
+
 .related-posts{
 	border-top: 1px $grey solid;
 }

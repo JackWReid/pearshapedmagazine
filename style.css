@@ -282,7 +282,7 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .caption-wrap { opacity: 1 !important; }
 
-.preview-scroller { display: inline-block; position: relative; margin-left: 10px; padding: 0 5px; max-width: 300px; float: left; height: 468px; overflow: scroll; }
+.preview-scroller { display: inline-block; position: relative; margin-left: 10px; padding: 0 5px; max-width: 300px; float: left; height: 470px; overflow: scroll; }
 .preview-scroller h2 { margin-top: 0px; text-align: center; color: #498c34; }
 
 .preview-scroller-item { margin-bottom: 30px; text-align: center; }
@@ -351,6 +351,9 @@ span.thumbnail-title { font-size: 1.5em; }
 .picks, .fans-of { display: block; margin-bottom: 20px; }
 
 .picks-title, .fans-of-title { font-weight: bold; }
+
+.post-tags { font-weight: bold; margin: 20px auto; }
+.post-tags a { font-weight: normal; color: #498c34; }
 
 .related-posts { border-top: 1px #dddddd solid; }
 
