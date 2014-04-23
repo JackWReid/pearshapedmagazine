@@ -12,6 +12,15 @@ get_header(); ?>
 
 	<div class="post-header">
 		<h1 class="post-title"><?php the_title(); ?></h1>
+		<div class="giginfo">
+			<?php 
+			    $giginfo = get_post_meta($post->ID, 'giginfo', true); 
+
+				if ($giginfo) {
+				    echo "<span class='giginfo-content'>" . $giginfo . "</span>";
+				}
+			?>
+		</div>
 		<div class="author">
 			<?php 
 			    $author = get_post_meta($post->ID, 'Author', true); 
@@ -40,6 +49,16 @@ get_header(); ?>
 		</div>
 
 		<?php the_content(); ?>
+
+		<div class="tickets">
+		<?php 
+		    $tickets = get_post_meta($post->ID, 'Tickets', true); 
+
+			if ($tickets) {
+			    echo "<span class='tickets-title'><a href='" . $tickets . "'>Buy tickets</a></span>";
+			}
+		?>
+		</div>
 
 		<div class="fans-of">
 		<?php 

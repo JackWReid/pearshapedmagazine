@@ -436,7 +436,7 @@ h1.site-title{
 
 // Keeps those pesky month headers in line
 .thumbnail-grid-wrapper{
-	max-width: 1204px;
+	max-width: 1202px;
 	margin: 0 auto;
 	h2{
 		margin-bottom: 5px;
@@ -449,20 +449,29 @@ h1.site-title{
 
 .thumbnail-card{
 	display: inline-block;
-	width: 23%;
+	width: 24.2%;
 	vertical-align: top;
 
-	padding: 5px;
-	margin: 6px 3px;
-	border: 1px solid $grey;
+	text-align: center;
 
-	a:hover{
+	padding: 5px;
+	margin: 4px 3px;
+
+	a{
 		color: $green;
+
+		&:hover img{
+			opacity: 0.5;
+		}
 	}
 }
 
 .thumbnail-title{
-	@include header
+	font-family: 'futura';
+}
+
+span.thumbnail-title{
+	font-size: 1.5em;
 }
 
 // Tighter spacing for mobile screens //
@@ -485,8 +494,8 @@ h1.site-title{
 
 .directory-card{
 	@extend .thumbnail-card;
-	width: 30%;
-	margin: 20px 10px;
+	width: 23.8%;
+	margin: 4px 5px;
 	.thumbnail-title{
 		font-size: 2em;
 	}

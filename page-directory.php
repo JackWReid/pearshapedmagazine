@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Default Page
+ * Template Name: Directory Page
  *
  * @package WordPress
  * @subpackage pearshapedtheme

@@ -86,6 +86,17 @@
 	width: 100%;
 }
 
+.giginfo{
+	@include title;
+}
+
+.tickets{
+	display: block;
+	a{
+		color: $green;
+	}
+}
+
 .rating{
 	@extend .kicker;
 	margin-bottom: 40px;

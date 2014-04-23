@@ -248,19 +248,22 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 .link-section-mobile { display: none; }
 @media screen and (max-width: 650px) { .link-section-mobile { display: block; } }
 
-.thumbnail-grid-wrapper { max-width: 1204px; margin: 0 auto; }
+.thumbnail-grid-wrapper { max-width: 1202px; margin: 0 auto; }
 .thumbnail-grid-wrapper h2 { margin-bottom: 5px; }
 
 .thumbnail-grid { text-align: left; }
 
-.thumbnail-card, .directory-card { display: inline-block; width: 23%; vertical-align: top; padding: 5px; margin: 6px 3px; border: 1px solid #dddddd; }
-.thumbnail-card a:hover, .directory-card a:hover { color: #498c34; }
+.thumbnail-card, .directory-card { display: inline-block; width: 24.2%; vertical-align: top; text-align: center; padding: 5px; margin: 4px 3px; }
+.thumbnail-card a, .directory-card a { color: #498c34; }
+.thumbnail-card a:hover img, .directory-card a:hover img { opacity: 0.5; }
 
-.thumbnail-title { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; }
+.thumbnail-title { font-family: 'futura'; }
+
+span.thumbnail-title { font-size: 1.5em; }
 
 @media screen and (max-width: 650px) { .thumbnail-card, .directory-card { width: 48%; }
   .thumbnail-title { display: none; } }
-.directory-card { width: 30%; margin: 20px 10px; }
+.directory-card { width: 23.8%; margin: 4px 5px; }
 .directory-card .thumbnail-title { font-size: 2em; }
 
 .directory-links { margin-top: 0; }
@@ -337,6 +340,11 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 @media screen and (max-width: 45em) { .post-content { margin: 0 1em 40px 1em; } }
 @media screen and (max-width: 500px) { h1.post-title { margin-top: 20px; } }
 .kicker, .rating { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; margin-top: 35px; font-size: 1.5em; width: 100%; }
+
+.giginfo { font-family: "futura", "helvetica", arial, sans-serif; text-transform: uppercase; font-weight: 500; }
+
+.tickets { display: block; }
+.tickets a { color: #498c34; }
 
 .rating { margin-bottom: 40px; }
 
