@@ -281,11 +281,11 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .caption-wrap { opacity: 1 !important; }
 
-.frontpage-about { display: inline-block; position: relative; margin-left: 10px; padding: 0 5px; width: 32%; height: 580px; overflow: scroll; }
+.frontpage-about { display: block; position: relative; padding: auto 1em; margin: 0 auto; max-width: 43em; }
 .frontpage-about h1 { text-align: center; color: #498c34; }
 @media screen and (max-width: 960px) { .frontpage-about { display: none; } }
 
-.frontpage-category-boxes { margin: 0 auto; display: inline-block; width: 65%; float: left; }
+.frontpage-category-boxes { max-width: 1000px; margin: 0 auto; border-bottom: 1px #dddddd solid; }
 .frontpage-category-boxes h1 { text-align: center; color: #498c34; }
 @media screen and (max-width: 960px) { .frontpage-category-boxes { float: none; width: 100%; } }
 
