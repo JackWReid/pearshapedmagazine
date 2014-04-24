@@ -84,7 +84,9 @@
 		@include title;
 		color: $green;
 	}
-	margin-bottom: 5px;
+
+	border-bottom: 1px $grey solid;
+	margin-bottom: 20px;
 }
 
 .kicker{

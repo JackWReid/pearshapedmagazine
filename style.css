@@ -201,7 +201,7 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 
 @media screen and (max-width: 796px) { h1.site-title { font-size: 4em; }
   .site-sub-title { font-size: 2em; } }
-.social { display: block; margin-top: -30px; margin-left: 10px; }
+.social { position: absolute; left: 10px; top: 70px; }
 .social img { max-width: 25px; }
 @media screen and (max-width: 1200px) { .social { display: none; } }
 
@@ -281,12 +281,8 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .caption-wrap { opacity: 1 !important; }
 
-.frontpage-about { display: block; position: relative; padding: auto 1em; margin: 0 auto; max-width: 43em; }
-.frontpage-about h1 { text-align: center; color: #498c34; }
-@media screen and (max-width: 960px) { .frontpage-about { display: none; } }
-
 .frontpage-category-boxes { max-width: 1000px; margin: 0 auto; border-bottom: 1px #dddddd solid; }
-.frontpage-category-boxes h1 { text-align: center; color: #498c34; }
+.frontpage-category-boxes h1 { font-family: Georgia; font-size: 4em; font-weight: bold; font-style: italic; text-align: center; color: #498c34; }
 @media screen and (max-width: 960px) { .frontpage-category-boxes { float: none; width: 100%; } }
 
 .event-previews, .event-reviews, .reviews, .features, .columns, .interviews { width: 32.5%; display: inline-block; vertical-align: top; }
@@ -295,6 +291,11 @@ span.thumbnail-title { font-size: 1.5em; }
 @media screen and (max-width: 960px) { .event-previews .post-category-info, .event-reviews .post-category-info, .reviews .post-category-info, .features .post-category-info, .columns .post-category-info, .interviews .post-category-info { display: none; } }
 
 .category-box-thumbnail { display: block; max-height: 200px; overflow: hidden; }
+
+.frontpage-about { display: block; position: relative; padding: auto 1em; margin: 0 auto; max-width: 43em; }
+.frontpage-about h1 { text-align: center; }
+.frontpage-about p { text-align: justify; }
+@media screen and (max-width: 960px) { .frontpage-about { display: none; } }
 
 .contact-card { max-width: 70em; margin: 2em auto; padding: 0.5em; }
 
@@ -342,7 +343,7 @@ span.thumbnail-title { font-size: 1.5em; }
 
 @media screen and (max-width: 45em) { .post-content { margin: 0 1em 40px 1em; } }
 @media screen and (max-width: 500px) { h1.post-title { margin-top: 20px; } }
-.post-category-info { margin-bottom: 5px; }
+.post-category-info { border-bottom: 1px #dddddd solid; margin-bottom: 20px; }
 .post-category-info a { font-family: "futura", "helvetica", arial, sans-serif; text-transform: uppercase; font-weight: 500; color: #498c34; }
 
 .kicker, .rating { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; margin-top: 35px; font-size: 1.5em; width: 100%; }

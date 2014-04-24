@@ -42,31 +42,16 @@
 	opacity: 1 !important;
 }
 
-.frontpage-about{
-	display: block;
-	position: relative;
-
-	padding: auto 1em;
-	margin: 0 auto;
-
-	max-width: 43em;
-
-	h1{
-		text-align: center;
-		color: $green;
-	}
-
-	@media screen and (max-width: $br-tablet){
-		display: none;
-	}
-}
-
 .frontpage-category-boxes{
 	max-width: 1000px;
 	margin: 0 auto;
 	border-bottom: 1px $grey solid;
 
 	h1{
+		font-family: Georgia;
+		font-size: 4em;
+		font-weight: bold;
+		font-style: italic;
 		text-align: center;
 		color: $green;
 	}
@@ -98,6 +83,28 @@
 	display: block;
 	max-height: 200px;
 	overflow: hidden;
+}
+
+.frontpage-about{
+	display: block;
+	position: relative;
+
+	padding: auto 1em;
+	margin: 0 auto;
+
+	max-width: 43em;
+
+	h1{
+		text-align: center;
+	}
+
+	p{
+		text-align: justify;
+	}
+
+	@media screen and (max-width: $br-tablet){
+		display: none;
+	}
 }
 
 
