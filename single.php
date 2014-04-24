@@ -64,7 +64,7 @@ get_header(); ?>
 		    $tickets = get_post_meta($post->ID, 'Tickets', true); 
 
 			if ($tickets) {
-			    echo "<span class='tickets-title'><a href='" . $tickets . "'>Buy tickets</a></span>";
+			    echo "<span class='tickets-title'><a href='" . $tickets . "'>Buy Tickets</a></span>";
 			}
 		?>
 		</div>
