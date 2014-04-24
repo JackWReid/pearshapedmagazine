@@ -28,22 +28,9 @@
 	overflow: hidden;
 
 	border-bottom: 1px solid $grey;
-	padding-bottom: 20px;
+	padding-bottom: 50px;
 
-	max-width: 1160px;
 	margin: 0 auto;
-}
-
-// The carousel on the home page
-.frontpage-slider{
-	display: inline-block;
-	float: left;
-	position: relative;
-	max-width: 850px;
-	padding-bottom: 40px;
-	ul li:first-child{
-		margin-left: -350px;
-	}
 }
 
 .caption{
@@ -55,69 +42,54 @@
 	opacity: 1 !important;
 }
 
-// Recent posts side scroller
-.preview-scroller{
+.frontpage-about{
 	display: inline-block;
 	position: relative;
+
 	margin-left: 10px;
 	padding: 0 5px;
 
-	max-width: 300px;
-	float: left;
+	width: 32%;
 
-	height: 470px;
+	height: 580px;
 	overflow: scroll;
 
-	h2{
-		margin-top: 0px;
+	h1{
 		text-align: center;
 		color: $green;
 	}
 }
 
-.preview-scroller-item{
-	margin-bottom: 30px;
-	text-align: center;
-	img{
-		max-width: 220px;
+.frontpage-category-boxes{
+	margin: 0 auto;
+	display: inline-block;
+	width: 65%;
+	float: left;
+	h1{
+		text-align: center;
+		color: $green;
 	}
 }
 
-.preview-scroller-title{
-	font-family: georgia;
-	font-size: 1em;
-	font-weight: bold;
-	font-style: italic;
-
-	opacity: 0.8em;
-
-	padding: auto 20px;
-}
-
-.frontpage-body{
-	max-width: 45em;
-	margin: 25px auto;
-
-	@media screen and (max-width: $br-mobile){
-		margin: 25px 1em;
+.event-previews, .event-reviews, .reviews, .features, .columns, .interviews{
+	width: 32.5%;
+	display: inline-block;
+	vertical-align: top;
+	h4{
+		margin-top: 5px;
+		font-family: 'futura';
+		text-align: center;
+	}
+	.post-category-info{
+		text-align: center;
+		margin: 0 auto;
 	}
 }
 
-@media screen and (max-width: $br-tablet){
-	.preview-scroller{
-		max-width: 100% !important;
-		display: block;
-		float: none;
-		padding: 0;
-		margin: 0;
-	}
-	.home-content{
-		width: 100%;
-	}
-	.frontpage-slider{
-		display: none;
-	}
-
+.category-box-thumbnail{
+	display: block;
+	max-height: 200px;
+	overflow: hidden;
 }
 
 

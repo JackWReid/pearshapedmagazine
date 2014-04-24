@@ -1,27 +1,34 @@
 <?php get_header(); ?>
-<div class="site-header">
-	<h1 class="site-title"><a href="<?php site_url(); ?>">PearShaped</a></h1>
-	<span class="site-sub-title">Online Music Magazine</span>
+<div class="section-header">
+	<h1 class="section-title"><?php single_cat_title(); ?></h1>
 </div>
-<div class="frontpage-slider">
-	<?php echo do_shortcode("[metaslider id=4]"); ?>
-</div>
-<div class="link-section">
-	<span class="link-title"><a href="http://pearshapedexeter.com/about-us">About PearShaped</a></span>
-</div>
-<div class="thumbnail-grid">
-	<h2>Recent Posts</h2>
-	<?php $cat_slug = '';
-	$latest_cat_post = new WP_Query( array('posts_per_page' => 16, 'category_name' => $cat_slug));
-	if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
-	
-	<div class="thumbnail-card">
-		<a href="<?php the_permalink(); ?>">
-		<?php the_post_thumbnail() ?>
-		<div class="thumbnail-title"><?php the_title(); ?></div>
+
+<div class="preview-stream">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<a href="<?php the_permalink(); ?>">
+	<div class="preview-item row">
+		<div class="four columns">
+			<?php the_post_thumbnail() ?>
+		</div>
+		<div class="eight columns">
+			<h1 class="preview-title"><?php the_title(); ?></h1>
+			<h3 class="preview-author">
+				<?php 
+				    $author = get_post_meta($post->ID, 'Author', true); 
+
+					if ($author) {
+					    echo $author;
+					}
+				?>
+			</h3>
+			<div class="preview-content">
+				<?php the_content(); ?>
+			</div>
+		</div>
 		</a>
 	</div>
-	<?php endwhile; endif; ?>
-
+	<?php endwhile; else: ?>
+	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+	<?php endif; ?>
 </div>
 <?php get_footer(); ?>

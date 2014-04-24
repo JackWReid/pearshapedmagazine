@@ -182,9 +182,11 @@ input:focus, select:focus, textarea:focus {
 //							   //
 
 .footer{
+	display: block;
 	text-align: center;
 	border-top: 1px solid $grey;
 	margin-bottom: 2em;
+	width: 100%;
 	@media screen and (max-width: $br-mobile){
 		margin: 0;
 	}
@@ -467,7 +469,6 @@ h1.site-title{
 	margin: 4px 3px;
 
 	a{
-		color: $green;
 
 		&:hover img{
 			opacity: 0.5;

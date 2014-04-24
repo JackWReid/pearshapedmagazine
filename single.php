@@ -11,7 +11,14 @@ get_header(); ?>
 <div class="post-content">
 
 	<div class="post-header">
+		<div class="post-category-info">
+
+			<?php the_category (' &gt; '); ?>
+
+		</div>
+
 		<h1 class="post-title"><?php the_title(); ?></h1>
+
 		<div class="giginfo">
 			<?php 
 			    $giginfo = get_post_meta($post->ID, 'giginfo', true); 
@@ -21,6 +28,7 @@ get_header(); ?>
 				}
 			?>
 		</div>
+
 		<div class="author">
 			<?php 
 			    $author = get_post_meta($post->ID, 'Author', true); 
@@ -30,6 +38,7 @@ get_header(); ?>
 				}
 			?>
 		</div>
+
 	</div>
 
 	<div class="post-thumbnail">
@@ -91,6 +100,15 @@ get_header(); ?>
 		</div>
 
 	</div>
+	<div class="sidebar">
+		<?php 
+		    $sidebar = get_post_meta($post->ID, 'Sidebar', true); 
+
+				if ($sidebar) {
+				    echo $sidebar;
+				}
+		?>
+		</div>
 	<div class="related-posts">
 
 		<?php wp_related_posts()?>

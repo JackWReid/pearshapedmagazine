@@ -13,7 +13,7 @@
 .post-title{
 	font-family: 'futura';
 	font-size: 3em;
-	margin-bottom: 5px;
+	margin: 0px;
 }
 
 .author{
@@ -25,13 +25,12 @@
 }
 
 .sidebar{
-	margin-top: -3px;
+	margin-top: 0px;
 	padding: 0;
-	max-height: 160px;
-	overflow: scroll;
 	iframe{
 		margin: 0;
 		padding: 0;
+
 	}
 }
 
@@ -78,6 +77,15 @@
 //							   //
 //        Meta Elements        //
 //							   //
+
+.post-category-info{
+
+	a{
+		@include title;
+		color: $green;
+	}
+	margin-bottom: 5px;
+}
 
 .kicker{
 	@include header;
