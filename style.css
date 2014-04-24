@@ -283,13 +283,16 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .frontpage-about { display: inline-block; position: relative; margin-left: 10px; padding: 0 5px; width: 32%; height: 580px; overflow: scroll; }
 .frontpage-about h1 { text-align: center; color: #498c34; }
+@media screen and (max-width: 960px) { .frontpage-about { display: none; } }
 
 .frontpage-category-boxes { margin: 0 auto; display: inline-block; width: 65%; float: left; }
 .frontpage-category-boxes h1 { text-align: center; color: #498c34; }
+@media screen and (max-width: 960px) { .frontpage-category-boxes { float: none; width: 100%; } }
 
 .event-previews, .event-reviews, .reviews, .features, .columns, .interviews { width: 32.5%; display: inline-block; vertical-align: top; }
 .event-previews h4, .event-reviews h4, .reviews h4, .features h4, .columns h4, .interviews h4 { margin-top: 5px; font-family: 'futura'; text-align: center; }
 .event-previews .post-category-info, .event-reviews .post-category-info, .reviews .post-category-info, .features .post-category-info, .columns .post-category-info, .interviews .post-category-info { text-align: center; margin: 0 auto; }
+@media screen and (max-width: 960px) { .event-previews .post-category-info, .event-reviews .post-category-info, .reviews .post-category-info, .features .post-category-info, .columns .post-category-info, .interviews .post-category-info { display: none; } }
 
 .category-box-thumbnail { display: block; max-height: 200px; overflow: hidden; }
 

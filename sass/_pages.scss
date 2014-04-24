@@ -58,6 +58,10 @@
 		text-align: center;
 		color: $green;
 	}
+
+	@media screen and (max-width: $br-tablet){
+		display: none;
+	}
 }
 
 .frontpage-category-boxes{
@@ -68,6 +72,10 @@
 	h1{
 		text-align: center;
 		color: $green;
+	}
+	@media screen and (max-width: $br-tablet){
+		float: none;
+		width: 100%;
 	}
 }
 
@@ -83,6 +91,9 @@
 	.post-category-info{
 		text-align: center;
 		margin: 0 auto;
+		@media screen and (max-width: $br-tablet){
+			display: none;
+		}
 	}
 }
 
