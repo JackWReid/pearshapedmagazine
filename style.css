@@ -201,7 +201,7 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 
 @media screen and (max-width: 796px) { h1.site-title { font-size: 4em; }
   .site-sub-title { font-size: 2em; } }
-.social { position: absolute; left: 10px; top: 70px; }
+.social { position: absolute; left: 10px; top: 75px; }
 .social img { max-width: 25px; }
 @media screen and (max-width: 1200px) { .social { display: none; } }
 
