@@ -9,10 +9,15 @@
 	</ul>
 </div>
 
+<div class="listings-slider">
+	<?php echo do_shortcode("[metaslider id=1730]"); ?>
+</div>
+
 <div class="listings-stream">
+	<h1>Previous Listings</h1>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<a href="<?php the_permalink(); ?>">
-		<h1 class="preview-title"><?php the_title(); ?></h1>
+		<h2 class="preview-title"><?php the_title(); ?></h2>
 		<div class="listings-content">
 			<?php the_content(); ?>
 		</div>

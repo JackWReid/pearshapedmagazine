@@ -295,7 +295,10 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .button-active a { color: #498c34; }
 
+.listings-slider { padding-bottom: 40px; border-bottom: 1px #eeeeee solid; }
+
 .listings-stream { max-width: 50em; margin: 0 auto; }
+.listings-stream h1 { font-family: Georgia; font-size: 4em; font-weight: bold; font-style: italic; text-align: center; color: #498c34; }
 
 .listings-content { margin-bottom: 50px; display: block; max-height: 400px; overflow: hidden; }
 
