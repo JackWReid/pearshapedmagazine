@@ -241,7 +241,7 @@ span.thumbnail-title { font-size: 1.5em; }
 @media screen and (max-width: 650px) { .thumbnail-card, .directory-card { width: 48%; }
   .thumbnail-title { display: none; } }
 .directory-card { width: 23.8%; margin: 4px 5px; }
-.directory-card .thumbnail-title { font-size: 2em; }
+.directory-card .thumbnail-title { font-size: 1.5em; }
 
 .directory-links { margin-top: 0; }
 .directory-links a:hover { color: #222222; }
