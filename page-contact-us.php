@@ -10,7 +10,7 @@ get_header(); ?>
 	<h1 class="section-title"><?php the_title(); ?></h1>
 </div>
 <div class="link-section-mobile">
-	<span class="link-title"><a href="http://localhost:8888/contact-us/email-us">Email Us</a></span>
+	<span class="link-title"><a href="http://pearshapedexeter.com/contact-us/email-us/">Email Us</a></span>
 </div>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php the_content(); ?>
