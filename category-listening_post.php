@@ -11,8 +11,8 @@
 
 <div class="preview-stream">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<a href="<?php the_permalink(); ?>">
 	<div class="preview-item row">
+	<a href="<?php the_permalink(); ?>">
 		<div class="four columns">
 			<?php the_post_thumbnail() ?>
 		</div>
@@ -30,8 +30,9 @@
 			<div class="preview-content">
 				<?php the_content(); ?>
 			</div>
+
 		</div>
-		</a>
+	</a>
 	</div>
 	<?php endwhile; else: ?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
