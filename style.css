@@ -299,6 +299,8 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .listings-content { display: block; max-height: 400px; overflow: hidden; }
 
+.directory-fix { margin-bottom: 25px; }
+
 .contact-card { max-width: 70em; margin: 2em auto; padding: 0.5em; }
 
 .contact-meta, .contact-bulk { display: inline-block; vertical-align: top; overflow: hidden; }
