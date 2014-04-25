@@ -91,7 +91,7 @@ input:focus, select:focus, textarea:focus {
 	font-size: 1.2em;
 	background-color: $white;
 	@include border("divider-bottom");
-	border-top: 5px solid $green;
+	@include border("heavy-line");
 
 	margin-bottom: 25px;
 }
@@ -177,7 +177,6 @@ input:focus, select:focus, textarea:focus {
 
 .site-header{
 	text-align: right;
-	@include border("divider-bottom");
 }
 
 h1.site-title{

@@ -20,7 +20,7 @@
 .author{
 	color: $green;
 	font-weight: 900;
-	border-bottom: 1px $grey solid;
+	@include border("divider-bottom");
 	margin-top: 10px;
 	margin-bottom: 35px;
 }
@@ -93,7 +93,7 @@
 		color: $green;
 	}
 
-	border-bottom: 1px $grey solid;
+	@include border("divider-bottom");
 	margin-bottom: 20px;
 }
 
