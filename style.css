@@ -225,7 +225,7 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 
 .link-section-alt { padding: 0.2em; text-align: center; width: 100%; border-bottom: 1px #eeeeee solid; }
 
-.link-title-alt { font-family: georgia; font-size: 1.5em; }
+.link-title-alt { font-family: georgia; font-weight: bold; font-style: italic; font-size: 1.5em; }
 .link-title-alt a { color: #498c34; }
 .link-title-alt a:hover { color: #222222; }
 
