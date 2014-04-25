@@ -1,0 +1,237 @@
+/////////////////////
+//				   //
+//   BREAKPOINTS   //
+//                 //
+/////////////////////
+
+$br-tablet: 960px;
+$br-mobile: 650px;
+$br-fullwidth: 1200px;
+$br-top2rows: 873px;
+$br-top3rows: 500px;
+
+/////////////////////
+//				   //
+//	  COLOURS      //
+//                 //
+/////////////////////
+
+$green: #498c34 !global;
+$grey: #ddd !global;
+$charcoal: #363636 !global;
+$white: #fff !global;
+$black: #222 !global;
+
+/////////////////////
+//				   //
+//	    FONTS      //
+//                 //
+/////////////////////
+
+// Futura Family
+@font-face {
+    font-family: 'futura';
+    src: url('http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot');
+    src: url('http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff') format('woff'),
+         url('http://static.tumblr.com/gjd1903/DK3n0zpxx/futuralt-webfont.ttf') format('truetype'),
+         url('http://static.tumblr.com/gjd1903/zKNn0zpx0/futuralt-webfont.svg#futura') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Aleo Family
+@font-face {
+    font-family: 'aleo';
+    src: url('http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot');
+    src: url('http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://static.tumblr.com/gjd1903/rDin0zqbx/aleo-bold-webfont.woff') format('woff'),
+         url('http://static.tumblr.com/gjd1903/s9Mn0zqc9/aleo-bold-webfont.ttf') format('truetype'),
+         url('http://static.tumblr.com/gjd1903/yfTn0zqcq/aleo-bold-webfont.svgg#aleo') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+// Font stack declaration
+$bodyfont: Georgia, serif;
+$headerfont: 'aleo', 'helvetica', arial, sans-serif;
+$titlefont: 'futura', 'helvetica', arial, sans-serif;
+
+// Standard font styles
+@mixin header{
+    font-family: $headerfont;
+    font-weight: bold;
+}
+@mixin title{
+    font-family: $titlefont;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+////////////////////////////
+//				          //
+//	    MIXIN LIBRARY     //
+//                        //
+////////////////////////////
+
+/////////////////////
+//				   //
+//	    LAYOUT     //
+//                 //
+/////////////////////
+
+// Box model settings
+@mixin box{
+
+	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+}
+
+// Basic column width calculator
+@mixin column($divisor, $width, $padding){
+
+	@include box;
+	float: left;
+	padding: $padding;
+	max-width: (100% / $divisor) * $width - 0.01%;
+
+}
+
+// Centered columns
+@mixin centercolumn($divisor, $width, $padding){
+
+	@include box;
+	padding: $padding;
+	max-width: (100% / $divisor) * $width - 0.01%;
+	float: none;
+	margin: 0 auto;
+
+}
+
+// Breakpoint collapse
+@mixin collapse($breakpoint, $width){
+
+	@media screen and (max-width: $breakpoint){
+		float: none;
+		max-width: $width;
+		margin: 0 auto;
+	}
+
+}
+
+/////////////////////
+//				   //
+//	  DECORATION   //
+//                 //
+/////////////////////
+
+// Border generator
+@mixin border($type){
+
+	$grey: #eee;
+	$green: #498c34;
+
+	@if $type == "box"{
+		border: 1px $grey solid;
+	}
+
+	@else if $type == "divider-top"{
+		border-top: 1px $grey solid;
+	}
+
+	@else if $type == "divider-bottom"{
+		border-bottom: 1px $grey solid;
+	}
+
+	@else if $type == "heavy-line"{
+		border-top: 5px $green solid;
+	}
+
+}
+
+// Inline list
+@mixin inline-list {
+
+  list-style-type: none;
+
+  &, & li {
+
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+
+  }
+
+}
+
+// Link styling generator
+@mixin link($type, $colour){
+
+	@if $type == "underline"{
+		color: inherit;
+		font-weight: inherit;
+		text-decoration: underline;
+	}
+
+	@else if $type == "bold"{
+		color: inherit;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	@else if $type == "plain"{
+		color: $colour;
+		font-weight: normal;
+		text-decoration: underline;
+	}
+
+	@else if $type == "naked"{
+		color: $colour;
+		font-weight: normal;
+		text-decoration: none;
+	}
+
+}
+
+// Heading size generator
+@mixin headers($family, $baseline, $multiplier){
+
+	h1, h2, h3, h4, h5, h6{
+		font-family: $family;
+		font-style: normal;
+		text-decoration: none;
+	}
+	
+	h6{
+		font-size: $baseline + $multiplier * $multiplier;
+		margin: 1em auto 0.5em auto;
+	}
+
+	h5{
+		font-size: $baseline + $multiplier * $multiplier * $multiplier;
+		margin: 1em auto 0.5em auto;
+	}
+
+	h4{
+		font-size: $baseline * $multiplier * $multiplier * $multiplier * $multiplier;
+		margin: 1em auto 0.5em auto;
+	}
+
+	h3{
+		font-size: $baseline * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier;
+		margin: 1em auto 0.5em auto;
+	}
+
+	h2{
+		font-size: $baseline * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier;
+		margin: 1em auto 0.5em auto;
+	}
+
+	h1{
+		font-size: $baseline * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier;
+		margin: 1em auto 0.5em auto;
+	}
+
+}
