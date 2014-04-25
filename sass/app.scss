@@ -305,6 +305,24 @@ h1.site-title{
 	}
 }
 
+.link-section-alt{
+	padding: 0.2em;
+	text-align: center;
+	width: 100%;
+	@include border("divider-bottom");
+}
+
+.link-title-alt{
+	font-family: georgia;
+	font-size: 1.5em;
+	a{
+	color: $green;
+		&:hover{
+			color: $black;
+		}
+	}
+}
+
 // Variant that only shows up on mobile //
 .link-section-mobile{
 	@extend .link-section;
