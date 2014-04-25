@@ -342,7 +342,7 @@ h1.site-title{
 //							   //
 
 .preview-stream{
-	max-width: 70em; // The stream is a centered column
+	max-width: 70em;
 	margin: 0 auto;
 }
 
@@ -387,14 +387,24 @@ h1.site-title{
 		width: 100%;
 		float: none;
 	}
-
-	img{
-		display: none;
-	}
 }
 
 .more-link{
 	color: $green;
+}
+
+// Narrower stream for the listings page
+.listings-stream{
+	max-width: 50em;
+	margin: 0 auto;
+}
+
+// Caps images like in single.php
+.listings-content{
+	@extend .preview-content;
+	display: block;
+	max-height: 400px;
+	overflow: hidden;
 }
 
 

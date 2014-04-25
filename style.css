@@ -236,11 +236,14 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 
 .preview-author { margin: 0; padding: 0; }
 
-.preview-content .kicker, .preview-content .rating, .preview-content h1, .preview-content h2, .preview-content h3, .preview-content h4, .preview-content h5, .preview-content h6, .preview-content strong { font-size: 15.4px; font-weight: 400 !important; font-style: normal; font-family: georgia; line-height: 1.25em; }
-.preview-content .column, .preview-content .columns { width: 100%; float: none; }
-.preview-content img { display: none; }
+.preview-content .kicker, .listings-content .kicker, .preview-content .rating, .listings-content .rating, .preview-content h1, .listings-content h1, .preview-content h2, .listings-content h2, .preview-content h3, .listings-content h3, .preview-content h4, .listings-content h4, .preview-content h5, .listings-content h5, .preview-content h6, .listings-content h6, .preview-content strong, .listings-content strong { font-size: 15.4px; font-weight: 400 !important; font-style: normal; font-family: georgia; line-height: 1.25em; }
+.preview-content .column, .listings-content .column, .preview-content .columns, .listings-content .columns { width: 100%; float: none; }
 
 .more-link { color: #498c34; }
+
+.listings-stream { max-width: 50em; margin: 0 auto; }
+
+.listings-content { display: block; max-height: 400px; overflow: hidden; }
 
 .link-section, .link-section-mobile { padding: 0.5em; text-align: center; width: 100%; border-bottom: 1px #dddddd solid; }
 
