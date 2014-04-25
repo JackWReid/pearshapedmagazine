@@ -1,7 +1,9 @@
 @import 'head'; // Wordpress Theme Information
 @import 'reset'; // CSS Normalise
-@import 'fonts'; // Font imports and basic definitions
+@import 'library'; // Super library of mixins, variables, and standards for PearShaped
 @import 'layout'; // Grid and image layout
+
+
 
 // Font family basics //
 body{
@@ -25,28 +27,11 @@ h1, h2, h3, h4, h5, h6, .caption{
 
 
 
-//							   //
-// Standard Variables & Mixins //
-//							   //
-
-// Theme Colours //
-$white: #fff;
-$black: #222;
-$green: #498c34;
-$grey: #ddd;
-$charcoal: #363636;
-
-// Standard Border Mixin //
-@mixin faint-border{
-	border-bottom: 1px solid $grey;
-}
-
-
-
-
-//							   //
-//   Standard Type Elements    //
-//							   //
+/////////////////////
+//				   //
+//  TYPE ELEMENTS  //
+//                 //
+/////////////////////
 
 b, strong{
 	font-weight: bold;
@@ -78,25 +63,7 @@ blockquote{
 	border-left: 3px $green solid;
 }
 
-// Overriding gross styling //
-.simplePullQuote{
-	border: none !important;
-	background: none !important;
-	box-shadow: none !important;
-	p{
-		text-indent: 0 !important;
-	}
-
-	font-style: italic;
-	font-size: 1.4em;
-	color: $charcoal;
-
-	border-top: 1px $green solid !important;
-	border-bottom: 1px $green solid !important;
-
-	margin: 0 1em !important;
-}
-
+// Green haze on search form focus
 input:focus, select:focus, textarea:focus {
 	outline-color: $green;
 }
@@ -106,9 +73,11 @@ input:focus, select:focus, textarea:focus {
 
 
 
-//							   //
-//	Top Bar Navigation Module  //
-//							   //
+/////////////////////
+//				   //
+//     NAV BAR     //
+//                 //
+/////////////////////
 
 .top-bar{
 	position: relative;
@@ -121,7 +90,7 @@ input:focus, select:focus, textarea:focus {
 
 	font-size: 1.2em;
 	background-color: $white;
-	@include faint-border;
+	@include border("divider-bottom");
 	border-top: 5px solid $green;
 
 	margin-bottom: 25px;
@@ -177,9 +146,11 @@ input:focus, select:focus, textarea:focus {
 
 
 
-//							   //
-//	     Footer Styling        //
-//							   //
+/////////////////////
+//				   //
+//      FOOTER     //
+//                 //
+/////////////////////
 
 .footer{
 	display: block;
@@ -198,13 +169,15 @@ input:focus, select:focus, textarea:focus {
 
 
 
-//							   //
-//		Front Page Header      //
-//							   //
+/////////////////////
+//				   //
+//   SIDE HEADER   //
+//                 //
+/////////////////////
 
 .site-header{
 	text-align: right;
-	@include faint-border;
+	@include border("divider-bottom");
 }
 
 h1.site-title{
@@ -272,9 +245,11 @@ h1.site-title{
 
 
 
-//							   //
-//   Section/Category Header   //
-//							   //
+/////////////////////
+//				   //
+//    CAT HEADER   //
+//                 //
+/////////////////////
 
 .section-header{
 	// margin-top: -15px; // Compensating for top-bar margin from front-page +10px
@@ -307,121 +282,17 @@ h1.site-title{
 
 
 
-
-//							   //
-//    Sub-Category Toggler     //
-//							   //
-
-.category-toggler{
-	list-style-type: none;
-	text-align: center;
-	font-size: 2em;
-	margin: 10px;
-	padding-left: 0;
-}
-
-.button, .button-active{
-	padding: 2px 5px;
-	display: inline-block;
-	a:hover{
-		color: $green; // Other categories hover green
-	}
-}
-
-.button-active a{
-	color: $green;
-}
-
-
-
-
-
-
-//							   //
-//   Category Preview Stream   //
-//							   //
-
-.preview-stream{
-	max-width: 70em;
-	margin: 0 auto;
-}
-
-.preview-item{
-	padding: 1em;
-	.columns{
-		padding: 0.2em;
-	}
-	p{
-		font-size: 1.1em;
-	}
-	@media screen and (max-width: $br-mobile){
-		img{
-			display: none;
-	}
-	}
-}
-
-.preview-title{
-	margin-top: 0; // Brings the title up the top of the padding
-	margin-bottom: 10px;
-	width: 100%;
-	border-bottom: 1px $grey solid;
-}
-
-.preview-author{
-	margin: 0;
-	padding: 0;
-}
-
-.preview-content{
-
-	.kicker, h1, h2, h3, h4, h5, h6, strong{
-		font-size: 15.4px;
-		font-weight: 400 !important;
-		font-style: normal;
-		font-family: georgia;
-		line-height: 1.25em;
-	}
-
-	.column, .columns{
-		width: 100%;
-		float: none;
-	}
-}
-
-.more-link{
-	color: $green;
-}
-
-// Narrower stream for the listings page
-.listings-stream{
-	max-width: 50em;
-	margin: 0 auto;
-}
-
-// Caps images like in single.php
-.listings-content{
-	@extend .preview-content;
-	display: block;
-	max-height: 400px;
-	overflow: hidden;
-}
-
-
-
-
-
-
-
-//							   //
-//  Centered Big Link Section  //
-//							   //
+/////////////////////
+//				   //
+//   LINK SECTION  //
+//                 //
+/////////////////////
 
 .link-section{
 	padding: 0.5em;
 	text-align: center;
 	width: 100%;
-	border-bottom: 1px $grey solid;
+	@include border("divider-bottom");
 }
 
 .link-title{
@@ -451,9 +322,11 @@ h1.site-title{
 
 
 
-//							   //
-//	   Standard Thumb Grid     //
-//							   //
+/////////////////////
+//				   //
+//   THUMB GRID    //
+//                 //
+/////////////////////
 
 // Keeps those pesky month headers in line
 .thumbnail-grid-wrapper{
@@ -508,9 +381,11 @@ span.thumbnail-title{
 
 
 
-//							   //
-//  Directory Grid Variation   //
-//							   //
+/////////////////////
+//				   //
+// DIRECTORY GRID  //
+//                 //
+/////////////////////
 
 .directory-card{
 	@extend .thumbnail-card;

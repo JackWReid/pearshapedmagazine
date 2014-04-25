@@ -1,8 +1,9 @@
-@import 'breakpoints';
-@import 'fonts';
-//							   //
-//     Global/General Use      //
-//							   //
+@import 'library';
+/////////////////////
+//				   //
+//      GLOBAL     //
+//                 //
+/////////////////////
 
 // An all round wrapper for basic pages
 .page-wrapper{
@@ -17,9 +18,11 @@
 
 
 
-//							   //
-//	        Front Page         //
-//							   //
+/////////////////////
+//				   //
+//   FRONT PAGE    //
+//                 //
+/////////////////////
 
 // Gives the slider breathing room and a divisor border
 .slider-module{
@@ -80,6 +83,7 @@
 	overflow: hidden;
 }
 
+// Narrower about column sits underneath the cat-boxes on the home page
 .frontpage-about{
 	display: block;
 	position: relative;
@@ -92,11 +96,9 @@
 	h1{
 		text-align: center;
 	}
-
 	p{
 		text-align: justify;
 	}
-
 	@media screen and (max-width: $br-tablet){
 		display: none;
 	}
@@ -108,9 +110,118 @@
 
 
 
-//							   //
-//	        Contact Us         //
-//							   //
+/////////////////////
+//				   //
+//    CATEGORIES   //
+//                 //
+/////////////////////
+
+.preview-stream{
+	max-width: 70em;
+	margin: 0 auto;
+}
+
+.preview-item{
+	padding: 1em;
+	.columns{
+		padding: 0.2em;
+	}
+	p{
+		font-size: 1.1em;
+	}
+	@media screen and (max-width: $br-mobile){
+		img{
+			display: none;
+	}
+	}
+}
+
+.preview-title{
+	margin-top: 0; // Brings the title up the top of the padding
+	margin-bottom: 10px;
+	width: 100%;
+	border-bottom: 1px $grey solid;
+}
+
+.preview-author{
+	margin: 0;
+	padding: 0;
+}
+
+.preview-content{
+
+	.kicker, h1, h2, h3, h4, h5, h6, strong{
+		font-size: 15.4px;
+		font-weight: 400 !important;
+		font-style: normal;
+		font-family: georgia;
+		line-height: 1.25em;
+	}
+
+	.column, .columns{
+		width: 100%;
+		float: none;
+	}
+}
+
+.more-link{
+	color: $green;
+}
+
+// A toggler module to select sub-categories on selected categories
+.category-toggler{
+	list-style-type: none;
+	text-align: center;
+	font-size: 2em;
+	margin: 10px;
+	padding-left: 0;
+}
+.button, .button-active{
+	padding: 2px 5px;
+	display: inline-block;
+	a:hover{
+		color: $green; // Other categories hover green
+	}
+}
+.button-active a{
+	color: $green;
+}
+
+
+
+
+
+
+
+/////////////////////
+//				   //
+//     LISTINGS    //
+//                 //
+/////////////////////
+
+// Narrower stream for the listings page
+.listings-stream{
+	max-width: 50em;
+	margin: 0 auto;
+}
+
+// Caps images like in single.php
+.listings-content{
+	@extend .preview-content;
+	display: block;
+	max-height: 400px;
+	overflow: hidden;
+}
+
+
+
+
+
+/////////////////////
+//				   //
+//    CONTACT US   //
+//                 //
+/////////////////////
 
 .contact-card{
 	max-width: 70em;
@@ -119,20 +230,18 @@
 	padding: 0.5em;
 }
 
-// The next three selectors primarily dictate columns of a grid //
+// The next three selectors primarily dictate columns of a grid
 .contact-meta, .contact-bulk{
 	display: inline-block;
 	vertical-align: top;
 	overflow: hidden;
 }
-
 .contact-meta{
 	width: 31%; // Left third
 	img{
 		max-width: 100%;
 	}
 }
-
 .contact-bulk{
 	width: 65%; // Right two thirds
 	padding: 0 0.5em;
@@ -143,6 +252,11 @@
 	h3{
 		margin-top: 0;
 	}
+}
+
+.contact-title{
+	width: 100%;
+	border-bottom: 1px $grey solid;
 }
 
 // Mobile variation with collapsed columns //
@@ -170,6 +284,7 @@
 	}
 }
 
+// Little image icon and email address on contact card
 .contact-email{
 	margin-top: -10px;
 	img, p{
@@ -187,19 +302,16 @@
 	}
 }
 
-.contact-title{
-	width: 100%;
-	border-bottom: 1px $grey solid;
-}
 
 
 
 
 
-
-//							   //
-//	           404             //
-//							   //
+/////////////////////
+//				   //
+//       404       //
+//                 //
+/////////////////////
 
 .fourohfour{
 	text-align: center;

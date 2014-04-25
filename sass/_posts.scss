@@ -1,9 +1,10 @@
-@import 'breakpoints';
-@import 'fonts';
+@import 'library';
 
-//							   //
-//    Post Header Elements     //
-//							   //
+/////////////////////
+//				   //
+// HEADER ELEMENTS //
+//                 //
+/////////////////////
 
 .post-header{
 	display: block;
@@ -44,9 +45,11 @@
 
 
 
-//							   //
-//         Post Content        //
-//							   //
+/////////////////////
+//				   //
+//     CONTENT     //
+//                 //
+/////////////////////
 
 .post-content{
 	display: block;
@@ -57,9 +60,11 @@
 
 
 
-//							   //
-//      Mobile Breakdowns      //
-//							   //
+/////////////////////
+//				   //
+//   BREAKPOINTS   //
+//                 //
+/////////////////////
 
 @media screen and (max-width: 45em){
 	.post-content{
@@ -74,10 +79,13 @@
 }
 
 
-//							   //
-//        Meta Elements        //
-//							   //
+/////////////////////
+//				   //
+//    META DATA    //
+//                 //
+/////////////////////
 
+// Chevron split list of categories of the post
 .post-category-info{
 
 	a{
@@ -96,10 +104,10 @@
 	width: 100%;
 }
 
+// Specific to event previews and reviews
 .giginfo{
 	@include title;
 }
-
 .tickets{
 	display: block;
 	a{
@@ -121,6 +129,7 @@
 	font-weight: bold;
 }
 
+// Spit out of all the post tags comma separated
 .post-tags{
 	font-weight: bold;
 	margin: 20px auto;
