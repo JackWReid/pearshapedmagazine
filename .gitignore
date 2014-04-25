@@ -30,3 +30,6 @@ node_modules
 
 ### Sass ###
 .sass-cache
+
+### Compiled stylesheet ###
+style.css
