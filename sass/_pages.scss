@@ -21,23 +21,17 @@
 //	        Front Page         //
 //							   //
 
-// Layout for home section
-.home-content{
-	display: block;
-	position: relative;
-	overflow: hidden;
-
+// Gives the slider breathing room and a divisor border
+.slider-module{
 	border-bottom: 1px solid $grey;
 	padding-bottom: 50px;
-
-	margin: 0 auto;
 }
 
+// Window dressing for the slider text
 .caption{
 	font-size: 16px;
 	padding: 10px !important;
 }
-
 .caption-wrap{
 	opacity: 1 !important;
 }

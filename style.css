@@ -278,7 +278,7 @@ span.thumbnail-title { font-size: 1.5em; }
 @font-face { font-family: 'aleo'; src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/rDin0zqbx/aleo-bold-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/s9Mn0zqc9/aleo-bold-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/yfTn0zqcq/aleo-bold-webfont.svgg#aleo") format("svg"); font-weight: bold; font-style: normal; }
 .page-wrapper { max-width: 60em; margin: 2em auto; padding: 1em; }
 
-.home-content { display: block; position: relative; overflow: hidden; border-bottom: 1px solid #dddddd; padding-bottom: 50px; margin: 0 auto; }
+.slider-module { border-bottom: 1px solid #dddddd; padding-bottom: 50px; }
 
 .caption { font-size: 16px; padding: 10px !important; }
 

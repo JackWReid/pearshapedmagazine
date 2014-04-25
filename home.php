@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 
-<div class="home-content">
-
+<div class="slider-module">
 	<?php echo do_shortcode("[metaslider id=4]"); ?>
-
 </div>
 
 <div class="frontpage-category-boxes">
