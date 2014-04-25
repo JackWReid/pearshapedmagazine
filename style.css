@@ -284,16 +284,16 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .caption-wrap { opacity: 1 !important; }
 
-.frontpage-category-boxes { max-width: 1000px; margin: 0 auto; border-bottom: 1px #dddddd solid; }
-.frontpage-category-boxes h1 { font-family: Georgia; font-size: 4em; font-weight: bold; font-style: italic; text-align: center; color: #498c34; }
-@media screen and (max-width: 960px) { .frontpage-category-boxes { float: none; width: 100%; } }
+.frontpage-cat-boxes { max-width: 1000px; margin: 0 auto; border-bottom: 1px #dddddd solid; }
+.frontpage-cat-boxes h1 { font-family: Georgia; font-size: 4em; font-weight: bold; font-style: italic; text-align: center; color: #498c34; }
+@media screen and (max-width: 960px) { .frontpage-cat-boxes { float: none; width: 100%; } }
 
-.event-previews, .event-reviews, .reviews, .features, .columns, .interviews { width: 32.5%; display: inline-block; vertical-align: top; }
-.event-previews h4, .event-reviews h4, .reviews h4, .features h4, .columns h4, .interviews h4 { margin-top: 5px; font-family: 'futura'; text-align: center; }
-.event-previews .post-category-info, .event-reviews .post-category-info, .reviews .post-category-info, .features .post-category-info, .columns .post-category-info, .interviews .post-category-info { text-align: center; margin: 0 auto; border: none; }
-@media screen and (max-width: 960px) { .event-previews .post-category-info, .event-reviews .post-category-info, .reviews .post-category-info, .features .post-category-info, .columns .post-category-info, .interviews .post-category-info { display: none; } }
+.cat-box { width: 32.5%; display: inline-block; vertical-align: top; }
+.cat-box h4 { margin-top: 5px; font-family: 'futura'; text-align: center; }
+.cat-box .post-category-info { text-align: center; margin: 0 auto; border: none; }
+@media screen and (max-width: 960px) { .cat-box .post-category-info { display: none; } }
 
-.category-box-thumbnail { display: block; max-height: 200px; overflow: hidden; }
+.category-box-image { display: block; max-height: 200px; overflow: hidden; }
 
 .frontpage-about { display: block; position: relative; padding: auto 1em; margin: 0 auto; max-width: 43em; }
 .frontpage-about h1 { text-align: center; }

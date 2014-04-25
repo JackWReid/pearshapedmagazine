@@ -4,10 +4,10 @@
 	<?php echo do_shortcode("[metaslider id=4]"); ?>
 </div>
 
-<div class="frontpage-category-boxes">
+<div class="frontpage-cat-boxes">
 	<h1>Latest Posts</h1>
 
-	<div class="event-previews">
+	<div class="cat-box">
 		<?php $cat_id = 10;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
@@ -15,7 +15,7 @@
 			<?php the_category (' &gt; '); ?>
 		</div>
 		<a href="<?php the_permalink(); ?>">
-		<div class="category-box-thumbnail">
+		<div class="cat-box-image">
 			<?php the_post_thumbnail(); ?>
 		</div>
 
@@ -24,7 +24,7 @@
 		<?php endwhile; endif; ?>
 	</div>
 
-	<div class="event-reviews">
+	<div class="cat-box">
 		<?php $cat_id = 25;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
@@ -32,7 +32,7 @@
 			<?php the_category (' &gt; '); ?>
 		</div>
 		<a href="<?php the_permalink(); ?>">
-		<div class="category-box-thumbnail">
+		<div class="cat-box-image">
 			<?php the_post_thumbnail(); ?>
 		</div>
 
@@ -41,7 +41,7 @@
 		<?php endwhile; endif; ?>
 	</div>
 
-	<div class="reviews">
+	<div class="cat-box">
 		<?php $cat_id = 17;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
@@ -49,7 +49,7 @@
 			<?php the_category (' &gt; '); ?>
 		</div>
 		<a href="<?php the_permalink(); ?>">
-		<div class="category-box-thumbnail">
+		<div class="cat-box-image">
 			<?php the_post_thumbnail(); ?>
 		</div>
 
@@ -58,7 +58,7 @@
 		<?php endwhile; endif; ?>
 	</div>
 
-	<div class="features">
+	<div class="cat-box">
 		<?php $cat_id = 125;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
@@ -66,7 +66,7 @@
 			<?php the_category (' &gt; '); ?>
 		</div>
 		<a href="<?php the_permalink(); ?>">
-		<div class="category-box-thumbnail">
+		<div class="cat-box-image">
 			<?php the_post_thumbnail(); ?>
 		</div>
 
@@ -74,7 +74,7 @@
 		</a>
 		<?php endwhile; endif; ?>
 	</div>
-	<div class="columns">
+	<div class="cat-box">
 		<?php $cat_id = 42;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
@@ -82,7 +82,7 @@
 			<?php the_category (' &gt; '); ?>
 		</div>
 		<a href="<?php the_permalink(); ?>">
-		<div class="category-box-thumbnail">
+		<div class="cat-box-image">
 			<?php the_post_thumbnail(); ?>
 		</div>
 
@@ -90,7 +90,7 @@
 		</a>
 		<?php endwhile; endif; ?>
 	</div>
-	<div class="interviews">
+	<div class="cat-box">
 		<?php $cat_id = 111;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
@@ -98,7 +98,7 @@
 			<?php the_category (' &gt; '); ?>
 		</div>
 		<a href="<?php the_permalink(); ?>">
-		<div class="category-box-thumbnail">
+		<div class="cat-box-image">
 			<?php the_post_thumbnail(); ?>
 		</div>
 

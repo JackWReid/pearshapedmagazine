@@ -36,7 +36,8 @@
 	opacity: 1 !important;
 }
 
-.frontpage-category-boxes{
+// Box of previews for latest post in each cateogory, presented on the home page
+.frontpage-cat-boxes{
 	max-width: 1000px;
 	margin: 0 auto;
 	border-bottom: 1px $grey solid;
@@ -54,8 +55,7 @@
 		width: 100%;
 	}
 }
-
-.event-previews, .event-reviews, .reviews, .features, .columns, .interviews{
+.cat-box{
 	width: 32.5%;
 	display: inline-block;
 	vertical-align: top;
@@ -73,8 +73,8 @@
 		}
 	}
 }
-
-.category-box-thumbnail{
+// Image clipping
+.category-box-image{
 	display: block;
 	max-height: 200px;
 	overflow: hidden;
