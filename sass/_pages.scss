@@ -202,6 +202,7 @@
 // Caps images like in single.php
 .listings-content{
 	@extend .preview-content;
+	margin-bottom: 50px;
 	display: block;
 	max-height: 400px;
 	overflow: hidden;

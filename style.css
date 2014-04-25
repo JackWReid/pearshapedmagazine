@@ -297,7 +297,7 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .listings-stream { max-width: 50em; margin: 0 auto; }
 
-.listings-content { display: block; max-height: 400px; overflow: hidden; }
+.listings-content { margin-bottom: 50px; display: block; max-height: 400px; overflow: hidden; }
 
 .directory-fix { margin-bottom: 25px; }
 
