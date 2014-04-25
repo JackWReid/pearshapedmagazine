@@ -77,7 +77,7 @@
 	}
 }
 // Image clipping
-.category-box-image{
+.cat-box-image{
 	display: block;
 	max-height: 200px;
 	overflow: hidden;
@@ -196,29 +196,6 @@
 .listings-slider{
 	padding-bottom: 40px;
 	@include border("divider-bottom");
-}
-
-// Narrower stream for the listings page
-.listings-stream{
-	max-width: 50em;
-	margin: 0 auto;
-	h1{
-		font-family: Georgia;
-		font-size: 4em;
-		font-weight: bold;
-		font-style: italic;
-		text-align: center;
-		color: $green;
-	}
-}
-
-// Caps images like in single.php
-.listings-content{
-	@extend .preview-content;
-	margin-bottom: 50px;
-	display: block;
-	max-height: 400px;
-	overflow: hidden;
 }
 
 

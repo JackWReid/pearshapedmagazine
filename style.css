@@ -265,7 +265,7 @@ span.thumbnail-title { font-size: 1.5em; }
 .cat-box .post-category-info { text-align: center; margin: 0 auto; border: none; }
 @media screen and (max-width: 960px) { .cat-box .post-category-info { display: none; } }
 
-.category-box-image { display: block; max-height: 200px; overflow: hidden; }
+.cat-box-image { display: block; max-height: 200px; overflow: hidden; }
 
 .frontpage-about { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 1em; max-width: 49.99%; float: none; margin: 0 auto; }
 .frontpage-about h1 { text-align: center; }
@@ -283,8 +283,8 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .preview-author { margin: 0; padding: 0; }
 
-.preview-content .kicker, .listings-content .kicker, .preview-content .rating, .listings-content .rating, .preview-content h1, .listings-content h1, .preview-content h2, .listings-content h2, .preview-content h3, .listings-content h3, .preview-content h4, .listings-content h4, .preview-content h5, .listings-content h5, .preview-content h6, .listings-content h6, .preview-content strong, .listings-content strong { font-size: 15.4px; font-weight: 400 !important; font-style: normal; font-family: georgia; line-height: 1.25em; }
-.preview-content .column, .listings-content .column, .preview-content .columns, .listings-content .columns { width: 100%; float: none; }
+.preview-content .kicker, .preview-content .rating, .preview-content h1, .preview-content h2, .preview-content h3, .preview-content h4, .preview-content h5, .preview-content h6, .preview-content strong { font-size: 15.4px; font-weight: 400 !important; font-style: normal; font-family: georgia; line-height: 1.25em; }
+.preview-content .column, .preview-content .columns { width: 100%; float: none; }
 
 .more-link { color: #498c34; }
 
@@ -296,11 +296,6 @@ span.thumbnail-title { font-size: 1.5em; }
 .button-active a { color: #498c34; }
 
 .listings-slider { padding-bottom: 40px; border-bottom: 1px #eeeeee solid; }
-
-.listings-stream { max-width: 50em; margin: 0 auto; }
-.listings-stream h1 { font-family: Georgia; font-size: 4em; font-weight: bold; font-style: italic; text-align: center; color: #498c34; }
-
-.listings-content { margin-bottom: 50px; display: block; max-height: 400px; overflow: hidden; }
 
 .directory-fix { margin-bottom: 25px; }
 

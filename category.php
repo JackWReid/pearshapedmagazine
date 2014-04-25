@@ -24,11 +24,12 @@
 			<div class="preview-content">
 				<?php the_content(); ?>
 			</div>
-			</a>
 		</div>
+		</a>
 	</div>
 	<?php endwhile; else: ?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>
 </div>
+
 <?php get_footer(); ?>
