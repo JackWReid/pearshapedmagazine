@@ -21,6 +21,15 @@
 					}
 				?>
 			</h3>
+            <div class="giginfo-alt">
+            <?php 
+                $giginfo = get_post_meta($post->ID, 'giginfo', true); 
+
+                if ($giginfo) {
+                    echo "<span class='giginfo-content'>" . $giginfo . "</span>";
+                }
+            ?>
+            </div>
 			<div class="preview-content">
 				<?php the_content(); ?>
 			</div>
