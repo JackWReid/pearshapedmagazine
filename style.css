@@ -356,7 +356,9 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .kicker, .rating { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; margin-top: 35px; font-size: 1.5em; width: 100%; }
 
-.giginfo { font-family: "futura", "helvetica", arial, sans-serif; text-transform: uppercase; font-weight: 500; }
+.giginfo, .giginfo-alt { font-family: "futura", "helvetica", arial, sans-serif; text-transform: uppercase; font-weight: 500; }
+
+.giginfo-alt { margin-top: 1em; }
 
 .tickets { display: block; }
 .tickets a { color: #498c34; }

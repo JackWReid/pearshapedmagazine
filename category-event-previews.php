@@ -7,11 +7,12 @@
         <li class="button"><a href="http://pearshapedexeter.com/category/event-reviews">Reviews</a></li>
     </ul>
 </div>
+
 <div class="link-section-alt">
     <span class="link-title-alt"><a href="http://pearshapedexeter.com/category/event-preview-archives">View Past Events</a></span>
 </div>
+
 <div class="preview-stream">
-    <?php global $query_string; query_posts($query_string . "&order=ASC"); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="preview-item row">
     <a href="<?php the_permalink(); ?>">
@@ -29,6 +30,15 @@
                     }
                 ?>
             </h3>
+            <div class="giginfo-alt">
+                <?php 
+                    $giginfo = get_post_meta($post->ID, 'giginfo', true); 
+
+                    if ($giginfo) {
+                        echo "<span class='giginfo-content'>" . $giginfo . "</span>";
+                    }
+                ?>
+            </div>
             <div class="preview-content">
                 <?php the_content(); ?>
             </div>

@@ -108,6 +108,10 @@
 .giginfo{
 	@include title;
 }
+.giginfo-alt{
+	@extend .giginfo;
+	margin-top: 1em;
+}
 .tickets{
 	display: block;
 	a{
