@@ -13,6 +13,7 @@
 </div>
 
 <div class="preview-stream">
+    <?php global $query_string; query_posts($query_string . "&order=ASC"); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="preview-item row">
     <a href="<?php the_permalink(); ?>">
