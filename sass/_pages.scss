@@ -47,6 +47,12 @@
 
 	h1{
 		@include swishheader;
+		@media screen and (max-width: $br-tablet){
+			font-size: 3.2em;
+		}
+		@media screen and (max-width: $br-mobile){
+			font-size: 2em;
+		}
 	}
 	@media screen and (max-width: $br-tablet){
 		float: none;
