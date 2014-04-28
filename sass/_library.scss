@@ -30,7 +30,7 @@ $black: #222 !global;
 
 // Futura Family
 @font-face {
-    font-family: 'futura';
+    font-family: 'futura-alt';
     src: url('http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot');
     src: url('http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix') format('embedded-opentype'),
          url('http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff') format('woff'),
@@ -55,7 +55,7 @@ $black: #222 !global;
 // Font stack declaration
 $bodyfont: Georgia, serif;
 $headerfont: 'aleo', 'helvetica', arial, sans-serif;
-$titlefont: 'futura', 'helvetica', arial, sans-serif;
+$titlefont: 'futura-alt', 'futura medium', arial, sans-serif;
 
 // Standard font styles
 @mixin header{
@@ -65,11 +65,11 @@ $titlefont: 'futura', 'helvetica', arial, sans-serif;
 @mixin title{
     font-family: $titlefont;
     text-transform: uppercase;
-    font-weight: normal !important; // Override iOS Futura glitch
+    font-weight: normal !important;
 }
 @mixin lowertitle{
 	font-family: $titlefont;
-    font-weight: normal !important; // Override iOS Futura glitch
+    font-weight: normal !important;
 }
 
 ////////////////////////////

@@ -117,9 +117,9 @@ a { text-decoration: none; color: inherit; }
 
 img { width: 100%; height: auto; }
 
-@font-face { font-family: 'futura'; src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/DK3n0zpxx/futuralt-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/zKNn0zpx0/futuralt-webfont.svg#futura") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'futura-alt'; src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/DK3n0zpxx/futuralt-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/zKNn0zpx0/futuralt-webfont.svg#futura") format("svg"); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'aleo'; src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/rDin0zqbx/aleo-bold-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/s9Mn0zqc9/aleo-bold-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/yfTn0zqcq/aleo-bold-webfont.svgg#aleo") format("svg"); font-weight: bold; font-style: normal; }
-@font-face { font-family: 'futura'; src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/DK3n0zpxx/futuralt-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/zKNn0zpx0/futuralt-webfont.svg#futura") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'futura-alt'; src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/DK3n0zpxx/futuralt-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/zKNn0zpx0/futuralt-webfont.svg#futura") format("svg"); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'aleo'; src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/rDin0zqbx/aleo-bold-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/s9Mn0zqc9/aleo-bold-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/yfTn0zqcq/aleo-bold-webfont.svgg#aleo") format("svg"); font-weight: bold; font-style: normal; }
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -160,7 +160,7 @@ body { font-family: Georgia, serif; font-size: 14px; }
 
 h1, h2, h3, h4, h5, h6, .caption { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; }
 
-.top-bar, .site-title, .site-sub-title, .category-toggler, .cards, #searchsubmit { font-family: "futura", "helvetica", arial, sans-serif; text-transform: uppercase; font-weight: normal !important; }
+.top-bar, .site-title, .site-sub-title, .category-toggler, .cards, #searchsubmit { font-family: "futura-alt", "futura medium", arial, sans-serif; text-transform: uppercase; font-weight: normal !important; }
 
 b, strong { font-weight: bold; }
 
@@ -219,7 +219,7 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 
 .link-section, .link-section-mobile { padding: 0.5em; text-align: center; width: 100%; border-bottom: 1px #eeeeee solid; }
 
-.link-title { font-family: "futura", "helvetica", arial, sans-serif; text-transform: uppercase; font-weight: normal !important; font-size: 2em; }
+.link-title { font-family: "futura-alt", "futura medium", arial, sans-serif; text-transform: uppercase; font-weight: normal !important; font-size: 2em; }
 .link-title a { color: #498c34; }
 .link-title a:hover { color: #222222; }
 
@@ -240,7 +240,7 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 .thumbnail-card, .directory-card { display: inline-block; width: 24.2%; vertical-align: top; text-align: center; padding: 5px; margin: 4px 3px; }
 .thumbnail-card a:hover img, .directory-card a:hover img { opacity: 0.5; }
 
-.thumbnail-title { font-family: "futura", "helvetica", arial, sans-serif; font-weight: normal !important; }
+.thumbnail-title { font-family: "futura-alt", "futura medium", arial, sans-serif; font-weight: normal !important; }
 
 span.thumbnail-title { font-size: 1.5em; }
 
@@ -252,7 +252,7 @@ span.thumbnail-title { font-size: 1.5em; }
 .directory-links { margin-top: 0; }
 .directory-links a:hover { color: #222222; }
 
-@font-face { font-family: 'futura'; src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/DK3n0zpxx/futuralt-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/zKNn0zpx0/futuralt-webfont.svg#futura") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'futura-alt'; src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/DK3n0zpxx/futuralt-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/zKNn0zpx0/futuralt-webfont.svg#futura") format("svg"); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'aleo'; src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/rDin0zqbx/aleo-bold-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/s9Mn0zqc9/aleo-bold-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/yfTn0zqcq/aleo-bold-webfont.svgg#aleo") format("svg"); font-weight: bold; font-style: normal; }
 .page-wrapper { max-width: 60em; margin: 2em auto; padding: 1em; }
 
@@ -267,7 +267,7 @@ span.thumbnail-title { font-size: 1.5em; }
 @media screen and (max-width: 960px) { .frontpage-cat-boxes { float: none; width: 100%; } }
 
 .cat-box { width: 32.5%; display: inline-block; vertical-align: top; }
-.cat-box h4 { font-family: "futura", "helvetica", arial, sans-serif; font-weight: normal !important; margin-top: 5px; text-align: center; }
+.cat-box h4 { font-family: "futura-alt", "futura medium", arial, sans-serif; font-weight: normal !important; margin-top: 5px; text-align: center; }
 .cat-box .post-category-info { text-align: center; margin: 0 auto; border: none; }
 @media screen and (max-width: 960px) { .cat-box .post-category-info { display: none; } }
 
@@ -334,11 +334,11 @@ span.thumbnail-title { font-size: 1.5em; }
 .fourohfour p { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; font-size: 1.5em; }
 @media screen and (max-width: 650px) { .fourohfour p { margin: 0; } }
 
-@font-face { font-family: 'futura'; src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/DK3n0zpxx/futuralt-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/zKNn0zpx0/futuralt-webfont.svg#futura") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'futura-alt'; src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/DK3n0zpxx/futuralt-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/zKNn0zpx0/futuralt-webfont.svg#futura") format("svg"); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'aleo'; src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot"); src: url("http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/gjd1903/rDin0zqbx/aleo-bold-webfont.woff") format("woff"), url("http://static.tumblr.com/gjd1903/s9Mn0zqc9/aleo-bold-webfont.ttf") format("truetype"), url("http://static.tumblr.com/gjd1903/yfTn0zqcq/aleo-bold-webfont.svgg#aleo") format("svg"); font-weight: bold; font-style: normal; }
 .post-header { display: block; max-width: 45em; }
 
-.post-title { font-family: "futura", "helvetica", arial, sans-serif; font-weight: normal !important; font-size: 3em; margin: 0px; }
+.post-title { font-family: "futura-alt", "futura medium", arial, sans-serif; font-weight: normal !important; font-size: 3em; margin: 0px; }
 
 .author { color: #498c34; font-weight: 900; border-bottom: 1px #eeeeee solid; margin-top: 10px; margin-bottom: 35px; }
 
@@ -352,11 +352,11 @@ span.thumbnail-title { font-size: 1.5em; }
 @media screen and (max-width: 45em) { .post-content { margin: 0 1em 40px 1em; } }
 @media screen and (max-width: 500px) { h1.post-title { margin-top: 20px; } }
 .post-category-info { border-bottom: 1px #eeeeee solid; margin-bottom: 20px; }
-.post-category-info a { font-family: "futura", "helvetica", arial, sans-serif; text-transform: uppercase; font-weight: normal !important; color: #498c34; }
+.post-category-info a { font-family: "futura-alt", "futura medium", arial, sans-serif; text-transform: uppercase; font-weight: normal !important; color: #498c34; }
 
 .kicker, .rating { font-family: "aleo", "helvetica", arial, sans-serif; font-weight: bold; margin-top: 35px; font-size: 1.5em; width: 100%; }
 
-.giginfo, .giginfo-alt { font-family: "futura", "helvetica", arial, sans-serif; text-transform: uppercase; font-weight: normal !important; }
+.giginfo, .giginfo-alt { font-family: "futura-alt", "futura medium", arial, sans-serif; text-transform: uppercase; font-weight: normal !important; }
 
 .giginfo-alt { margin-top: 1em; }
 
