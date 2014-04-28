@@ -170,7 +170,7 @@ p { font-size: 1.1em; line-height: 1.25em; }
 
 hr { border: 0; height: 1px; color: #dddddd; background: #dddddd; }
 
-blockquote { margin: 0; padding: 0em 0em 0em 1em; font-size: 1.05em; font-style: italic; color: #363636; border-left: 3px #498c34 solid; }
+blockquote { margin: 0; padding: 0em 0em 0em 1em; font-size: 1.05em; font-style: italic; opacity: 0.9; border-left: 3px #498c34 solid; }
 
 input:focus, select:focus, textarea:focus { outline-color: #498c34; }
 
