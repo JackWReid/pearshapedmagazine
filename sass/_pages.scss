@@ -63,8 +63,8 @@
 	display: inline-block;
 	vertical-align: top;
 	h4{
+		@include lowertitle;
 		margin-top: 5px;
-		font-family: 'futura';
 		text-align: center;
 	}
 	.post-category-info{

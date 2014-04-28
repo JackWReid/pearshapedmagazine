@@ -12,7 +12,7 @@
 }
 
 .post-title{
-	font-family: 'futura';
+	@include lowertitle;
 	font-size: 3em;
 	margin: 0px;
 }

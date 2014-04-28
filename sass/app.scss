@@ -379,7 +379,7 @@ h1.site-title{
 }
 
 .thumbnail-title{
-	font-family: 'futura';
+	@include lowertitle;
 }
 
 span.thumbnail-title{

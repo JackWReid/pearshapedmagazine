@@ -65,7 +65,11 @@ $titlefont: 'futura', 'helvetica', arial, sans-serif;
 @mixin title{
     font-family: $titlefont;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: normal !important; // Override iOS Futura glitch
+}
+@mixin lowertitle{
+	font-family: $titlefont;
+    font-weight: normal !important; // Override iOS Futura glitch
 }
 
 ////////////////////////////
