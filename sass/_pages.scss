@@ -46,12 +46,7 @@
 	@include border("divider-bottom");
 
 	h1{
-		font-family: Georgia;
-		font-size: 4em;
-		font-weight: bold;
-		font-style: italic;
-		text-align: center;
-		color: $green;
+		@include swishheader;
 	}
 	@media screen and (max-width: $br-tablet){
 		float: none;
@@ -142,6 +137,7 @@
 	padding: 0;
 }
 
+// Sanitised formatting for previews
 .preview-content{
 
 	.kicker, h1, h2, h3, h4, h5, h6, strong{

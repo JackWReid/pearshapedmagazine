@@ -251,17 +251,11 @@ h1.site-title{
 /////////////////////
 
 .section-header{
-	// margin-top: -15px; // Compensating for top-bar margin from front-page +10px
 	margin-bottom: 20px;
 }
 
 .section-title{
-	font-family: Georgia;
-	font-size: 4em;
-	font-weight: bold;
-	font-style: italic;
-	text-align: center;
-	color: $green;
+	@include swishheader;
 
 	margin: 0 auto;
 

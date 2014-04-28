@@ -212,7 +212,7 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 
 .section-header { margin-bottom: 20px; }
 
-.section-title { font-family: Georgia; font-size: 4em; font-weight: bold; font-style: italic; text-align: center; color: #498c34; margin: 0 auto; }
+.section-title { font-family: Georgia, serif; font-size: 4em; font-weight: bold; font-style: italic; text-align: center; color: #498c34; margin: 0 auto; }
 @media screen and (max-width: 1200px) { .section-title { font-size: 4em; } }
 @media screen and (max-width: 1200px) { .section-title { font-size: 3.2em; } }
 @media screen and (max-width: 650px) { .section-title { font-size: 3em; } }
@@ -263,7 +263,7 @@ span.thumbnail-title { font-size: 1.5em; }
 .caption-wrap { opacity: 1 !important; }
 
 .frontpage-cat-boxes { max-width: 1000px; margin: 0 auto; border-bottom: 1px #eeeeee solid; }
-.frontpage-cat-boxes h1 { font-family: Georgia; font-size: 4em; font-weight: bold; font-style: italic; text-align: center; color: #498c34; }
+.frontpage-cat-boxes h1 { font-family: Georgia, serif; font-size: 4em; font-weight: bold; font-style: italic; text-align: center; color: #498c34; }
 @media screen and (max-width: 960px) { .frontpage-cat-boxes { float: none; width: 100%; } }
 
 .cat-box { width: 32.5%; display: inline-block; vertical-align: top; }

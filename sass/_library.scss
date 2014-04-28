@@ -70,6 +70,14 @@ $titlefont: 'futura-alt', 'futura medium', arial, sans-serif;
 	font-family: $titlefont;
     font-weight: normal !important;
 }
+@mixin swishheader{
+	font-family: $bodyfont;
+	font-size: 4em;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	color: $green;
+}
 
 ////////////////////////////
 //				          //
@@ -170,7 +178,7 @@ $titlefont: 'futura-alt', 'futura medium', arial, sans-serif;
 }
 
 // Link styling generator
-@mixin link($type, $colour){
+@mixin link($type){
 
 	@if $type == "underline"{
 		color: inherit;
@@ -185,56 +193,23 @@ $titlefont: 'futura-alt', 'futura medium', arial, sans-serif;
 	}
 
 	@else if $type == "plain"{
-		color: $colour;
+		color: $green;
 		font-weight: normal;
 		text-decoration: underline;
 	}
 
 	@else if $type == "naked"{
-		color: $colour;
+		color: $green;
 		font-weight: normal;
 		text-decoration: none;
 	}
-
-}
-
-// Heading size generator
-@mixin headers($family, $baseline, $multiplier){
-
-	h1, h2, h3, h4, h5, h6{
-		font-family: $family;
-		font-style: normal;
+	@else if $type == "hover"{
+		color: inherit;
+		font-weight: normal;
 		text-decoration: none;
-	}
-	
-	h6{
-		font-size: $baseline + $multiplier * $multiplier;
-		margin: 1em auto 0.5em auto;
-	}
-
-	h5{
-		font-size: $baseline + $multiplier * $multiplier * $multiplier;
-		margin: 1em auto 0.5em auto;
-	}
-
-	h4{
-		font-size: $baseline * $multiplier * $multiplier * $multiplier * $multiplier;
-		margin: 1em auto 0.5em auto;
-	}
-
-	h3{
-		font-size: $baseline * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier;
-		margin: 1em auto 0.5em auto;
-	}
-
-	h2{
-		font-size: $baseline * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier;
-		margin: 1em auto 0.5em auto;
-	}
-
-	h1{
-		font-size: $baseline * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier * $multiplier;
-		margin: 1em auto 0.5em auto;
+		&:hover{
+			color: $green;
+		}
 	}
 
 }
