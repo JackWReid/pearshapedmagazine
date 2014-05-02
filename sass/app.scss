@@ -342,24 +342,24 @@ h1.site-title{
 }
 
 .thumbnail-grid{
-	text-align: left;
+	&:after{
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
 }
 
 .thumbnail-card{
-	display: inline-block;
-	width: 24.2%;
-	vertical-align: top;
-
-	text-align: center;
-
-	padding: 5px;
-	margin: 4px 3px;
-
-	a{
-
-		&:hover img{
-			opacity: 0.5;
-		}
+	float: left;
+	@include makeGrid(4, 2%);
+	a:hover img{
+		opacity: 0.5;
+	}
+	@media screen and (max-width: $br-tablet){
+		@include makeGrid(3, 2%);
+	}
+	@media screen and (max-width: $br-mobile){
+		@include makeGrid(2, 2%);
 	}
 }
 

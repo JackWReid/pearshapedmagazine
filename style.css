@@ -232,10 +232,18 @@ h1.site-title { font-size: 6em; font-weight: 500; line-height: 0.9em; text-align
 .thumbnail-grid-wrapper { max-width: 1202px; margin: 0 auto; }
 .thumbnail-grid-wrapper h2 { margin-bottom: 5px; }
 
-.thumbnail-grid { text-align: left; }
+.thumbnail-grid:after { content: ""; display: table; clear: both; }
 
-.thumbnail-card, .directory-card { display: inline-block; width: 24.2%; vertical-align: top; text-align: center; padding: 5px; margin: 4px 3px; }
+.thumbnail-card, .directory-card { float: left; width: 23.5%; }
+.thumbnail-card:nth-child(n), .directory-card:nth-child(n) { margin-bottom: 2%; margin-right: 2%; }
+.thumbnail-card:nth-child(4n+1), .directory-card:nth-child(4n+1) { margin-right: 0; }
 .thumbnail-card a:hover img, .directory-card a:hover img { opacity: 0.5; }
+@media screen and (max-width: 960px) { .thumbnail-card, .directory-card { width: 32%; }
+  .thumbnail-card:nth-child(n), .directory-card:nth-child(n) { margin-bottom: 2%; margin-right: 2%; }
+  .thumbnail-card:nth-child(3n+1), .directory-card:nth-child(3n+1) { margin-right: 0; } }
+@media screen and (max-width: 650px) { .thumbnail-card, .directory-card { width: 49%; }
+  .thumbnail-card:nth-child(n), .directory-card:nth-child(n) { margin-bottom: 2%; margin-right: 2%; }
+  .thumbnail-card:nth-child(2n+1), .directory-card:nth-child(2n+1) { margin-right: 0; } }
 
 .thumbnail-title { font-family: "futura-alt", "futura medium", arial, sans-serif; font-weight: normal !important; }
 
