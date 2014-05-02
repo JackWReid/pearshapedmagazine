@@ -86,13 +86,10 @@ $titlefont: 'futura-alt', 'futura medium', arial, sans-serif;
 ////////////////////////////
 
 @mixin makeGrid($columns, $margin) {
-  width: ((100% - (($columns - 1) * $margin)) / $columns);
+  width: ((99% - (($columns) * $margin)) / $columns);
   &:nth-child(n) {
     margin-bottom: $margin;
     margin-right: $margin;
-  }
-  &:nth-child(#{$columns}n+1) {
-    margin-right: 0;
   }
 }
 

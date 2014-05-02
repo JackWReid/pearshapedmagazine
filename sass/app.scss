@@ -342,29 +342,38 @@ h1.site-title{
 }
 
 .thumbnail-grid{
-	&:after{
-	  content: "";
-	  display: table;
-	  clear: both;
-	}
+	text-align: left;
 }
 
 .thumbnail-card{
-	float: left;
-	@include makeGrid(4, 2%);
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+
+	a{
+		&:hover img{
+			opacity: 0.5;
+		}
+	}
+
 	a:hover img{
 		opacity: 0.5;
 	}
+
+	@include makeGrid(4, 2%);
 	@media screen and (max-width: $br-tablet){
 		@include makeGrid(3, 2%);
 	}
 	@media screen and (max-width: $br-mobile){
 		@include makeGrid(2, 2%);
+		width: 100% !important;
 	}
 }
 
 .thumbnail-title{
 	@include lowertitle;
+	display: block;
+	width: 100%;
 }
 
 span.thumbnail-title{

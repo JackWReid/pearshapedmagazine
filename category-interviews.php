@@ -4,15 +4,18 @@
 </div>
 
 </div>
+<div class="thumbnail-grid-wrapper">
 <div class="thumbnail-grid">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="thumbnail-card">
 			<a href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail() ?>
-			<span class="thumbnail-title"><?php the_title(); ?></span>
+				<?php the_post_thumbnail() ?>
+				<span class="thumbnail-title"><?php the_title(); ?></span>
+			</a>
 		</div>
 	<?php endwhile; else: ?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 <?php endif; ?>
 </div>
-<?php get_footer(); ?>
+</div>
+<?php get_footer(); ?>s
