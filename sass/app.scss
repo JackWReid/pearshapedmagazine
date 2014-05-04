@@ -103,6 +103,9 @@ input:focus, select:focus, textarea:focus {
 // For jQuery sticky polyfill
 .sticky{  
 	position: fixed;
+	@media screen and (max-width: $br-mobile){
+		position: relative;
+	}
 }
 
 // Vertically align all of the top bar elements //

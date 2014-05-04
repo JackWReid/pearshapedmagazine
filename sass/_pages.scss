@@ -89,11 +89,9 @@
 
 // Narrower about column sits underneath the cat-boxes on the home page
 .frontpage-about{
-	@include centercolumn(2, 1, 1em);
-	@media screen and (max-width: $br-mobile){
-		width: 100%;
-		padding: 0 1em;
-	}
+	max-width: 45em;
+	padding: 0 1em;
+	margin: 0 auto;
 	h1{
 		text-align: center;
 	}

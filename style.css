@@ -179,6 +179,7 @@ input:focus, select:focus, textarea:focus { outline-color: #498c34; }
 .top-bar-wrap { text-align: center; }
 
 .sticky { position: fixed; }
+@media screen and (max-width: 650px) { .sticky { position: relative; } }
 
 .nav, #searchform, .social { vertical-align: middle; }
 
@@ -278,8 +279,7 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .cat-box-image { display: block; max-height: 200px; overflow: hidden; }
 
-.frontpage-about { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 1em; max-width: 49.99%; float: none; margin: 0 auto; }
-@media screen and (max-width: 650px) { .frontpage-about { width: 100%; padding: 0 1em; } }
+.frontpage-about { max-width: 45em; padding: 0 1em; }
 .frontpage-about h1 { text-align: center; }
 .frontpage-about p { text-align: justify; }
 
