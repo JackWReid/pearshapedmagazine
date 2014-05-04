@@ -178,8 +178,7 @@ input:focus, select:focus, textarea:focus { outline-color: #498c34; }
 
 .top-bar-wrap { text-align: center; }
 
-.sticky { position: fixed; }
-@media screen and (max-width: 650px) { .sticky { position: relative; } }
+@media screen and (min-width: 650px) { .sticky { position: fixed; } }
 
 .nav, #searchform, .social { vertical-align: middle; }
 
@@ -279,7 +278,7 @@ span.thumbnail-title { font-size: 1.5em; }
 
 .cat-box-image { display: block; max-height: 200px; overflow: hidden; }
 
-.frontpage-about { max-width: 45em; padding: 0 1em; }
+.frontpage-about { max-width: 45em; padding: 0 1em; margin: 0 auto; }
 .frontpage-about h1 { text-align: center; }
 .frontpage-about p { text-align: justify; }
 
