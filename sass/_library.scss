@@ -4,11 +4,11 @@
 //                 //
 /////////////////////
 
-$br-tablet: 960px;
-$br-mobile: 650px;
-$br-fullwidth: 1200px;
-$br-top2rows: 873px;
-$br-top3rows: 500px;
+$br-tablet: 960px !global;
+$br-mobile: 650px !global;
+$br-fullwidth: 1200px !global;
+$br-top2rows: 873px !global;
+$br-top3rows: 500px !global;
 
 /////////////////////
 //				   //
@@ -54,7 +54,7 @@ $black: #222 !global;
 // Font stack declaration
 $bodyfont: Georgia, serif;
 $headerfont: 'aleo', 'helvetica', arial, sans-serif;
-$titlefont: 'futura-alt', 'futura medium', arial, sans-serif;
+$titlefont: 'futura-alt', arial, sans-serif;
 
 // Standard font styles
 @mixin header{

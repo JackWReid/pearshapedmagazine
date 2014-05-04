@@ -28,6 +28,9 @@
 .slider-module{
 	@include border("divider-bottom");
 	padding-bottom: 50px;
+	@media screen and (max-width: $br-mobile){
+		display: none;
+	}
 }
 
 // Window dressing for the slider text
@@ -93,9 +96,6 @@
 	}
 	p{
 		text-align: justify;
-	}
-	@media screen and (max-width: $br-tablet){
-		display: none;
 	}
 }
 

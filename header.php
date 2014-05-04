@@ -13,12 +13,14 @@
 <head>
     <?php wp_head(); ?>
     <meta charset="<?php bloginfo( 'charset' ); ?>" >
+    <meta name="keywords" content="magazine, music, exeter, reviews, events, live, student">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php bloginfo( 'name' ); ?> <?php wp_title(); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
+    <link rel="apple-touch-icon" href="http://pearshapedexeter.com/wp-content/uploads/2014/05/icon.png"/>  
 
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />

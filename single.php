@@ -8,17 +8,17 @@
 get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div class="post-content">
+<div itemscope itemtype="http://schema.org/Article" class="post-content">
 
 	<div class="post-header">
-		<div class="post-category-info">
+		<div itemprop="articleSection" class="post-category-info">
 
 			<?php the_category (' &gt; '); ?>
 
 		</div>
 
-		<h1 class="post-title"><?php the_title(); ?></h1>
-
+		<h1 itemprop="name" itemprop="headline" class="post-title"><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h1>
+		<meta itemprop="dateCreated" content='<?php the_date(); ?>'>
 		<div class="giginfo">
 			<?php 
 			    $giginfo = get_post_meta($post->ID, 'giginfo', true); 
@@ -30,24 +30,24 @@ get_header(); ?>
 		</div>
 
 		<div class="author">
-			<?php 
-			    $author = get_post_meta($post->ID, 'Author', true); 
-
-				if ($author) {
-				    echo "by " . $author;
-				}
-			?>
+			by
+			<span itemprop="author">
+			<?php $author = get_post_meta($post->ID, 'Author', true);
+				if ($author){
+					echo $author;
+			} ?>
+			</span>
 		</div>
 
 	</div>
 
-	<div class="post-thumbnail">
+	<div itemprop="image" class="post-thumbnail">
 		<?php the_post_thumbnail(); ?>
 	</div>
 
 	<div class="post-body">
 
-		<div class="kicker">
+		<div itemprop="about" itemprop="description" class="kicker">
 			<?php 
 			    $kicker = get_post_meta($post->ID, 'Kicker', true); 
 
@@ -57,9 +57,11 @@ get_header(); ?>
 			?>
 		</div>
 
+		<div itemprop="articleBody">
 		<?php the_content(); ?>
+		</div>
 
-		<div class="tickets">
+		<div itemprop="offers" class="tickets">
 		<?php 
 		    $tickets = get_post_meta($post->ID, 'Tickets', true); 
 
@@ -113,7 +115,7 @@ get_header(); ?>
 
 		<?php wp_related_posts()?>
 
-		<div class="post-tags"><?php the_tags(); ?></div>
+		<div itemprop="keywords" class="post-tags"><?php the_tags(); ?></div>
 		
 	</div>
 </div>
