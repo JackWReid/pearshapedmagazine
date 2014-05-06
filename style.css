@@ -282,17 +282,23 @@ span.thumbnail-title { font-size: 1.5em; }
 .frontpage-about h1 { text-align: center; }
 .frontpage-about p { text-align: justify; }
 
-.frontpage-cat-boxes-alt { margin-top: -25px; width: 100%; }
-@media screen and (max-width: 900px) { .frontpage-cat-boxes-alt { overflow-x: scroll; -webkit-overflow-scrolling: touch; white-space: nowrap; } }
+.frontpage-cat-boxes-alt, .featured-posts { width: 100%; }
+@media screen and (max-width: 900px) { .frontpage-cat-boxes-alt, .featured-posts { overflow-x: scroll; -webkit-overflow-scrolling: touch; white-space: nowrap; } }
 
-.cat-box-alt { width: 33.333%; margin: 0 -3px -3px 0; display: inline-block; vertical-align: top; background-image: url("http://pearshapedexeter.com/wp-content/uploads/2014/04/Large.png"); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-@media screen and (max-width: 900px) { .cat-box-alt { width: 300px; } }
+.featured-posts { margin-top: -25px; }
 
-.cat-box-image-alt { display: block; position: relative; height: 300px; overflow: hidden; }
-.cat-box-image-alt img { position: absolute; left: 0; top: 0; }
-.cat-box-image-alt h4, .cat-box-image-alt h5 { z-index: 2; left: 20px; position: absolute; color: white; text-shadow: 3px 3px 3px #000; }
-.cat-box-image-alt h5 { top: 200px; font-size: 20px; }
-.cat-box-image-alt h4 { top: 235px; font-size: 20px; }
+.cat-box-alt, .featured-posts-box { margin: 0 -3px -3px 0; display: inline-block; vertical-align: top; background-image: url("http://pearshapedexeter.com/wp-content/uploads/2014/04/Large.png"); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+@media screen and (max-width: 900px) { .cat-box-alt, .featured-posts-box { width: 300px; } }
+
+.cat-box-alt { width: 33.333%; }
+
+.featured-posts-box { width: 25%; }
+
+.cat-box-image-alt, .featured-posts-image { display: block; position: relative; height: 300px; overflow: hidden; }
+.cat-box-image-alt img, .featured-posts-image img { position: absolute; left: 0; top: 0; }
+.cat-box-image-alt h4, .cat-box-image-alt h5, .featured-posts-image h4, .featured-posts-image h5 { z-index: 2; left: 20px; position: absolute; color: white; text-shadow: 3px 3px 3px #000; }
+.cat-box-image-alt h5, .featured-posts-image h5 { top: 200px; font-size: 20px; }
+.cat-box-image-alt h4, .featured-posts-image h4 { top: 235px; font-size: 20px; }
 
 .preview-stream { max-width: 70em; margin: 0 auto; }
 

@@ -7,6 +7,29 @@
  */
 get_header(); ?>
 
+<div class="featured-posts">
+<?php
+    $args=array(
+      'tag' => 'featured',
+      'showposts'=>4,
+      'caller_get_posts'=>1
+    );
+    $my_query = new WP_Query($args);
+    if( $my_query->have_posts() ) {
+      while ($my_query->have_posts()) : $my_query->the_post(); ?>
+        	<div class="featured-posts-box">
+        		<div class="featured-posts-image">
+	        		<?php the_post_thumbnail(); ?>
+	        		<h4><?php the_title(); ?></h4>
+        		</div>
+        	</div>
+       <?php
+      endwhile;
+    }
+  wp_reset_query();
+?>
+</div>
+
 <div class="frontpage-cat-boxes-alt">
 
 	<div class="cat-box-alt">

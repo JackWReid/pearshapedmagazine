@@ -101,8 +101,7 @@
 }
 
 // Prototype code
-.frontpage-cat-boxes-alt{
-	margin-top: -25px;
+.frontpage-cat-boxes-alt, .featured-posts{
 	width: 100%;
 	@media screen and (max-width: 900px){
 		overflow-x: scroll;
@@ -111,8 +110,11 @@
 	}
 }
 
-.cat-box-alt{
-	width: 33.333%;
+.featured-posts{
+	margin-top: -25px;
+}
+
+.cat-box-alt, .featured-posts-box{
 	margin: 0 -3px -3px 0;
 
 	display: inline-block;
@@ -126,8 +128,14 @@
 	  -o-background-size: cover;
 	  background-size: cover;
 }
+.cat-box-alt{
+	width: 33.333%;
+}
+.featured-posts-box{
+	width: 25%;
+}
 
-.cat-box-image-alt{
+.cat-box-image-alt, .featured-posts-image{
 	display: block;
 	position: relative;
 
