@@ -11,17 +11,19 @@ get_header(); ?>
 <?php
     $args=array(
       'tag' => 'featured',
-      'showposts'=>4,
+      'showposts'=>2,
       'caller_get_posts'=>1
     );
     $my_query = new WP_Query($args);
     if( $my_query->have_posts() ) {
       while ($my_query->have_posts()) : $my_query->the_post(); ?>
         	<div class="featured-posts-box">
+        		<a href="<?php the_permalink(); ?>">
         		<div class="featured-posts-image">
 	        		<?php the_post_thumbnail(); ?>
 	        		<h4><?php the_title(); ?></h4>
         		</div>
+        		</a>
         	</div>
        <?php
       endwhile;

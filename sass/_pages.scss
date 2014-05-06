@@ -101,7 +101,7 @@
 }
 
 // Prototype code
-.frontpage-cat-boxes-alt, .featured-posts{
+.frontpage-cat-boxes-alt{
 	width: 100%;
 	@media screen and (max-width: 900px){
 		overflow-x: scroll;
@@ -110,11 +110,8 @@
 	}
 }
 
-.featured-posts{
-	margin-top: -25px;
-}
-
-.cat-box-alt, .featured-posts-box{
+.cat-box-alt{
+	width: 33.333%;
 	margin: 0 -3px -3px 0;
 
 	display: inline-block;
@@ -122,23 +119,11 @@
 	@media screen and (max-width: 900px){
 		width: 300px;
 	}
-	background-image: url('http://pearshapedexeter.com/wp-content/uploads/2014/04/Large.png');
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-}
-.cat-box-alt{
-	width: 33.333%;
-}
-.featured-posts-box{
-	width: 25%;
 }
 
-.cat-box-image-alt, .featured-posts-image{
+.cat-box-image-alt{
 	display: block;
 	position: relative;
-
 	height: 300px;
 	overflow: hidden;
 
@@ -163,6 +148,49 @@
 	h4{
 		top: 235px;
 		font-size: 20px;
+	}
+}
+
+.featured-posts{
+	width: 100%;
+	margin-top: -25px;
+	@media screen and (max-width: 900px){
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+		white-space: nowrap;
+	}
+}
+
+.featured-posts-box{
+	display: inline-block;
+	position: relative;
+
+	margin: 0 -3px -3px 0;
+	width: 50%;
+	height: 400px;
+	overflow: hidden;
+	@media screen and (max-width: 900px){
+		width: 90%;
+	}
+
+}
+
+.featured-posts-image{
+	img{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	h4{
+		z-index: 2;
+		top: 310px;
+		left: 20px;
+		position: absolute;
+
+		font-size: 30px;
+		color: white;
+		text-shadow: 3px 3px 3px #000;
 	}
 }
 // Prototype code
