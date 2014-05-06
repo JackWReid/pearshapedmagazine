@@ -100,6 +100,64 @@
 	}
 }
 
+// Prototype code
+.frontpage-cat-boxes-alt{
+	margin-top: -25px;
+	width: 100%;
+	@media screen and (max-width: 900px){
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+		white-space: nowrap;
+	}
+}
+
+.cat-box-alt{
+	width: 33.333%;
+	margin: 0 -3px -3px 0;
+
+	display: inline-block;
+	vertical-align: top;
+	@media screen and (max-width: 900px){
+		width: 300px;
+	}
+	background-image: url('http://pearshapedexeter.com/wp-content/uploads/2014/04/Large.png');
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+
+.cat-box-image-alt{
+	display: block;
+	position: relative;
+
+	height: 300px;
+	overflow: hidden;
+
+	img{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	h4, h5{
+		z-index: 2;
+		left: 20px;
+
+		position: absolute;
+		color: white;
+		text-shadow: 3px 3px 3px #000;
+	}
+	h5{
+		top: 200px;
+		font-size: 20px;
+	}
+	h4{
+		top: 235px;
+		font-size: 20px;
+	}
+}
+// Prototype code
 
 
 
