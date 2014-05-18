@@ -101,10 +101,8 @@ input:focus, select:focus, textarea:focus {
 }
 
 // For jQuery sticky polyfill
-.sticky{  
-	@media screen and (min-width: $br-mobile){
-		position: fixed;
-	}
+.sticky{
+	position: fixed;
 }
 
 // Vertically align all of the top bar elements //
@@ -414,6 +412,10 @@ span.thumbnail-title{
 	a:hover{
 		color: $black;
 	}
+}
+
+#wpstats{
+	display: none;
 }
 
 @import 'pages';
