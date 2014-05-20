@@ -29,26 +29,24 @@
 <body>
 
 <div class="site-header">
-    <h1 class="site-title"><a href="<?php echo home_url(); ?>">PearShaped</a></h1>
+    <h1 class="site-header__title"><a href="<?php echo home_url(); ?>">PearShaped</a></h1>
     <?php get_search_form(); ?>
-    <div class="social">
+    <div class="site-header__social-icons">
         <a href="https://www.facebook.com/PearShapedExeter"><img src="http://i.imgur.com/VXGTdj0.png" alt="Facebook" /></a>
         <a href="http://twitter.com/pearshapedexe"><img src="http://i.imgur.com/caAQrTA.png" alt="Twitter"></a>
         <a href="http://soundcloud.com/pearshaped-exeter"><img src="http://i.imgur.com/DrFWOyr.png" alt="Soundcloud"></a>
     </div>
 </div>
 
-<div class="top-bar">
-    <div class="top-bar-wrap">
-        <ul class="nav">
-            <li><a href="http://pearshapedexeter.com/category/listings">Events</a></li>
-            <li><a href="http://pearshapedexeter.com/category/reviews/">Reviews</a></li>
-            <li><a href="http://pearshapedexeter.com/category/features/">Features</a></li>
-            <li><a href="http://pearshapedexeter.com/category/columns/">Columns</a></li>
-            <li><a href="http://pearshapedexeter.com/category/interviews/">Interviews</a></li>
-            <li><a href="http://pearshapedexeter.com/directory/">Directory</a></li>
-            <li><a href="http://pearshapedexeter.com/contact-us/">Contact Us</a></li>
-            <li><a href="https://www.exeterguild.org/societies/15967/">Join</a></li>
-        </ul>
-    </div>
+<div class="nav-bar">
+    <ul class="nav-bar__list">
+        <li><a href="http://pearshapedexeter.com/category/listings">Events</a></li>
+        <li><a href="http://pearshapedexeter.com/category/reviews/">Reviews</a></li>
+        <li><a href="http://pearshapedexeter.com/category/features/">Features</a></li>
+        <li><a href="http://pearshapedexeter.com/category/columns/">Columns</a></li>
+        <li><a href="http://pearshapedexeter.com/category/interviews/">Interviews</a></li>
+        <li><a href="http://pearshapedexeter.com/directory/">Directory</a></li>
+        <li><a href="http://pearshapedexeter.com/contact-us/">Contact Us</a></li>
+        <li><a href="https://www.exeterguild.org/societies/15967/">Join</a></li>
+    </ul>
 </div>

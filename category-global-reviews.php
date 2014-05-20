@@ -1,15 +1,14 @@
 <?php get_header(); ?>
 <div class="section-header">
-	<h1 class="section-title"><?php single_cat_title(); ?></h1>
+	<h1 class="section-header__title"><?php single_cat_title(); ?></h1>
 	
-	<ul class="category-toggler">
-		<li class="button"><a href="http://pearshapedexeter.com/category/reviews">All</a></li>
-		<li class="button"><a href="http://pearshapedexeter.com/category/local-reviews">Local</a></li>
-		<li class="button-active"><a href="http://pearshapedexeter.com/category/global-reviews">Global</a></li>
+	<ul class="category-toggle">
+		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/reviews">All</a></li>
+		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/local-reviews">Local</a></li>
+		<li class="category-toggle__button_active"><a href="http://pearshapedexeter.com/category/global-reviews">Global</a></li>
 	</ul>
 </div>
 
-<div class="thumbnail-grid-wrapper">
 <div class="thumbnail-grid">
 <?php
 // set current month to that of first post, and print it.
@@ -27,14 +26,13 @@ while (have_posts()) : the_post();
     endif;
 
     // output data for the post
-    echo "<div class='thumbnail-card'><a href='" . get_permalink() . "'>";
+    echo "<div class='thumbnail-grid__item'><a href='" . get_permalink() . "'>";
     the_post_thumbnail();
     echo "</a></div>";
 
 endwhile;
 
 ?>
-</div>
 </div>
 
 <?php get_footer(); ?>

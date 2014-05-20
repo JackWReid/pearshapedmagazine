@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <div class="section-header">
-	<h1 class="section-title">Events</h1>
+	<h1 class="section-header__title">Events</h1>
 
-	<ul class="category-toggler">
-		<li class="button-active"><a href="http://pearshapedexeter.com/category/listings">Listings</a></li>
-		<li class="button"><a href="http://pearshapedexeter.com/category/event-previews">Upcoming</a></li>
-		<li class="button"><a href="http://pearshapedexeter.com/category/event-reviews">Reviews</a></li>
+	<ul class="category-toggle">
+		<li class="category-toggle__button_active"><a href="http://pearshapedexeter.com/category/listings">Listings</a></li>
+		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/event-previews">Upcoming</a></li>
+		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/event-reviews">Reviews</a></li>
 	</ul>
 </div>
 

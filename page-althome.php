@@ -17,9 +17,9 @@ get_header(); ?>
     $my_query = new WP_Query($args);
     if( $my_query->have_posts() ) {
       while ($my_query->have_posts()) : $my_query->the_post(); ?>
-        	<div class="featured-posts-box">
+        	<div class="featured-posts__module">
         		<a href="<?php the_permalink(); ?>">
-        		<div class="featured-posts-image">
+        		<div class="featured-posts__image">
 	        		<?php the_post_thumbnail(); ?>
 	        		<h4><?php the_title(); ?></h4>
         		</div>
@@ -32,15 +32,15 @@ get_header(); ?>
 ?>
 </div>
 
-<div class="frontpage-cat-boxes-alt">
+<div class="cat-box-bold">
 
-	<div class="cat-box-alt">
+	<div class="cat-box-bold__module">
 		<?php $cat_id = 580;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id), 'order' => 'ASC'));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 
 		<a href="<?php the_permalink(); ?>">
-			<div class="cat-box-image-alt">
+			<div class="cat-box-bold__image">
 				<?php the_post_thumbnail(); ?>
 				<h5>Event Previews</h5>
 				<h4><?php the_title(); ?></h4>
@@ -50,13 +50,13 @@ get_header(); ?>
 		<?php endwhile; endif; ?>
 	</div>
 
-	<div class="cat-box-alt">
+	<div class="cat-box-bold__module">
 		<?php $cat_id = 25;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 
 		<a href="<?php the_permalink(); ?>">
-			<div class="cat-box-image-alt">
+			<div class="cat-box-box__image">
 				<?php the_post_thumbnail(); ?>
 				<h5>Event Reviews</h5>
 				<h4><?php the_title(); ?></h4>
@@ -66,13 +66,13 @@ get_header(); ?>
 		<?php endwhile; endif; ?>
 	</div>
 
-	<div class="cat-box-alt">
+	<div class="cat-box-bold__module">
 		<?php $cat_id = 17;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 
 		<a href="<?php the_permalink(); ?>">
-			<div class="cat-box-image-alt">
+			<div class="cat-box-box__image">
 				<?php the_post_thumbnail(); ?>
 				<h5>Album Reviews</h5>
 				<h4><?php the_title(); ?></h4>
@@ -83,13 +83,13 @@ get_header(); ?>
 		<?php endwhile; endif; ?>
 	</div>
 
-	<div class="cat-box-alt">
+	<div class="cat-box-bold__module">
 		<?php $cat_id = 125;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 
 		<a href="<?php the_permalink(); ?>">
-			<div class="cat-box-image-alt">
+			<div class="cat-box-box__image">
 				<?php the_post_thumbnail(); ?>
 				<h5>Features</h5>
 				<h4><?php the_title(); ?></h4>
@@ -99,13 +99,13 @@ get_header(); ?>
 
 		<?php endwhile; endif; ?>
 	</div>
-	<div class="cat-box-alt">
+	<div class="cat-box-bold__module">
 		<?php $cat_id = 42;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 
 		<a href="<?php the_permalink(); ?>">
-			<div class="cat-box-image-alt">
+			<div class="cat-box-box__image">
 				<?php the_post_thumbnail(); ?>
 				<h5>Columns</h5>
 				<h4><?php the_title(); ?></h4>
@@ -114,13 +114,13 @@ get_header(); ?>
 
 		<?php endwhile; endif; ?>
 	</div>
-	<div class="cat-box-alt">
+	<div class="cat-box-bold__module">
 		<?php $cat_id = 111;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 
 		<a href="<?php the_permalink(); ?>">
-			<div class="cat-box-image-alt">
+			<div class="cat-box-box__image">
 				<?php the_post_thumbnail(); ?>
 				<h5>Interviews</h5>
 				<h4><?php the_title(); ?></h4>

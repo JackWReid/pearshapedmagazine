@@ -72,18 +72,24 @@
 	}
 }
 
-// Tablet Grid Collapse //
+// Tablet Grid Collapse
 .twelve.columns, .ten.columns, .nine.columns, .eight.columns, .six.columns, .four.columns, .three.columns, .two.columns{
 	@media screen and (max-width: $br-tablet){
 		margin-left: 2px;
 	}
 }
 
-// Mobile Grid Collapse //
+// Mobile Grid Collapse
 .twelve.columns, .ten.columns, .nine.columns, .eight.columns, .six.columns, .four.columns, .three.columns, .two.columns{
 	@media screen and (max-width: $br-mobile){
 		float: none;
 		margin: 0;
 		width: 100%;
 	}
+}
+
+.page-wrapper{
+	max-width: 60em;
+	margin: 2em auto;
+	padding: 1em;
 }

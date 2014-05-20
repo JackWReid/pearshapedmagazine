@@ -1,28 +1,28 @@
 <?php get_header(); ?>
 <div class="section-header">
-    <h1 class="section-title">Events</h1>
-    <ul class="category-toggler">
-        <li class="button"><a href="http://pearshapedexeter.com/category/listings">Listings</a></li>
-        <li class="button-active"><a href="http://pearshapedexeter.com/category/event-previews">Upcoming</a></li>
-        <li class="button"><a href="http://pearshapedexeter.com/category/event-reviews">Reviews</a></li>
+    <h1 class="section-header__title">Events</h1>
+    <ul class="category-toggle">
+        <li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/listings">Listings</a></li>
+        <li class="category-toggle__button_active"><a href="http://pearshapedexeter.com/category/event-previews">Upcoming</a></li>
+        <li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/event-reviews">Reviews</a></li>
     </ul>
 </div>
 
-<div class="link-section-alt">
-    <span class="link-title-alt"><a href="http://pearshapedexeter.com/category/event-preview-archives">View Past Events</a></span>
+<div class="link-section-green">
+    <span class="link-section-green__title"><a href="http://pearshapedexeter.com/category/event-preview-archives">View Past Events</a></span>
 </div>
 
 <div class="preview-stream">
     <?php global $query_string; query_posts($query_string . "&order=ASC"); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <div class="preview-item row">
+    <div class="preview-stream__item row">
     <a href="<?php the_permalink(); ?>">
         <div class="four columns">
             <?php the_post_thumbnail() ?>
         </div>
         <div class="eight columns">
-            <h1 class="preview-title"><?php the_title(); ?></h1>
-            <h3 class="preview-author">
+            <h1 class="preview-stream__item__title"><?php the_title(); ?></h1>
+            <h3 class="preview-stream__item__author">
                 <?php 
                     $author = get_post_meta($post->ID, 'Author', true); 
 
@@ -40,7 +40,7 @@
                     }
                 ?>
             </div>
-            <div class="preview-content">
+            <div class="preview-stream__item__content">
                 <?php the_content(); ?>
             </div>
         </a>

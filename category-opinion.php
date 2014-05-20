@@ -1,24 +1,24 @@
 <?php get_header(); ?>
 <div class="section-header">
-	<h1 class="section-title">Columns</h1>
+	<h1 class="section-header__title">Columns</h1>
 
-	<ul class="category-toggler">
-		<li class="button"><a href="http://pearshapedexeter.com/category/columns">All</a></li>
-		<li class="button-active"><a href="http://pearshapedexeter.com/category/opinion">Opinion</a></li>
-		<li class="button"><a href="http://pearshapedexeter.com/category/listening_post">Listening Post</a></li>
+	<ul class="category-toggle">
+		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/columns">All</a></li>
+		<li class="category-toggle__button_active"><a href="http://pearshapedexeter.com/category/opinion">Opinion</a></li>
+		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/listening_post">Listening Post</a></li>
 	</ul>
 </div>
 
 <div class="preview-stream">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<div class="preview-item row">
+	<div class="preview-stream__item row">
 	<a href="<?php the_permalink(); ?>">
 		<div class="four columns">
 			<?php the_post_thumbnail() ?>
 		</div>
 		<div class="eight columns">
-			<h1 class="preview-title"><?php the_title(); ?></h1>
-			<h3 class="preview-author">
+			<h1 class="preview-stream__item__title"><?php the_title(); ?></h1>
+			<h3 class="preview-stream__item__author">
 				<?php 
 				    $author = get_post_meta($post->ID, 'Author', true); 
 
@@ -27,7 +27,7 @@
 					}
 				?>
 			</h3>
-			<div class="preview-content">
+			<div class="preview-stream__item__content">
 				<?php the_content(); ?>
 			</div>
 			</a>

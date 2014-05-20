@@ -7,7 +7,7 @@
  */
 get_header(); ?>
 <div class="section-header">
-	<h1 class="section-title"><?php the_title(); ?></h1>
+	<h1 class="section-header__title"><?php the_title(); ?></h1>
 </div>
 <div class="page-wrapper">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

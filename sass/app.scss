@@ -1,36 +1,41 @@
-@import 'head'; // Wordpress Theme Information
 @import 'reset'; // CSS Normalise
 @import 'library'; // Super library of mixins, variables, and standards for PearShaped
 @import 'layout'; // Grid and image layout
 
-
-
-// Font family basics //
-body{
-	font-family: $bodyfont;
-	font-size: 14px; // Type baseline
+// Futura Family
+@font-face {
+    font-family: 'futura-alt';
+    src: url('http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot');
+    src: url('http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff') format('woff'),
+         url('http://static.tumblr.com/gjd1903/DK3n0zpxx/futuralt-webfont.ttf') format('truetype'),
+         url('http://static.tumblr.com/gjd1903/zKNn0zpx0/futuralt-webfont.svg#futura') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6, .caption{
-	@include header;
+// Aleo Family
+@font-face {
+    font-family: 'aleo';
+    src: url('http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot');
+    src: url('http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://static.tumblr.com/gjd1903/rDin0zqbx/aleo-bold-webfont.woff') format('woff'),
+         url('http://static.tumblr.com/gjd1903/s9Mn0zqc9/aleo-bold-webfont.ttf') format('truetype'),
+         url('http://static.tumblr.com/gjd1903/yfTn0zqcq/aleo-bold-webfont.svgg#aleo') format('svg');
+    font-weight: bold;
+    font-style: normal;
 }
-
-.top-bar,
-.site-title,
-.category-toggler,
-.cards,
-#searchsubmit{
-	@include title;
-}
-
-
-
 
 /////////////////////
 //				   //
 //  TYPE ELEMENTS  //
 //                 //
 /////////////////////
+
+html{
+	font-family: $bodyfont;
+	font-size: 14px;
+}
 
 b, strong{
 	font-weight: bold;
@@ -40,9 +45,8 @@ i, em{
 	font-style: italic;
 }
 
-p{
-	font-size: 1.1em;
-	line-height: 1.25em;
+h1, h2, h3, h4, h5, h6, .caption{
+	@include header;
 }
 
 hr{
@@ -78,7 +82,7 @@ input:focus, select:focus, textarea:focus {
 //                 //
 /////////////////////
 
-.top-bar{
+.nav-bar{
 	position: relative;
 	width: 100%;
 	z-index: 3;
@@ -87,6 +91,8 @@ input:focus, select:focus, textarea:focus {
 	position: -webkit-sticky;
 	top: 0;
 
+	@include title;
+	text-align: center;
 	font-size: 1.2em;
 	background-color: $white;
 	@include border("divider-bottom");
@@ -95,55 +101,101 @@ input:focus, select:focus, textarea:focus {
 	margin-bottom: 25px;
 }
 
-// To center all the top bar elements //
-.top-bar-wrap{
-	text-align: center;
-}
-
-// For jQuery sticky polyfill
-.sticky{
-	position: fixed;
-}
-
-// Vertically align all of the top bar elements //
-.nav, #searchform, .social{
-	vertical-align: middle;
-}
-
-.nav{
-	list-style-type: none;
-	margin: 5px 0;
-	padding-left: -40px; // Reset bullet point space
-	display: inline-block;
-
-	padding: 0;
-
-	li{
+	.nav-bar__list{
+		list-style-type: none;
+		margin: 5px 0;
+		padding-left: -40px;
 		display: inline-block;
-		margin-right: 0.5em;
-		a:hover{
-			color: $green; // Hovering over nav links makes them go green
+
+		padding: 0;
+
+		li{
+			display: inline-block;
+			margin-right: 0.5em;
+			a:hover{
+				color: $green;
+			}
 		}
 	}
+
+	// For jQuery sticky polyfill
+	.sticky{
+		position: fixed;
+	}
+
+
+/////////////////////
+//				   //
+//   SIDE HEADER   //
+//                 //
+/////////////////////
+
+
+.site-header{
+	text-align: right;
 }
 
-// PearShaped title in nav bar //
-.top-bar-title{
-	font-size: 1.2em;
-	color: $green;
-}
+	.site-header__title{
+		@include title;
+		font-size: 6em;
+		font-weight: 500;
+		text-align: center;
+		
+		margin: 0 auto;
+		width: auto;
 
-// Hiding the search box and social links when they start to overflow //
+		@media screen and (max-width: $br-tablet){
+			font-size: 4em;
+		}
+
+		@media screen and (max-width: $br-mobile){
+			font-size: 3em;
+		}
+	}
+
+	.site-header__social-icons{
+		position: absolute;
+		left: 10px;
+		top: 75px;
+		img{
+			max-width: 25px;
+		}
+		@media screen and (max-width: $br-fullwidth){
+			display: none;
+		}
+	}
+
+	#searchform{
+		display: block;
+		margin-right: 10px;
+		margin-top: -30px;
+		padding-bottom: 10px;
+		.screen-reader-text{
+			display: none;
+		}
+		// The search input field //
+		#s{
+			width: 7em;
+		}
+		// The search button //
+		#searchsubmit{
+			@include title;
+			border-radius: 0;
+		}
+		@media screen and (max-width: $br-fullwidth){
+			display: none;
+		}
+	}
+
 @media screen and (max-width: $br-fullwidth){
-	#searchform, .social{
+	#searchform, .site-header__social-icons{
 		display: none;
 	}
 }
 
-
-
-
-
+.nav-bar__list, #searchform, .site-header__social-icons{
+	vertical-align: middle;
+}
 
 /////////////////////
 //				   //
@@ -163,80 +215,6 @@ input:focus, select:focus, textarea:focus {
 }
 
 
-
-
-
-
-
-/////////////////////
-//				   //
-//   SIDE HEADER   //
-//                 //
-/////////////////////
-
-.site-header{
-	text-align: right;
-}
-
-h1.site-title{
-	font-size: 6em;
-	font-weight: 500;
-	line-height: 0.9em;
-	text-align: center;
-	
-	margin: 0 auto;
-	padding: 15px 0;
-
-	width: auto;
-
-	@media screen and (max-width: $br-tablet){
-		font-size: 4em;
-	}
-
-	@media screen and (max-width: $br-mobile){
-		font-size: 3em;
-	}
-}
-
-.social{
-	position: absolute;
-	left: 10px;
-	top: 75px;
-	img{
-		max-width: 25px;
-	}
-	@media screen and (max-width: $br-fullwidth){
-		display: none;
-	}
-}
-
-#searchform{
-	display: block;
-	margin-right: 10px;
-	margin-top: -30px;
-	padding-bottom: 10px;
-	.screen-reader-text{
-		display: none;
-	}
-	// The search input field //
-	#s{
-		width: 7em;
-	}
-	// The search button //
-	#searchsubmit{
-		border-radius: 0;
-	}
-	@media screen and (max-width: $br-fullwidth){
-		display: none;
-	}
-}
-
-
-
-
-
-
-
 /////////////////////
 //				   //
 //    CAT HEADER   //
@@ -247,23 +225,14 @@ h1.site-title{
 	margin-bottom: 20px;
 }
 
-.section-title{
-	@include swishheader;
+	.section-header__title{
+		@include swishheader;
+		margin: 0 auto;
 
-	margin: 0 auto;
-
-	// Scaling header for smaller screens //
-	@media screen and (max-width: $br-fullwidth){
-		font-size: 3.2em;
+		@media screen and (max-width: $br-mobile){
+			font-size: 2em;
+		}
 	}
-	@media screen and (max-width: $br-mobile){
-		font-size: 2em;
-	}
-}
-
-
-
-
 
 
 /////////////////////
@@ -279,38 +248,37 @@ h1.site-title{
 	@include border("divider-bottom");
 }
 
-.link-title{
-	@include title;
-	font-size: 2em;
-	a{
-		color: $green;
-		&:hover{
-			color: $black;
+	.link-section__title{
+		@include title;
+		font-size: 2em;
+		a{
+			color: $green;
+			&:hover{
+				color: $black;
+			}
 		}
 	}
-}
 
-.link-section-alt{
+.link-section-green{
 	padding: 0.2em;
 	text-align: center;
 	width: 100%;
 	@include border("divider-bottom");
 }
 
-.link-title-alt{
-	font-family: georgia;
-	font-weight: bold;
-	font-style: italic;
-	font-size: 1.5em;
-	a{
-	color: $green;
-		&:hover{
-			color: $black;
+	.link-title-green__title{
+		font-family: georgia;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 1.5em;
+		a{
+		color: $green;
+			&:hover{
+				color: $black;
+			}
 		}
 	}
-}
 
-// Variant that only shows up on mobile //
 .link-section-mobile{
 	@extend .link-section;
 	display: none;
@@ -332,60 +300,50 @@ h1.site-title{
 //                 //
 /////////////////////
 
-// Keeps those pesky month headers in line
-.thumbnail-grid-wrapper{
+.thumbnail-grid{
 	max-width: 1202px;
 	margin: 0 auto;
+	text-align: left;
 	h2{
 		margin-bottom: 5px;
 	}
 }
 
-.thumbnail-grid{
-	text-align: left;
-}
+	.thumbnail-grid__item{
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
 
-.thumbnail-card{
-	display: inline-block;
-	vertical-align: top;
-	text-align: center;
-
-	a{
-		&:hover img{
+		a:hover img{
 			opacity: 0.5;
+		}
+
+		@include makeGrid(4, 2%);
+		@media screen and (max-width: $br-tablet){
+			@include makeGrid(3, 2%);
+		}
+		@media screen and (max-width: $br-mobile){
+			@include makeGrid(2, 2%);
+			width: 100% !important;
 		}
 	}
 
-	a:hover img{
-		opacity: 0.5;
+	.thumbnail-grid__item__title{
+		@include lowertitle;
+		display: block;
+		width: 100%;
 	}
 
-	@include makeGrid(4, 2%);
-	@media screen and (max-width: $br-tablet){
-		@include makeGrid(3, 2%);
+	span.thumbnail-grid__item__title{
+		font-size: 1.5em;
 	}
-	@media screen and (max-width: $br-mobile){
-		@include makeGrid(2, 2%);
-		width: 100% !important;
-	}
-}
-
-.thumbnail-title{
-	@include lowertitle;
-	display: block;
-	width: 100%;
-}
-
-span.thumbnail-title{
-	font-size: 1.5em;
-}
 
 // Tighter spacing for mobile screens //
 @media screen and (max-width: $br-mobile){
-	.thumbnail-card{
+	.thumbnail-grid__item{
 	width: 48%;
 	}
-	.thumbnail-title{
+	.thumbnail-grid__item__title{
 		display: none; // Post titles look gross when squished up
 	}
 }
@@ -401,18 +359,25 @@ span.thumbnail-title{
 /////////////////////
 
 .directory-card{
-	@extend .thumbnail-card;
-	.thumbnail-title{
-		font-size: 1.5em;
-	}
+	@extend .thumbnail-grid__item;
 }
 
-.directory-links{
-	margin-top: 0;
-	a:hover{
-		color: $black;
+	.directory-card__title{
+			font-size: 1.5em;
+		}
+
+	.directory-card__links{
+		margin-top: 0;
+		a:hover{
+			color: $black;
+		}
 	}
-}
+
+/////////////////////
+//				   //
+//  HIDES & FIXES  //
+//                 //
+/////////////////////
 
 #wpstats{
 	display: none;

@@ -11,11 +11,18 @@ module.exports = function(grunt) {
         sass: {
             dist: {
               options: {
-                style: 'compact',
+                style: 'compressed',
               },
                 files: {
-                    'style.css' : 'sass/app.scss'
+                    'sass/build.css' : 'sass/app.scss'
                 }
+            }
+        },
+
+        concat: {
+            dist: {
+                src: ['sass/head.css', 'sass/build.css'],
+                dest: 'style.css'
             }
         }
     });
@@ -23,9 +30,10 @@ module.exports = function(grunt) {
     // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass']);
+    grunt.registerTask('default', ['sass', 'concat']);
     grunt.registerTask('auto', ['watch']);
 
 };

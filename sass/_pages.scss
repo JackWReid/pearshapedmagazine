@@ -1,22 +1,4 @@
 @import 'library';
-/////////////////////
-//				   //
-//      GLOBAL     //
-//                 //
-/////////////////////
-
-// An all round wrapper for basic pages
-.page-wrapper{
-	max-width: 60em;
-	margin: 2em auto;
-	padding: 1em;
-}
-
-
-
-
-
-
 
 /////////////////////
 //				   //
@@ -24,8 +6,7 @@
 //                 //
 /////////////////////
 
-// Gives the slider breathing room and a divisor border
-.slider-module{
+.slider{
 	@include border("divider-bottom");
 	padding-bottom: 50px;
 	@media screen and (max-width: $br-mobile){
@@ -33,62 +14,56 @@
 	}
 }
 
-// Window dressing for the slider text
-.caption{
-	font-size: 16px;
-	padding: 10px !important;
-}
-.caption-wrap{
-	opacity: 1 !important;
-}
+	.caption{
+		font-size: 16px;
+		padding: 10px !important;
+	}
 
-// Box of previews for latest post in each cateogory, presented on the home page
-.frontpage-cat-boxes{
+	.caption-wrap{
+		opacity: 1 !important;
+	}
+
+.cat-box{
 	max-width: 1000px;
 	margin: 0 auto;
 	@include border("divider-bottom");
 
-	h1{
-		@include swishheader;
-		@media screen and (max-width: $br-tablet){
-			font-size: 3.2em;
-		}
-		@media screen and (max-width: $br-mobile){
-			font-size: 2em;
-		}
-	}
 	@media screen and (max-width: $br-tablet){
 		float: none;
 		width: 100%;
 	}
 }
-.cat-box{
-	width: 32.5%;
-	display: inline-block;
-	vertical-align: top;
-	h4{
-		@include lowertitle;
-		margin-top: 5px;
-		text-align: center;
+
+	.cat-box h1{
+		@include swishheader;
 	}
-	.post-category-info{
-		text-align: center;
-		margin: 0 auto;
-		border: none;
-		@media screen and (max-width: $br-tablet){
-			display: none;
+
+	.cat-box__module{
+		width: 32.5%;
+		display: inline-block;
+		vertical-align: top;
+		h4{
+			@include lowertitle;
+			margin-top: 5px;
+			text-align: center;
+		}
+		.post-category-info{
+			text-align: center;
+			margin: 0 auto;
+			border: none;
+			@media screen and (max-width: $br-tablet){
+				display: none;
+			}
 		}
 	}
-}
-// Image clipping
-.cat-box-image{
-	display: block;
-	max-height: 200px;
-	overflow: hidden;
-}
 
-// Narrower about column sits underneath the cat-boxes on the home page
-.frontpage-about{
+	.cat-box__image{
+		display: block;
+		max-height: 200px;
+		overflow: hidden;
+	}
+
+.text-column{
 	max-width: 45em;
 	padding: 0 1em;
 	margin: 0 auto;
@@ -100,8 +75,14 @@
 	}
 }
 
-// Prototype code
-.frontpage-cat-boxes-alt{
+
+/////////////////////
+//				   //
+//  ALT-HOMEPAGE   //
+//                 //
+/////////////////////
+
+.cat-box-bold{
 	width: 100%;
 	@media screen and (max-width: 900px){
 		overflow-x: scroll;
@@ -110,46 +91,46 @@
 	}
 }
 
-.cat-box-alt{
-	width: 33.333%;
-	margin: 0 -3px -3px 0;
+	.cat-box-bold__module{
+		width: 33.333%;
+		margin: 0 -3px -3px 0;
 
-	display: inline-block;
-	vertical-align: top;
-	@media screen and (max-width: 900px){
-		width: 300px;
-	}
-}
-
-.cat-box-image-alt{
-	display: block;
-	position: relative;
-	height: 300px;
-	overflow: hidden;
-
-	img{
-		position: absolute;
-		left: 0;
-		top: 0;
+		display: inline-block;
+		vertical-align: top;
+		@media screen and (max-width: 900px){
+			width: 300px;
+		}
 	}
 
-	h4, h5{
-		z-index: 2;
-		left: 20px;
+	.cat-box-bold__image{
+		display: block;
+		position: relative;
+		height: 300px;
+		overflow: hidden;
 
-		position: absolute;
-		color: white;
-		text-shadow: 3px 3px 3px #000;
+		img{
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		h4, h5{
+			z-index: 2;
+			left: 20px;
+
+			position: absolute;
+			color: white;
+			text-shadow: 3px 3px 3px #000;
+		}
+		h5{
+			top: 200px;
+			font-size: 20px;
+		}
+		h4{
+			top: 235px;
+			font-size: 20px;
+		}
 	}
-	h5{
-		top: 200px;
-		font-size: 20px;
-	}
-	h4{
-		top: 235px;
-		font-size: 20px;
-	}
-}
 
 .featured-posts{
 	width: 100%;
@@ -161,43 +142,38 @@
 	}
 }
 
-.featured-posts-box{
-	display: inline-block;
-	position: relative;
+	.featured-posts__module{
+		display: inline-block;
+		position: relative;
 
-	margin: 0 -3px -3px 0;
-	width: 50%;
-	height: 400px;
-	overflow: hidden;
-	@media screen and (max-width: 900px){
-		width: 90%;
+		margin: 0 -3px -3px 0;
+		width: 50%;
+		height: 400px;
+		overflow: hidden;
+		@media screen and (max-width: 900px){
+			width: 90%;
+		}
+
 	}
 
-}
+	.featured-posts__image{
+		img{
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
 
-.featured-posts-image{
-	img{
-		position: absolute;
-		left: 0;
-		top: 0;
+		h4{
+			z-index: 2;
+			top: 310px;
+			left: 20px;
+			position: absolute;
+
+			font-size: 30px;
+			color: white;
+			text-shadow: 3px 3px 3px #000;
+		}
 	}
-
-	h4{
-		z-index: 2;
-		top: 310px;
-		left: 20px;
-		position: absolute;
-
-		font-size: 30px;
-		color: white;
-		text-shadow: 3px 3px 3px #000;
-	}
-}
-// Prototype code
-
-
-
-
 
 
 /////////////////////
@@ -211,7 +187,7 @@
 	margin: 0 auto;
 }
 
-.preview-item{
+.preview-stream__item{
 	padding: 1em;
 	.columns{
 		padding: 0.2em;
@@ -226,41 +202,42 @@
 	}
 }
 
-.preview-title{
-	margin-top: 0; // Brings the title up the top of the padding
-	margin-bottom: 10px;
-	width: 100%;
-	@include border("divider-bottom");
-}
-
-.preview-author{
-	margin: 0;
-	padding: 0;
-}
-
-// Sanitised formatting for previews
-.preview-content{
-
-	.kicker, h1, h2, h3, h4, h5, h6, strong{
-		font-size: 15.4px;
-		font-weight: 400 !important;
-		font-style: normal;
-		font-family: georgia;
-		line-height: 1.25em;
-	}
-
-	.column, .columns{
+	.preview-stream__item__title{
+		margin-top: 0;
+		margin-bottom: 10px;
 		width: 100%;
-		float: none;
+		@include border("divider-bottom");
 	}
-}
 
-.more-link{
-	color: $green;
-}
+	.preview-stream__item__author{
+		margin: 0;
+		padding: 0;
+	}
+
+	// Sanitised formatting for previews
+	.preview-stream__item__content{
+
+		.kicker, h1, h2, h3, h4, h5, h6, strong{
+			font-size: 15.4px;
+			font-weight: 400 !important;
+			font-style: normal;
+			font-family: georgia;
+			line-height: 1.25em;
+		}
+
+		.column, .columns{
+			width: 100%;
+			float: none;
+		}
+	}
+
+	.preview-stream__item__more-link{
+		color: $green;
+	}
 
 // A toggler module to select sub-categories on selected categories
-.category-toggler{
+.category-toggle{
+	@include title;
 	list-style-type: none;
 	text-align: center;
 	font-size: 2em;
@@ -270,21 +247,21 @@
 		font-size: 1.5em;
 	}
 }
-.button, .button-active{
-	padding: 2px 5px;
-	display: inline-block;
-	a:hover{
-		color: $green; // Other categories hover green
+
+	.category-toggle__button{
+		padding: 2px 5px;
+		display: inline-block;
+		a:hover{
+			color: $green; // Other categories hover green
+		}
 	}
-}
-.button-active a{
-	color: $green;
-}
 
-
-
-
-
+	.category-toggle__button_active{
+		@extend .category-toggle__button;
+		a{
+			color: $green;
+		}
+	}
 
 
 /////////////////////
@@ -297,24 +274,6 @@
 	padding-bottom: 40px;
 	@include border("divider-bottom");
 }
-
-
-
-
-
-
-/////////////////////
-//				   //
-//       404       //
-//                 //
-/////////////////////
-
-.directory-fix{
-	margin-bottom:  25px;
-}
-
-
-
 
 
 /////////////////////
@@ -403,10 +362,6 @@
 }
 
 
-
-
-
-
 /////////////////////
 //				   //
 //       404       //
@@ -415,20 +370,9 @@
 
 .fourohfour{
 	text-align: center;
+	
 	img{
 		width: 30%;
 		margin: 1em auto;
 	}
-	p{
-		@include header;
-		font-size: 1.5em;
-		@media screen and (max-width: $br-mobile){
-			margin: 0;
-		}
-	}
 }
-
-
-
-
-
