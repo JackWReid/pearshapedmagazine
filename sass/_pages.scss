@@ -289,41 +289,55 @@
 	padding: 0.5em;
 }
 
-// The next three selectors primarily dictate columns of a grid
-.contact-meta, .contact-bulk{
-	display: inline-block;
-	vertical-align: top;
-	overflow: hidden;
-}
-.contact-meta{
-	width: 31%; // Left third
-	img{
-		max-width: 100%;
+	// The next three selectors primarily dictate columns of a grid
+	.contact-card__meta, .contact-card__info{
+		display: inline-block;
+		vertical-align: top;
+		overflow: hidden;
 	}
-}
-.contact-bulk{
-	width: 65%; // Right two thirds
-	padding: 0 0.5em;
-	h2{
-		font-size: 2em;
-		margin: 0 0 0.5em 0;
+	.contact-card__meta{
+		width: 31%;
+		img{
+			max-width: 100%;
+		}
 	}
-	h3{
-		margin-top: 0;
+	.contact-card__info{
+		width: 65%;
+		padding: 0 0.5em;
+		h2{
+			font-size: 2em;
+			margin: 0 0 0.5em 0;
+		}
+		h3{
+			margin-top: 0;
+		}
 	}
-}
 
-.contact-title{
-	width: 100%;
-	@include border("divider-bottom");
-}
+	.contact-card__title{
+		width: 100%;
+		@include border("divider-bottom");
+	}
+
+	// Little image icon and email address on contact card
+	.contact-card__email{
+		margin-top: -10px;
+		p{
+			margin: 0 auto;
+			padding-bottom: 10px;
+			text-align: center;
+			font-style: italic;
+		}
+		i{
+			margin-right: 0.5em;
+		}
+	}
 
 // Mobile variation with collapsed columns //
 @media screen and (max-width: $br-mobile){
 	.contact-card img{
 		display: none;
 	}
-	.contact-meta, .contact-bulk{
+	.contact-card__meta, .contact-card__info{
 		width: 100%;
 		img{
 			display: block;
@@ -332,32 +346,14 @@
 			text-align: center; // Centered image and details
 		}
 	}
-	.contact-title, .contact-incumbent{
+	.contact-card__title, .contact-card__incumbent{
 		text-align: center;
 	}
-	.contact-meta{
+	.contact-card__title{
 		margin-bottom: 10px;
 	}
-	.contact-email{
+	.contact-card__email{
 		display: none;
-	}
-}
-
-// Little image icon and email address on contact card
-.contact-email{
-	margin-top: -10px;
-	img, p{
-		display: inline-block;
-		vertical-align: top;
-	}
-	img{
-		max-width: 25px;
-	}
-	p{
-		margin: 0 auto;
-		padding-bottom: 10px;
-		text-align: center;
-		font-style: italic;
 	}
 }
 
