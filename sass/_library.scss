@@ -32,8 +32,8 @@ $black: #222 !global;
 
 // Font stack declaration
 $bodyfont: Georgia, serif;
-$headerfont: 'aleo', 'helvetica', arial, sans-serif;
-$titlefont: 'futura-alt', arial, sans-serif;
+$headerfont: 'aleo', 'adelle', 'helvetica', arial, sans-serif;
+$titlefont: 'futura-alt', 'futura', 'futura-pt', arial, sans-serif;
 
 // Standard font styles
 @mixin header{
