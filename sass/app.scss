@@ -156,9 +156,9 @@ input:focus, select:focus, textarea:focus {
 	.site-header__social-icons{
 		position: absolute;
 		left: 10px;
-		top: 75px;
-		img{
-			max-width: 25px;
+		top: 80px;
+		i{
+			margin-right: 5px;
 		}
 		@media screen and (max-width: $br-fullwidth){
 			display: none;

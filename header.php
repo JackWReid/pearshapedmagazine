@@ -21,6 +21,7 @@
     <link rel="apple-touch-icon" href="http://pearshapedexeter.com/wp-content/uploads/2014/05/icon.png"/>  
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
@@ -32,9 +33,9 @@
     <h1 class="site-header__title"><a href="<?php echo home_url(); ?>">PearShaped</a></h1>
     <?php get_search_form(); ?>
     <div class="site-header__social-icons">
-        <a href="https://www.facebook.com/PearShapedExeter"><img src="http://i.imgur.com/VXGTdj0.png" alt="Facebook" /></a>
-        <a href="http://twitter.com/pearshapedexe"><img src="http://i.imgur.com/caAQrTA.png" alt="Twitter"></a>
-        <a href="http://soundcloud.com/pearshaped-exeter"><img src="http://i.imgur.com/DrFWOyr.png" alt="Soundcloud"></a>
+        <a href="https://www.facebook.com/PearShapedExeter"><i class="fa fa-facebook-square fa-2x"></i></a>
+        <a href="http://twitter.com/pearshapedexe"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="http://soundcloud.com/pearshaped-exeter"><i class="fa fa-soundcloud fa-2x"></i></a>
     </div>
 </div>
 
