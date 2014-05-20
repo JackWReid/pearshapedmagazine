@@ -15,6 +15,9 @@
 	@include lowertitle;
 	font-size: 3em;
 	margin: 0px;
+	@media screen and ($br-mobile){
+		font-size: 2.7em;
+	}
 }
 
 .author{
@@ -56,6 +59,10 @@
 	max-width: 45em;
 
 	margin: 0 auto;
+
+	p{
+		font-size: 1.1em;
+	}
 }
 
 

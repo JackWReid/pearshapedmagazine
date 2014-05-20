@@ -367,6 +367,7 @@ span.thumbnail-title { font-size: 1.5em; }
 .post-header { display: block; max-width: 45em; }
 
 .post-title { font-family: "futura-alt", arial, sans-serif; font-weight: normal !important; font-size: 3em; margin: 0px; }
+@media screen and (650px) { .post-title { font-size: 2.7em; } }
 
 .author { color: #498c34; font-weight: 900; border-bottom: 1px #eeeeee solid; margin-top: 10px; margin-bottom: 35px; }
 
@@ -376,6 +377,7 @@ span.thumbnail-title { font-size: 1.5em; }
 .post-thumbnail { display: block; max-height: 400px; overflow: hidden; }
 
 .post-content { display: block; max-width: 45em; margin: 0 auto; }
+.post-content p { font-size: 1.1em; }
 
 @media screen and (max-width: 45em) { .post-content { margin: 0 1em 40px 1em; } }
 @media screen and (max-width: 500px) { h1.post-title { margin-top: 20px; } }
