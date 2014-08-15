@@ -15,7 +15,7 @@
 <?php
 // set current month to that of first post, and print it.
 $current_month = get_the_time('F');
-// UNTESTED YEAR FUNCTION == ROLL OUT TO LOCAL & GLOBAL
+// Pushed to production, untested year visible
 $current_year = get_the_time('Y');
 echo "<h2>" . $current_month . $current_year "</h2>";
 
