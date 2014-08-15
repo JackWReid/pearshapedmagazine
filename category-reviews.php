@@ -15,7 +15,9 @@
 <?php
 // set current month to that of first post, and print it.
 $current_month = get_the_time('F');
-echo "<h2>" . $current_month . "</h2>";
+// UNTESTED YEAR FUNCTION == ROLL OUT TO LOCAL & GLOBAL
+$current_year = get_the_time('Y');
+echo "<h2>" . $current_month . $current_year "</h2>";
 
 while (have_posts()) : the_post();
 
@@ -24,7 +26,7 @@ while (have_posts()) : the_post();
     $this_month = get_the_time('F');
     if( $this_month!=$current_month ):
         $current_month = $this_month;
-        echo "<h2>" . $current_month . "</h2>";
+        echo "<h2>" . $current_month . $current_year "</h2>";
     endif;
 
     // output data for the post
@@ -35,9 +37,6 @@ while (have_posts()) : the_post();
 endwhile;
 
 ?>
-</div>
-<div class="link-section">
-    <span class="link-section__title"><a href="/">View older reviews</a></span>
 </div>
 
 <?php get_footer(); ?>

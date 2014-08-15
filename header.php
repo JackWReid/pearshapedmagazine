@@ -41,7 +41,7 @@
 
 <div class="nav-bar">
     <ul class="nav-bar__list">
-        <li><a href="http://pearshapedexeter.com/category/listings">Events</a></li>
+        <li><a href="http://pearshapedexeter.com/category/event-previews">Events</a></li>
         <li><a href="http://pearshapedexeter.com/category/reviews/">Reviews</a></li>
         <li><a href="http://pearshapedexeter.com/category/features/">Features</a></li>
         <li><a href="http://pearshapedexeter.com/category/columns/">Columns</a></li>

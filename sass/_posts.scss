@@ -151,9 +151,12 @@
 }
 
 .related-posts{
+	margin-top: 40px;
 	border-top: 1px $grey solid;
 }
-
+h3.related_post_title{
+	font-size: 21px;
+}
 ul.related_post{
 	list-style: none;
 	padding: 0 !important;
