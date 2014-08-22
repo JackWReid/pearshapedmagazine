@@ -16,14 +16,13 @@
     <meta name="keywords" content="magazine, music, exeter, reviews, events, live, student">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php bloginfo( 'name' ); ?> <?php wp_title(); ?></title>
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="apple-touch-icon" href="http://pearshapedexeter.com/wp-content/uploads/2014/05/icon.png"/>  
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link rel="apple-touch-icon" href="http://pearshapedexeter.com/ps-logo.png"/>
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+    <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
     <link rel="alternate" type="application/rss+xml" title="PearShaped Exeter" href="<?php bloginfo('rss2_url'); ?>">
 </head>
 <body>
