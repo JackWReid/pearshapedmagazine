@@ -18,7 +18,6 @@
     <title><?php bloginfo( 'name' ); ?> <?php wp_title(); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="apple-touch-icon" href="http://pearshapedexeter.com/wp-content/uploads/2014/05/icon.png"/>  
-    <script type="text/javascript" src="//use.typekit.net/aug3vvf.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>

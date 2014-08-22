@@ -5,11 +5,10 @@
 // Futura Family
 @font-face {
     font-family: 'futura-alt';
-    src: url('http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot');
-    src: url('http://static.tumblr.com/gjd1903/zB0n0zpwm/futuralt-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://static.tumblr.com/gjd1903/cNon0zpyd/futuralt-webfont.woff') format('woff'),
-         url('http://static.tumblr.com/gjd1903/DK3n0zpxx/futuralt-webfont.ttf') format('truetype'),
-         url('http://static.tumblr.com/gjd1903/zKNn0zpx0/futuralt-webfont.svg#futura') format('svg');
+    src: url('http://pearshapedexeter.com/fonts/futuralt-webfont.eot');
+    src: url('http://pearshapedexeter.com/fonts/futuralt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://pearshapedexeter.com/fonts/futuralt-webfont.woff') format('woff'),
+         url('http://pearshapedexeter.com/fonts/futuralt-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,11 +16,10 @@
 // Aleo Family
 @font-face {
     font-family: 'aleo';
-    src: url('http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot');
-    src: url('http://static.tumblr.com/gjd1903/g8vn0zqbg/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://static.tumblr.com/gjd1903/rDin0zqbx/aleo-bold-webfont.woff') format('woff'),
-         url('http://static.tumblr.com/gjd1903/s9Mn0zqc9/aleo-bold-webfont.ttf') format('truetype'),
-         url('http://static.tumblr.com/gjd1903/yfTn0zqcq/aleo-bold-webfont.svgg#aleo') format('svg');
+    src: url('http://pearshapedexeter.com/fonts/aleo-bold-webfont.eot');
+    src: url('http://pearshapedexeter.com/fonts/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://pearshapedexeter.com/fonts/aleo-bold-webfont.woff') format('woff'),
+         url('http://pearshapedexeter.com/fonts/aleo-bold-webfont.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -207,7 +205,7 @@ input:focus, select:focus, textarea:focus {
 //                 //
 /////////////////////
 
-.footer{
+/*.footer{
 	display: block;
 	text-align: center;
 	border-top: 1px solid $grey;
@@ -215,6 +213,42 @@ input:focus, select:focus, textarea:focus {
 	width: 100%;
 	@media screen and (max-width: $br-mobile){
 		margin: 0;
+	}
+}*/
+
+.footer{
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	padding-bottom: 20px;
+	
+	border-top: 1px solid $grey;
+	background: $grey;
+	font-family: 'futura-alt';
+}
+
+.footer-alt{
+	text-align: left;
+	h2{
+		font-size: 20px;
+		margin-bottom: 0;
+	}
+	h2,small{
+		padding: 0 10px;
+		font-family: 'futura-alt';
+	}
+}
+.footer-nav{
+	display: flex;
+}
+ul.footer-list{
+	list-style: none;
+	padding: 0 10px;
+	a:first-child{
+		text-decoration: underline;
+	}
+	li{
+		line-height: 1.3em;
 	}
 }
 

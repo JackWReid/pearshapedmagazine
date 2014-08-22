@@ -15,18 +15,17 @@
 <?php
 // set current month to that of first post, and print it.
 $current_month = get_the_time('F');
-// Pushed to production, untested year visible
 $current_year = get_the_time('Y');
-echo "<h2>" . $current_month . $current_year "</h2>";
+echo "<h2>" . $current_month . " " . $current_year . "</h2>";
 
 while (have_posts()) : the_post();
-
+$current_year = get_the_time('Y');
     // check each subsequent post to see if the month is the same
     // or has changed and needs to be printed:
     $this_month = get_the_time('F');
     if( $this_month!=$current_month ):
         $current_month = $this_month;
-        echo "<h2>" . $current_month . $current_year "</h2>";
+        echo "<h2>" . $current_month . " " . $current_year . "</h2>";
     endif;
 
     // output data for the post
