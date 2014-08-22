@@ -32,9 +32,7 @@ $current_year = get_the_time('Y');
     echo "<div class='thumbnail-grid__item'><a href='" . get_permalink() . "'>";
     the_post_thumbnail();
     echo "</a></div>";
-
 endwhile;
-
 ?>
 </div>
 
