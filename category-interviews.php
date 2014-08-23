@@ -4,16 +4,18 @@
 </div>
 
 </div>
+
 <div class="thumbnail-grid">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<div class="thumbnail-grid__item">
-			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail() ?>
-				<span class="thumbnail-grid__item__title"><?php the_title(); ?></span>
-			</a>
-		</div>
-	<?php endwhile; else: ?>
-	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-<?php endif; ?>
+<?php
+while (have_posts()) : the_post();
+    $author = get_post_meta($post->ID, 'Author', true);
+    echo "<div class='thumbnail-grid__item'><a href='" . get_permalink() . "'>";
+    the_post_thumbnail();
+    echo "<div class='thumbnail-grid__item__meta'><h3>"; the_title(); echo "</h3>";
+    if ($author) { echo "<p>" . $author . "</p></div>"; }
+    echo "</a></div>";
+endwhile;
+?>
 </div>
+
 <?php get_footer(); ?>s

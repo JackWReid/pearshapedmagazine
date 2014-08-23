@@ -205,20 +205,9 @@ input:focus, select:focus, textarea:focus {
 //                 //
 /////////////////////
 
-/*.footer{
-	display: block;
-	text-align: center;
-	border-top: 1px solid $grey;
-	margin-bottom: 2em;
-	width: 100%;
-	@media screen and (max-width: $br-mobile){
-		margin: 0;
-	}
-}*/
-
 .footer{
-	display: flex;
-	justify-content: center;
+	@include flexbox;
+	@include flexbox-center;
 	margin-top: 50px;
 	padding-bottom: 20px;
 	
@@ -239,7 +228,7 @@ input:focus, select:focus, textarea:focus {
 	}
 }
 .footer-nav{
-	display: flex;
+	@include flexbox;
 }
 ul.footer-list{
 	list-style: none;
@@ -339,51 +328,68 @@ ul.footer-list{
 /////////////////////
 
 .thumbnail-grid{
-	max-width: 1202px;
-	margin: 0 auto;
-	text-align: left;
-	h2{
-		margin-bottom: 5px;
-	}
+    @include flexbox;
+    @include flexbox-wrap;
 }
-
-	.thumbnail-grid__item{
-		display: inline-block;
-		vertical-align: top;
-		text-align: center;
-
-		a:hover img{
-			opacity: 0.5;
-		}
-
-		@include makeGrid(4, 2%);
-		@media screen and (max-width: $br-tablet){
-			@include makeGrid(3, 2%);
-		}
-		@media screen and (max-width: $br-mobile){
-			@include makeGrid(2, 2%);
-			width: 100% !important;
-		}
-	}
-
-	.thumbnail-grid__item__title{
-		@include lowertitle;
-		display: block;
-		width: 100%;
-	}
-
-	span.thumbnail-grid__item__title{
-		font-size: 1.5em;
-	}
-
-// Tighter spacing for mobile screens //
-@media screen and (max-width: $br-mobile){
-	.thumbnail-grid__item{
-	width: 48%;
-	}
-	.thumbnail-grid__item__title{
-		display: none; // Post titles look gross when squished up
-	}
+.thumbnail-grid__item{
+    width: 25%;
+    padding: 1em;
+    @media screen and (max-width: 800px){
+        width: 33.33%;
+    }
+    @media screen and (max-width: 625px){
+        width: 50%;
+    }
+}
+.thumbnail-grid__item__meta{
+    display: none;
+    position: relative;
+    text-align: center;
+    padding: 1em;
+    margin-top: -14em;
+    h3{
+        font-size: 1.5em;
+    }
+    @media screen and (max-width: 953px){
+        margin-top: -11em;
+    }
+    @media screen and (max-width: 625px){
+        margin-top: -12em;
+    }
+}
+.thumbnail-grid__item:hover{
+    img{
+        opacity: 0.3;
+    }
+    .thumbnail-grid__item__meta{
+        display: block;
+    }
+}
+.date-divider{
+    width: 25%;
+    padding: 1em;
+    overflow: hidden;
+   	@include flexbox;
+    flex-direction: column;
+    @include flexbox-center;
+    h3{
+        font-family: $titlefont;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 4em;
+        &:first-child{
+            color: #498c34;
+        }
+    }
+    @media screen and (max-width: 800px){
+        width: 33.33%;
+    }
+    @media screen and (max-width: 625px){
+        width: 50%;
+    }
+}
+.date-divider__info{
 }
 
 
