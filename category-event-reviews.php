@@ -12,7 +12,7 @@
 	<div class="preview-stream__item row">
 	<a href="<?php the_permalink(); ?>">
 		<div class="four columns">
-			<?php the_post_thumbnail() ?>
+			<?php the_post_thumbnail('medium') ?>
 		</div>
 		<div class="eight columns">
 			<h1 class="preview-stream__item__title"><?php the_title(); ?></h1>

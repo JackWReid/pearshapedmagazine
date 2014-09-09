@@ -16,7 +16,7 @@
 		</div>
 		<a href="<?php the_permalink(); ?>">
 		<div class="cat-box__image">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail('medium'); ?>
 		</div>
 
 		<h4><?php the_title(); ?></h4>
@@ -33,7 +33,7 @@
 		</div>
 		<a href="<?php the_permalink(); ?>">
 		<div class="cat-box__image">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail('medium'); ?>
 		</div>
 
 		<h4><?php the_title(); ?></h4>
@@ -50,7 +50,7 @@
 		</div>
 		<a href="<?php the_permalink(); ?>">
 		<div class="cat-box__image">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail('medium'); ?>
 		</div>
 
 		<h4><?php the_title(); ?></h4>
@@ -67,7 +67,7 @@
 		</div>
 		<a href="<?php the_permalink(); ?>">
 		<div class="cat-box__image">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail('medium'); ?>
 		</div>
 
 		<h4><?php the_title(); ?></h4>
@@ -83,7 +83,7 @@
 		</div>
 		<a href="<?php the_permalink(); ?>">
 		<div class="cat-box__image">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail('medium'); ?>
 		</div>
 
 		<h4><?php the_title(); ?></h4>
@@ -99,7 +99,7 @@
 		</div>
 		<a href="<?php the_permalink(); ?>">
 		<div class="cat-box__image">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail('medium'); ?>
 		</div>
 
 		<h4><?php the_title(); ?></h4>
