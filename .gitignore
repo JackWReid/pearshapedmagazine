@@ -31,5 +31,9 @@ node_modules
 ### Sass ###
 .sass-cache
 
-### Compiled stylesheet ###
+### Compiled ###
 style.css
+dist/*
+
+### SFTP Config ###
+sftp-config.json
