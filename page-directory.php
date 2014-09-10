@@ -7,12 +7,12 @@
  */
 get_header(); ?>
 <div class="section-header">
-	<h1 class="section-header__title"><a href="http://pearshapedexeter.com/directory"><?php the_title(); ?></a></h1>
+	<h1 class="section-header__title"><a href="<?php echo site_url(); ?>/directory"><?php the_title(); ?></a></h1>
 
 	<ul class="category-toggle">
-		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/directory/artists">Artists</a></li>
-		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/directory/venues">Venues</a></li>
-		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/directory/promoters">Promoters</a></li>
+		<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/directory/artists">Artists</a></li>
+		<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/directory/venues">Venues</a></li>
+		<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/directory/promoters">Promoters</a></li>
 	</ul>
 </div>
 <div class="page-wrapper directory-pad">

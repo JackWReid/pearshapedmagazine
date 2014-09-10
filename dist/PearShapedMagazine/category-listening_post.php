@@ -3,9 +3,9 @@
 	<h1 class="section-header__title">Columns</h1>
 
 	<ul class="category-toggle">
-		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/columns">All</a></li>
-		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/opinion">Opinion</a></li>
-		<li class="category-toggle__button_active"><a href="http://pearshapedexeter.com/category/listening_post">Listening Post</a></li>
+		<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/category/columns">All</a></li>
+		<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/category/opinion">Opinion</a></li>
+		<li class="category-toggle__button_active"><a href="<?php echo site_url(); ?>/category/listening_post">Listening Post</a></li>
 	</ul>
 </div>
 

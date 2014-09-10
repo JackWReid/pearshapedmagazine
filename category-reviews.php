@@ -4,9 +4,9 @@
 	<h1 class="section-header__title"><?php single_cat_title(); ?></h1>
 	
 	<ul class="category-toggle">
-		<li class="category-toggle__button_active"><a href="http://pearshapedexeter.com/category/reviews">All</a></li>
-		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/local-reviews">Local</a></li>
-		<li class="category-toggle__button"><a href="http://pearshapedexeter.com/category/global-reviews">Global</a></li>
+		<li class="category-toggle__button_active"><a href="<?php echo site_url(); ?>/category/reviews">All</a></li>
+		<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/category/local-reviews">Local</a></li>
+		<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/category/global-reviews">Global</a></li>
 	</ul>
 
 </div>
