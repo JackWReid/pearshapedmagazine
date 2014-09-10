@@ -331,15 +331,18 @@ ul.footer-list{
 .thumbnail-grid{
     @include flexbox;
     @include flexbox-wrap;
+    margin: 0 auto 4em auto;
 }
 .thumbnail-grid__item{
     width: 25%;
-    padding: 1em;
+    padding: 0.8em;
     @media screen and (max-width: 800px){
         width: 33.33%;
+        padding: 0.7em;
     }
     @media screen and (max-width: 625px){
         width: 50%;
+        padding: 0.5em;
     }
 }
 .thumbnail-grid__item__meta{
@@ -367,30 +370,17 @@ ul.footer-list{
     }
 }
 .date-divider{
-    width: 25%;
     padding: 1em;
     overflow: hidden;
    	@include flexbox;
     flex-direction: column;
     @include flexbox-center;
     h3{
-        font-family: $titlefont;
-        text-align: center;
-        text-transform: uppercase;
+    	font-family: $titlefont;
+    	font-weight: normal;
         margin: 0;
-        font-size: 4em;
-        &:first-child{
-            color: #498c34;
-        }
+        font-size: 2.5em;
     }
-    @media screen and (max-width: 800px){
-        width: 33.33%;
-    }
-    @media screen and (max-width: 625px){
-        width: 50%;
-    }
-}
-.date-divider__info{
 }
 
 
