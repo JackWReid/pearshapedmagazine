@@ -1,0 +1,470 @@
+/*====================================*\
+    #GENERIC
+\*====================================*/
+
+
+
+
+/*------------------------------------*\
+    #BASICS
+\*------------------------------------*/
+
+/**
+ * We are told that we shouldn't fix the body font size to px value
+ * but it sure makes things more predictable further down the casc-
+ * ade.
+ */
+html{
+	font-family: $bodyfont;
+	font-size: 14px;
+}
+
+p{
+	line-height: 1.25em;
+}
+
+b, strong{
+	font-weight: bold;
+}
+
+i, em{
+	font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6, .caption{
+	@include header;
+}
+
+/**
+ * This rule is not currently effective #dud.
+ */
+a{
+	transition: all 1s ease-in-out;
+}
+
+/**
+ * Perhaps this should be handled by a mixin #dud.
+ */
+hr{
+	border: 0;
+	height: 1px;
+	color: $grey;
+	background: $grey;
+}
+
+blockquote{
+	margin: 0;
+	padding: 0em 0em 0em 1em;
+
+	font-size: 1.05em;
+	font-style: italic;
+	opacity: 0.9;
+	border-left: 3px $green solid;
+}
+
+/**
+ * Gives a green haze on the search box.
+ */
+input:focus, select:focus, textarea:focus {
+	outline-color: $green;
+}
+
+/**
+ * Standard bounding box for paragraphs, especially handy on mobile.
+ */
+.page-wrapper{
+	max-width: 60em;
+	margin: 2em auto;
+	padding: 1em;
+}
+
+
+
+/*------------------------------------*\
+    #NAVBAR
+\*------------------------------------*/
+
+.nav-bar{
+	position: relative;
+	width: 100%;
+	z-index: 3;
+
+	/**
+	 * This property doesn't work on most browsers yet, but is a g-
+	 * ood first catch. See .sticky for workaround.
+	 */
+	position: -webkit-sticky;
+	top: 0;
+
+	@include title;
+	text-align: center;
+	font-size: 1.2em;
+	background-color: $white;
+	@include border("divider-bottom");
+	@include border("heavy-line");
+	margin-bottom: 25px;
+}
+
+	.nav-bar__list{
+		list-style-type: none;
+		margin: 5px 0;
+		padding: 0 -40px 0 0;
+		display: inline-block;
+		vertical-align: middle;
+
+		li{
+			display: inline-block;
+			margin-right: 0.5em;
+			a:hover{
+				color: $green;
+			}
+		}
+	}
+
+	/**
+	 * In place of the -webkit-sticky property, a js script add st-
+	 * icky class to .nav-bar after the user has scrolled to a pos-
+	 * ition in which the bar is no longer visible. Nav bar then
+	 * sticks to the top.
+	 */
+	.sticky{
+		position: fixed;
+	}
+
+
+
+
+
+/*------------------------------------*\
+    #SITEHEADER
+\*------------------------------------*/
+
+/**
+ * #dud. This should be layed out not as inline objects with ab-
+ * solute positions, but as block, even flexbox objects.
+ */
+.site-header{
+	text-align: right;
+}
+
+	.site-header__title{
+		@include title;
+		font-size: 6em;
+		font-weight: 500;
+		text-align: center;
+		
+		margin: 0 auto;
+		width: auto;
+
+		@media screen and (max-width: $br-tablet){
+			font-size: 4em;
+		}
+
+		@media screen and (max-width: $br-mobile){
+			font-size: 3em;
+		}
+	}
+
+	.site-header__social-icons{
+		position: absolute;
+		left: 10px;
+		top: 80px;
+		vertical-align: middle;
+
+		i{
+			margin-right: 5px;
+		}
+
+		@media screen and (max-width: $br-fullwidth){
+			display: none;
+		}
+	}
+
+#searchform{
+	display: block;
+	margin: -30px 10px 0 0;
+	padding-bottom: 10px;
+	vertical-align: middle;
+
+	.screen-reader-text{
+		display: none;
+	}
+
+	/**
+	 * Text search field. ID given by WP, terrible semantically.
+	 */
+	#s{
+		width: 7em;
+	}
+
+	/**
+	 * Submit button. Again terrible ID given by WP.
+	 */
+	#searchsubmit{
+		@include title;
+		border-radius: 0;
+	}
+}
+
+	/**
+	 * No search or social icons for mobile users.
+	 */
+	@media screen and (max-width: $br-fullwidth){
+		#searchform,
+		.site-header__social-icons{
+			display: none;
+		}
+	}
+
+
+
+
+
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+
+/**
+ * .footer is grey panel, in which .footer-alt is centered.
+ */
+.footer{
+	@include flexbox;
+	@include flexbox-center;
+	margin-top: 50px;
+	padding-bottom: 20px;
+	
+	border-top: 1px solid $grey;
+	background: $grey;
+	font-family: 'futura-alt';
+}
+
+	.footer-alt{
+		text-align: left;
+
+		h2{
+			font-size: 20px;
+			margin-bottom: 0;
+		}
+
+		h2,
+		small{
+			padding: 0 10px;
+			font-family: 'futura-alt';
+		}
+	}
+
+	.footer-nav{
+		@include flexbox;
+	}
+
+	ul.footer-list{
+		list-style: none;
+		padding: 0 10px;
+
+		
+		/**
+		 * first:child is macro-category, which is underlined as
+		 * a header.
+		 */
+		a:first-child{
+			text-decoration: underline;
+		}
+
+		li{
+			line-height: 1.3em;
+		}
+	}
+
+
+
+
+
+/*------------------------------------*\
+    #CATEGORYHEADER
+\*------------------------------------*/
+
+.section-header{
+	margin-bottom: 20px;
+}
+
+	.section-header__title{
+		@include swishheader;
+		margin: 0 auto;
+
+		@media screen and (max-width: $br-mobile){
+			font-size: 2em;
+		}
+	}
+
+
+
+
+
+
+/*------------------------------------*\
+    #LINKSECTION
+\*------------------------------------*/
+
+.link-section{
+	padding: 0.5em;
+	text-align: center;
+	width: 100%;
+	@include border("divider-bottom");
+}
+
+	.link-section__title{
+		@include title;
+		font-size: 2em;
+		a{
+			color: $green;
+			&:hover{
+				color: $black;
+			}
+		}
+	}
+
+.link-section-green{
+	padding: 0.2em;
+	text-align: center;
+	width: 100%;
+	@include border("divider-bottom");
+}
+
+	.link-title-green__title{
+		font-family: georgia;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 1.5em;
+		a{
+		color: $green;
+			&:hover{
+				color: $black;
+			}
+		}
+	}
+
+.link-section-mobile{
+	@extend .link-section;
+	display: none;
+	@media screen and (max-width: $br-mobile){
+		display: block;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    #THUMBNAILGRID
+\*------------------------------------*/
+
+.thumbnail-grid{
+    @include flexbox;
+    @include flexbox-wrap;
+    margin: 0 auto 4em auto;
+}
+
+	
+	/**
+	 * Four images per row on largest size with more generous mar-
+	 * gins. For tablet sizes, down to three items per row, and
+	 * mobile, two items per row. Each time margins tighten up.
+	 */
+	.thumbnail-grid__item{
+	    width: 25%;
+	    padding: 0.8em;
+	    @media screen and (max-width: 800px){
+	        width: 33.33%;
+	        padding: 0.7em;
+	    }
+	    @media screen and (max-width: 625px){
+	        width: 50%;
+	        padding: 0.5em;
+	    }
+	}
+
+		
+		/**
+		 * Hover on image yields title and author of review over-
+		 * lay. Media queries help keep text vertically centered
+		 * but are not wholly effective.
+		 */
+		.thumbnail-grid__item__meta{
+		    display: none;
+		    position: relative;
+		    text-align: center;
+		    padding: 1em;
+		    margin-top: -14em;
+		    h3{
+		        font-size: 1.5em;
+		    }
+		    @media screen and (max-width: 953px){
+		        margin-top: -11em;
+		    }
+		    @media screen and (max-width: 625px){
+		        margin-top: -12em;
+		    }
+		}
+
+		.thumbnail-grid__item:hover{
+		    img{
+		        opacity: 0.3;
+			}
+			
+			/**
+			 * #dud. Display: block switch appears to be redundant,
+			 * and if we stick to opacity we could wheedle in a
+			 * nice transition.
+			 */
+			.thumbnail-grid__item__meta{
+		        display: block;
+		        opacity: 1;
+		    }
+
+		}
+
+.date-divider{
+    padding: 1em;
+    h3{
+    	text-align: left;
+        margin: 0;
+        font-size: 1.7em;
+    }
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #DIRECTORYGRID
+\*------------------------------------*/
+
+.directory-card{
+	@extend .thumbnail-grid__item;
+}
+
+	.directory-card__title{
+			font-size: 1.5em;
+		}
+
+	.directory-card__links{
+		margin-top: 0;
+		a:hover{
+			color: $black;
+		}
+	}
+
+
+
+
+
+/*------------------------------------*\
+    #HIDESANDFIXES
+\*------------------------------------*/
+
+#wpstats{
+	display: none;
+}

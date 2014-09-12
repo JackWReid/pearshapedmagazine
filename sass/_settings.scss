@@ -1,41 +1,84 @@
-/////////////////////
-//				   //
-//   BREAKPOINTS   //
-//                 //
-/////////////////////
+/*====================================*\
+    #SETTINGS
+\*====================================*/
+
+
+
+
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
 
 $br-tablet: 960px !global;
 $br-mobile: 650px !global;
 
-// For hiding elements in the site header
+/**
+ * The very biggest, for hiding stuff on anything but spacious
+ * screens.
+ */
 $br-fullwidth: 1200px !global;
 
-// For bumping content under a growing top bar
+/**
+ * Accomodates the fixed top bar which grows taller on mobile
+ * screens as the links overflow the line.
+ */
 $br-top3rows: 500px !global;
 
-/////////////////////
-//				   //
-//	  COLOURS      //
-//                 //
-/////////////////////
+
+
+
+/*------------------------------------*\
+    #COLOURS
+\*------------------------------------*/
 
 $green: #498c34 !global;
 $grey: #ddd !global;
 $white: #fff !global;
 $black: #222 !global;
 
-/////////////////////
-//				   //
-//	    FONTS      //
-//                 //
-/////////////////////
 
-// Font stack declaration
+
+
+/*------------------------------------*\
+    #FONTS
+\*------------------------------------*/
+
+/**
+ * Futura. 'Alt' to override user's own copy for uniformity.
+ */
+@font-face {
+    font-family: 'futura-alt';
+    src: url('http://pearshapedexeter.com/fonts/futuralt-webfont.eot');
+    src: url('http://pearshapedexeter.com/fonts/futuralt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://pearshapedexeter.com/fonts/futuralt-webfont.woff') format('woff'),
+         url('http://pearshapedexeter.com/fonts/futuralt-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+ * Aleo.
+ */
+@font-face {
+    font-family: 'aleo';
+    src: url('http://pearshapedexeter.com/fonts/aleo-bold-webfont.eot');
+    src: url('http://pearshapedexeter.com/fonts/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://pearshapedexeter.com/fonts/aleo-bold-webfont.woff') format('woff'),
+         url('http://pearshapedexeter.com/fonts/aleo-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/**
+ * Font stack declarations. Multiple Futura fallbacks.
+ */
 $bodyfont: Georgia, serif;
 $headerfont: 'aleo', 'adelle', 'helvetica', arial, sans-serif;
 $titlefont: 'futura-alt', 'futura', 'futura-pt', arial, sans-serif;
 
-// Standard font styles
+/**
+ * Different kinds of headers to include across styles.
+ */
 @mixin header{
     font-family: $headerfont;
     font-weight: bold;
@@ -58,27 +101,17 @@ $titlefont: 'futura-alt', 'futura', 'futura-pt', arial, sans-serif;
 	color: $green;
 }
 
-////////////////////////////
-//				          //
-//	    MIXIN LIBRARY     //
-//                        //
-////////////////////////////
 
-@mixin makeGrid($columns, $margin) {
-  width: ((99% - (($columns) * $margin)) / $columns);
-  &:nth-child(n) {
-    margin-bottom: $margin;
-    margin-right: $margin;
-  }
-}
 
-/////////////////////
-//				   //
-//	    LAYOUT     //
-//                 //
-/////////////////////
 
-// Flexbox prefixing
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+/**
+ * Flexbox always invoked with mixin for prefixing, thanks to Chris
+ * Coyier.
+ */
 @mixin flexbox{
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -101,54 +134,16 @@ $titlefont: 'futura-alt', 'futura', 'futura-pt', arial, sans-serif;
 	justify-content: center;
 }
 
-// Box model settings
-@mixin box{
 
-	-webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
 
-}
 
-// Basic column width calculator
-@mixin column($divisor, $width, $padding){
+/*------------------------------------*\
+    #DECORATION
+\*------------------------------------*/
 
-	@include box;
-	float: left;
-	padding: $padding;
-	max-width: (100% / $divisor) * $width - 0.01%;
-
-}
-
-// Centered columns
-@mixin centercolumn($divisor, $width, $padding){
-
-	@include box;
-	padding: $padding;
-	max-width: (100% / $divisor) * $width - 0.01%;
-	float: none;
-	margin: 0 auto;
-
-}
-
-// Breakpoint collapse
-@mixin collapse($breakpoint, $width){
-
-	@media screen and (max-width: $breakpoint){
-		float: none;
-		max-width: $width;
-		margin: 0 auto;
-	}
-
-}
-
-/////////////////////
-//				   //
-//	  DECORATION   //
-//                 //
-/////////////////////
-
-// Border generator
+/**
+ * Generates uniform borders, needs more implementation.
+ */
 @mixin border($type){
 
 	$grey: #eee;
@@ -172,7 +167,9 @@ $titlefont: 'futura-alt', 'futura', 'futura-pt', arial, sans-serif;
 
 }
 
-// Inline list
+/**
+ * Flattens out lists.
+ */
 @mixin inline-list {
 
   list-style-type: none;
@@ -187,7 +184,9 @@ $titlefont: 'futura-alt', 'futura', 'futura-pt', arial, sans-serif;
 
 }
 
-// Link styling generator
+/**
+ * Most unused link styling mixin.
+ */
 @mixin link($type){
 
 	@if $type == "underline"{

@@ -1,10 +1,13 @@
-@import 'library';
+/*====================================*\
+    #POSTS
+\*====================================*/
 
-/////////////////////
-//				   //
-// HEADER ELEMENTS //
-//                 //
-/////////////////////
+
+
+
+/*------------------------------------*\
+    #POSTTITLE
+\*------------------------------------*/
 
 .post-header{
 	display: block;
@@ -28,9 +31,15 @@
 	margin-bottom: 35px;
 }
 
+/**
+ * Sidebar, despite the name, appears at the bottom of the post
+ * and includes an embedded SoundCloud or YouTube player. iframe
+ * stops ugly padding.
+ */
 .sidebar{
 	margin-top: 0px;
 	padding: 0;
+
 	iframe{
 		margin: 0;
 		padding: 0;
@@ -38,6 +47,10 @@
 	}
 }
 
+/**
+ * Post image is brutally snipped at 400px, perhaps needs center-
+ * ing algorithm.
+ */
 .post-thumbnail{
 	display: block;
 	max-height: 400px;
@@ -48,16 +61,13 @@
 
 
 
-/////////////////////
-//				   //
-//     CONTENT     //
-//                 //
-/////////////////////
+/*------------------------------------*\
+    #POSTCONTENT
+\*------------------------------------*/
 
 .post-content{
 	display: block;
 	max-width: 45em;
-
 	margin: 0 auto;
 
 	p{
@@ -67,11 +77,11 @@
 
 
 
-/////////////////////
-//				   //
-//   BREAKPOINTS   //
-//                 //
-/////////////////////
+
+
+/*------------------------------------*\
+    NEEDS REFACTORING
+\*------------------------------------*/
 
 @media screen and (max-width: 45em){
 	.post-content{
@@ -86,13 +96,16 @@
 }
 
 
-/////////////////////
-//				   //
-//    META DATA    //
-//                 //
-/////////////////////
 
-// Chevron split list of categories of the post
+
+
+/*------------------------------------*\
+    #METADATA
+\*------------------------------------*/
+
+/**
+ * A chevron-divided list of the categories of the post.
+ */
 .post-category-info{
 
 	a{
@@ -111,14 +124,14 @@
 	width: 100%;
 }
 
-// Specific to event previews and reviews
 .giginfo{
 	@include title;
 }
-.giginfo-alt{
-	@extend .giginfo;
-	margin-top: 1em;
-}
+	.giginfo-alt{
+		@extend .giginfo;
+		margin-top: 1em;
+	}
+
 .tickets{
 	display: block;
 	a{
@@ -131,16 +144,17 @@
 	margin-bottom: 40px;
 }
 
-.picks, .fans-of{
+.picks,
+.fans-of{
 	display: block;
 	margin-bottom: 20px;
 }
 
-.picks-title, .fans-of-title{
-	font-weight: bold;
-}
+	.picks-title,
+	.fans-of-title{
+		font-weight: bold;
+	}
 
-// Spit out of all the post tags comma separated
 .post-tags{
 	font-weight: bold;
 	margin: 20px auto;
@@ -154,13 +168,15 @@
 	margin-top: 40px;
 	border-top: 1px $grey solid;
 }
-h3.related_post_title{
-	font-size: 21px;
-}
-ul.related_post{
-	list-style: none;
-	padding: 0 !important;
-	a{
-		color: $green;
+
+	h3.related_post_title{
+		font-size: 21px;
 	}
-}
+
+	ul.related_post{
+		list-style: none;
+		padding: 0 !important;
+		a{
+			color: $green;
+		}
+	}
