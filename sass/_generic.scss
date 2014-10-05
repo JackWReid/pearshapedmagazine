@@ -1,12 +1,12 @@
 /*====================================*\
-    #GENERIC
+	#GENERIC
 \*====================================*/
 
 
 
 
 /*------------------------------------*\
-    #BASICS
+	#BASICS
 \*------------------------------------*/
 
 /**
@@ -81,7 +81,7 @@ input:focus, select:focus, textarea:focus {
 
 
 /*------------------------------------*\
-    #NAVBAR
+	#NAVBAR
 \*------------------------------------*/
 
 .nav-bar{
@@ -105,10 +105,10 @@ input:focus, select:focus, textarea:focus {
 	margin-bottom: 25px;
 }
 
-	.nav-bar__list{
+	ul.nav-bar__list{
 		list-style-type: none;
 		margin: 5px 0;
-		padding: 0 -40px 0 0;
+		padding: 0;
 		display: inline-block;
 		vertical-align: middle;
 
@@ -136,7 +136,7 @@ input:focus, select:focus, textarea:focus {
 
 
 /*------------------------------------*\
-    #SITEHEADER
+	#SITEHEADER
 \*------------------------------------*/
 
 /**
@@ -221,7 +221,7 @@ input:focus, select:focus, textarea:focus {
 
 
 /*------------------------------------*\
-    #FOOTER
+	#FOOTER
 \*------------------------------------*/
 
 /**
@@ -280,7 +280,7 @@ input:focus, select:focus, textarea:focus {
 
 
 /*------------------------------------*\
-    #CATEGORYHEADER
+	#CATEGORYHEADER
 \*------------------------------------*/
 
 .section-header{
@@ -302,7 +302,7 @@ input:focus, select:focus, textarea:focus {
 
 
 /*------------------------------------*\
-    #LINKSECTION
+	#LINKSECTION
 \*------------------------------------*/
 
 .link-section{
@@ -356,13 +356,13 @@ input:focus, select:focus, textarea:focus {
 
 
 /*------------------------------------*\
-    #THUMBNAILGRID
+	#THUMBNAILGRID
 \*------------------------------------*/
 
 .thumbnail-grid{
-    @include flexbox;
-    @include flexbox-wrap;
-    margin: 0 auto 4em auto;
+	@include flexbox;
+	@include flexbox-wrap;
+	margin: 0 auto 4em auto;
 }
 
 	
@@ -372,16 +372,17 @@ input:focus, select:focus, textarea:focus {
 	 * mobile, two items per row. Each time margins tighten up.
 	 */
 	.thumbnail-grid__item{
-	    width: 25%;
-	    padding: 0.8em;
-	    @media screen and (max-width: 800px){
-	        width: 33.33%;
-	        padding: 0.7em;
-	    }
-	    @media screen and (max-width: 625px){
-	        width: 50%;
-	        padding: 0.5em;
-	    }
+		width: 25%;
+		padding: 0.5em;
+		img{
+			max-width: 100%;
+		}
+		@media screen and (max-width: 800px){
+			width: 33.33%;
+		}
+		@media screen and (max-width: 625px){
+			width: 50%;
+		}
 	}
 
 		
@@ -391,25 +392,25 @@ input:focus, select:focus, textarea:focus {
 		 * but are not wholly effective.
 		 */
 		.thumbnail-grid__item__meta{
-		    display: none;
-		    position: relative;
-		    text-align: center;
-		    padding: 1em;
-		    margin-top: -14em;
-		    h3{
-		        font-size: 1.5em;
-		    }
-		    @media screen and (max-width: 953px){
-		        margin-top: -11em;
-		    }
-		    @media screen and (max-width: 625px){
-		        margin-top: -12em;
-		    }
+			display: none;
+			position: relative;
+			text-align: center;
+			padding: 1em;
+			margin-top: -15em;
+			h3{
+				font-size: 1.5em;
+			}
+			@media screen and (max-width: 953px){
+				margin-top: -11em;
+			}
+			@media screen and (max-width: 625px){
+				margin-top: -12em;
+			}
 		}
 
 		.thumbnail-grid__item:hover{
-		    img{
-		        opacity: 0.3;
+			img{
+				opacity: 0.3;
 			}
 			
 			/**
@@ -418,19 +419,19 @@ input:focus, select:focus, textarea:focus {
 			 * nice transition.
 			 */
 			.thumbnail-grid__item__meta{
-		        display: block;
-		        opacity: 1;
-		    }
+				display: block;
+				opacity: 1;
+			}
 
 		}
 
 .date-divider{
-    padding: 1em;
-    h3{
-    	text-align: left;
-        margin: 0;
-        font-size: 1.7em;
-    }
+	padding: 1em;
+	h3{
+		text-align: left;
+		margin: 0;
+		font-size: 1.7em;
+	}
 }
 
 
@@ -439,7 +440,7 @@ input:focus, select:focus, textarea:focus {
 
 
 /*------------------------------------*\
-    #DIRECTORYGRID
+	#DIRECTORYGRID
 \*------------------------------------*/
 
 .directory-card{
@@ -462,7 +463,7 @@ input:focus, select:focus, textarea:focus {
 
 
 /*------------------------------------*\
-    #HIDESANDFIXES
+	#HIDESANDFIXES
 \*------------------------------------*/
 
 #wpstats{

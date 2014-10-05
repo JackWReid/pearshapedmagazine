@@ -12,7 +12,7 @@
 /**
  * Quite a bold media query that removes the slider altogether for
  * mobile users. !important rules overrule stylesheets injected at
- * the end of the cascade.
+ * the end of the cascade by the slider plugin.
  */
 .slider{
 	@include border("divider-bottom");
@@ -44,6 +44,7 @@
 
 	.cat-box h1{
 		@include swishheader;
+		font-size: 30px;
 	}
 
 	.cat-box__module{
@@ -98,6 +99,7 @@
 
 	.preview-stream__item{
 		padding: 1em;
+		display: flex;
 
 		.columns{
 			padding: 0.2em;
@@ -106,12 +108,18 @@
 		p{
 			font-size: 1.1em;
 		}
+	}
 
+	.preview-stream__item__image{
+		flex: 1;
+		padding: 0 1em;
 		@media screen and (max-width: $br-mobile){
-			img{
-				display: none;
-			}
+			display: none;
 		}
+	}
+
+	.preview-stream__item__info{
+		flex: 2;
 	}
 
 	.preview-stream__item__title{
@@ -132,7 +140,7 @@
 	 * but we want all the text to come out as sanitised text.
 	 */
 	.preview-stream__item__content{
-
+		
 		.kicker,
 		h1, h2, h3, h4, h5, h6,
 		strong{
@@ -141,11 +149,6 @@
 			font-style: normal;
 			font-family: $bodyfont;
 			line-height: 1.25em;
-		}
-
-		.column, .columns{
-			width: 100%;
-			float: none;
 		}
 	}
 

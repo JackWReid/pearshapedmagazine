@@ -22,14 +22,13 @@
       </ul>
       <ul class="footer-list">
         <a href="<?php echo site_url(); ?>/category/features/"><li>Features</li></a>
+        <a href="<?php echo site_url(); ?>/category/interview/"><li>Interviews</li></a>
+        <a href="<?php echo site_url(); ?>/category/guides/"><li>Guides</li></a>
       </ul>
       <ul class="footer-list">
         <a href="<?php echo site_url(); ?>/category/local-reviews/"><li>Columns</li></a>
         <a href="<?php echo site_url(); ?>/category/opinion/"><li>Opinion</li></a>
         <a href="<?php echo site_url(); ?>/category/listening-post/"><li>Listening Post</li></a>
-      </ul>
-      <ul class="footer-list">
-        <a href="<?php echo site_url(); ?>/directory/"><li>Directory</li></a>
       </ul>
     </div>
     <small>Website designed by Jack Reid & Lizzie Hatfield. Developed by Jack Reid.</small>
