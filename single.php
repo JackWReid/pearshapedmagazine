@@ -5,7 +5,7 @@
  * @package WordPress
  * @subpackage pearshapedtheme
  */
-get_header(); ?>
+get_header('minimal'); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <div itemscope itemtype="http://schema.org/Article" class="post-content">
