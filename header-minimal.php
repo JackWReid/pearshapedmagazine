@@ -24,9 +24,9 @@
 </head>
 <body>
 
-<div class="nav-bar">
+<div class="nav-bar-minimal">
     <ul class="nav-bar__list">
-        <li><a href="<?php echo site_url(); ?>/">Home</a></li>
+        <li><a href="<?php echo site_url(); ?>/">PearShaped</a></li>
         <li><a href="<?php echo site_url(); ?>/category/event-previews">Events</a></li>
         <li><a href="<?php echo site_url(); ?>/category/reviews/">Reviews</a></li>
         <li><a href="<?php echo site_url(); ?>/category/features/">Features</a></li>

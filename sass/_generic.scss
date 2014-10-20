@@ -121,6 +121,15 @@ input:focus, select:focus, textarea:focus {
 		}
 	}
 
+.nav-bar-minimal{
+	@extend .nav-bar;
+	position: fixed;
+
+	ul.nav-bar__list li:first-child{
+		color: $green;
+	}
+}
+
 	/**
 	 * In place of the -webkit-sticky property, a js script add st-
 	 * icky class to .nav-bar after the user has scrolled to a pos-
@@ -229,7 +238,8 @@ input:focus, select:focus, textarea:focus {
  */
 .footer{
 	@include flexbox;
-	@include flexbox-center;
+	@include flex-justify(center);
+	@include flex-align(center);
 	margin-top: 50px;
 	padding-bottom: 20px;
 	

@@ -68,30 +68,15 @@
 .post-content{
 	display: block;
 	max-width: 45em;
-	margin: 0 auto;
+	margin: 75px auto 0 auto;
+	padding: 0 1em;
 
 	p{
 		font-size: 1.1em;
 	}
-}
 
-
-
-
-
-/*------------------------------------*\
-    NEEDS REFACTORING
-\*------------------------------------*/
-
-@media screen and (max-width: 45em){
-	.post-content{
-		margin: 0 1em 40px 1em;
-	}
-}
-
-@media screen and (max-width: $br-top3rows){
-	h1.post-title{
-		margin-top: 20px;
+	@media screen and (max-width: $br-top3rows){
+		margin: 125px auto 0 auto;
 	}
 }
 

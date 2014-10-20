@@ -42,7 +42,7 @@ get_header('minimal'); ?>
 	</div>
 
 	<div itemprop="image" class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail('full'); ?>
 	</div>
 
 	<div class="post-body">
