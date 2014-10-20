@@ -13,7 +13,10 @@
 </div>
 
 <div class="preview-stream">
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php
+	$cat_id = 11;
+	$rev_post_query = new WP_Query( array('posts_per_page' => '30', 'category__in' => array($cat_id), 'order' => 'ASC'));
+    if ( $rev_post_query->have_posts() ) : while ( $rev_post_query->have_posts() ) : $rev_post_query->the_post(); ?>
     <div class="preview-stream__item">
         <div class="preview-stream__item__image">
             <a href="<?php the_permalink(); ?>">

@@ -10,7 +10,7 @@
 </div>
 
 <div class="listings-slider">
-	<?php echo do_shortcode("[metaslider id=1730]"); ?>
+	<?php echo do_shortcode("[metaslider id=3364]"); ?>
 </div>
 
 <?php get_footer(); ?>

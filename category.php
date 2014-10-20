@@ -26,11 +26,10 @@
 				<div class="preview-stream__item__content">
 					<?php the_content(); ?>
 				</div>
-			</a>
 		</div>
 	</div>
 	<?php endwhile; else: ?>
-	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+	<p><?php _e('<div class="no-posts">Sorry, no posts matched your criteria.</div>'); ?></p>
 	<?php endif; ?>
 </div>
 

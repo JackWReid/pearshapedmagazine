@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
 <div class="slider">
-	<?php echo do_shortcode("[metaslider id=4]"); ?>
+	<?php echo do_shortcode("[metaslider id=2499]"); ?>
 </div>
 
 <div class="cat-box">
 	<h1>Latest Posts</h1>
 
 	<div class="cat-box__module">
-		<?php $cat_id = 580;
+		<?php $cat_id = 11;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id), 'order' => 'ASC'));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 		<div class="post-category-info">
@@ -25,7 +25,7 @@
 	</div>
 
 	<div class="cat-box__module">
-		<?php $cat_id = 25;
+		<?php $cat_id = 12;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 		<div class="post-category-info">
@@ -42,7 +42,7 @@
 	</div>
 
 	<div class="cat-box__module">
-		<?php $cat_id = 17;
+		<?php $cat_id = 10;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 		<div class="post-category-info">
@@ -59,7 +59,7 @@
 	</div>
 
 	<div class="cat-box__module">
-		<?php $cat_id = 125;
+		<?php $cat_id = 4;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 		<div class="post-category-info">
@@ -75,7 +75,7 @@
 		<?php endwhile; endif; ?>
 	</div>
 	<div class="cat-box__module">
-		<?php $cat_id = 42;
+		<?php $cat_id = 2;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 		<div class="post-category-info">
@@ -91,7 +91,7 @@
 		<?php endwhile; endif; ?>
 	</div>
 	<div class="cat-box__module">
-		<?php $cat_id = 111;
+		<?php $cat_id = 5;
 		$latest_cat_post = new WP_Query( array('posts_per_page' => 1, 'category__in' => array($cat_id)));
 		if( $latest_cat_post->have_posts() ) : while( $latest_cat_post->have_posts() ) : $latest_cat_post->the_post();  ?>
 		<div class="post-category-info">
