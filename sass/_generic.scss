@@ -109,6 +109,8 @@ input:focus, select:focus, textarea:focus {
 		@include flexbox;
 		@include flex-direction(row);
 		@include flex-justify(center);
+		@include flex-align(center);
+		@include flex-wrap;
 		list-style-type: none;
 		margin: 5px 0;
 		padding: 0;
@@ -120,6 +122,9 @@ input:focus, select:focus, textarea:focus {
 		li a:hover{
 			color: $green;
 		}
+
+		//@media screen and (max-width: $br-tablet){
+		//}
 	}
 
 .nav-bar-minimal{
@@ -192,9 +197,6 @@ input:focus, select:focus, textarea:focus {
 
 #searchform{
 	display: block;
-	margin: -30px 10px 0 0;
-	padding-bottom: 10px;
-	vertical-align: middle;
 
 	.screen-reader-text{
 		display: none;
@@ -214,6 +216,16 @@ input:focus, select:focus, textarea:focus {
 		@include title;
 		border-radius: 0;
 	}
+}
+
+.site-header #searchform{
+	margin: -30px 10px 0 0;
+	padding-bottom: 10px;
+	vertical-align: middle;
+}
+
+.nav-bar__list #searchform{
+	font-size: 15px;
 }
 
 	/**
@@ -372,7 +384,7 @@ input:focus, select:focus, textarea:focus {
 
 .thumbnail-grid{
 	@include flexbox;
-	@include flexbox-wrap;
+	@include flex-wrap;
 	margin: 0 auto 4em auto;
 }
 

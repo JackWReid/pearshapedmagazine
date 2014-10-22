@@ -35,5 +35,6 @@
         <li><a href="<?php echo site_url(); ?>/category/guides">Guides</a></li>
         <li><a href="<?php echo site_url(); ?>/contact-us/">Contact Us</a></li>
         <li><a href="https://www.exeterguild.org/societies/15967/">Join</a></li>
+        <?php get_search_form(); ?>
     </ul>
 </div>

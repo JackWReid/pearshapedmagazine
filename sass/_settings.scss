@@ -141,7 +141,7 @@ $titlefont: 'futura-alt', 'futura', 'futura-pt', arial, sans-serif;
 	justify-content: $var;
 }
 
-@mixin flexbox-wrap{
+@mixin flex-wrap{
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
