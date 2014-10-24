@@ -27,8 +27,10 @@
       </ul>
       <ul class="footer-list">
         <a href="<?php echo site_url(); ?>/category/local-reviews/"><li>Columns</li></a>
-        <a href="<?php echo site_url(); ?>/category/opinion/"><li>Opinion</li></a>
+        <!--<a href="<?php echo site_url(); ?>/category/opinion/"><li>Opinion</li></a>-->
         <a href="<?php echo site_url(); ?>/category/listening-post/"><li>Listening Post</li></a>
+        <a href="<?php echo site_url(); ?>/category/spotlight/"><li>Spotlight</li></a>
+        <a href="<?php echo site_url(); ?>/category/listening-post/"><li>Archive</li></a>
       </ul>
     </div>
     <small>Website designed by Jack Reid & Lizzie Hatfield. Developed by Jack Reid.</small>

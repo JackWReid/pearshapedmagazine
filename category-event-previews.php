@@ -45,7 +45,7 @@
                     ?>
                 </div>
                 <div class="preview-stream__item__content">
-                    <?php the_content(); ?>
+                    <?php the_excerpt(); ?>
                 </div>
             </a>
         </div>

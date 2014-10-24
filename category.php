@@ -24,7 +24,7 @@
 					?>
 				</h3>
 				<div class="preview-stream__item__content">
-					<?php the_content(); ?>
+					<?php the_excerpt(); ?>
 				</div>
 		</div>
 	</div>
