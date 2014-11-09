@@ -11,8 +11,8 @@
  <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-    <?php wp_head(); ?>
     <meta charset="<?php bloginfo( 'charset' ); ?>" >
+    <?php wp_head(); ?>
     <meta name="keywords" content="magazine, music, exeter, reviews, events, live, student">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php bloginfo( 'name' ); ?> <?php wp_title(); ?></title>
