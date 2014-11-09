@@ -1,58 +1,37 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
+  grunt.initConfig({
 
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+    watch: {
+        styles: {
+            files: ['dev/**'],
+            tasks: ['sass'],
+        }
+    },
 
-        watch: {
-            files: ['sass/*'],
-            tasks: ['default']
-        },
-
-        sass: {
-            dist: {
-              options: {
-                style: 'compressed',
-              },
-                files: {
-                    'sass/build.css' : 'sass/app.scss'
-                }
-            }
-        },
-
-        concat: {
-            dist: {
-                src: ['sass/head.css', 'sass/build.css'],
-                dest: 'style.css'
-            }
-        },
-
-        copy: {
-            main: {
-                files: [
-                    // PHP Templates
-                    {src: ['*.php'], dest: 'dist/PearShapedMagazine/', filter: 'isFile'},
-                    // Style
-                    {src: ['style.css'], dest: 'dist/PearShapedMagazine/', filter: 'isFile'},
-                    // Images
-                    {src: ['screenshot.png', 'favicon.ico'], dest: 'dist/PearShapedMagazine/', filter: 'isFile'},
-                    // JS
-                    {src: ['js'], dest: 'dist/PearShapedMagazine/'},
-                ]
-                
+    // Sass processor renders straight out to the dist build
+    sass: {
+        dist: {
+            options: {
+                style: 'compressed'
+            },
+            files: {
+                'style.css': 'sass/app.scss',
             }
         }
+    },
 
-    });
+    // SCSS linter only called on 'lint' task
+    scsslint: {
+      allFiles: [ 'sass/*.scss' ],
+    }
 
-    // 3. Where we tell Grunt we plan to use this plug-in.
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-copy');
+  });
 
-    // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass', 'concat']);
-    grunt.registerTask('auto', ['watch']);
-    grunt.registerTask('push', ['copy']);
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-scss-lint');
 
+  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('lint', ['scsslint']);
+  grunt.registerTask('auto', ['watch']);
 };
