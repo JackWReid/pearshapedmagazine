@@ -36,13 +36,6 @@ h1, h2, h3, h4, h5, h6, .caption{
 }
 
 /**
- * This rule is not currently effective #dud.
- */
-a{
-	transition: all .25s ease-in-out;
-}
-
-/**
  * Perhaps this should be handled by a mixin #dud.
  */
 hr{
@@ -122,9 +115,6 @@ input:focus, select:focus, textarea:focus {
 		li a:hover{
 			color: $green;
 		}
-
-		//@media screen and (max-width: $br-tablet){
-		//}
 	}
 
 .nav-bar-minimal{
