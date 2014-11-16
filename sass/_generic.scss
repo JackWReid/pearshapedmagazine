@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5, h6, .caption{
 	@include header;
 }
 
+a{
+	transition: color 0.25s ease-in-out;
+}
+
 /**
  * Perhaps this should be handled by a mixin #dud.
  */
