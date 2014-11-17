@@ -1,6 +1,5 @@
 <?php
 /**
- * Minified header for the theme
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
