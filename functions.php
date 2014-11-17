@@ -19,3 +19,10 @@
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
 ?>
+<?php
+add_filter( 'excerpt_more', 'pearshaped_read_more' );
+function pearshaped_read_more( $text ) {
+    global $post;
+    return '... <br><a class="read-more-link" href="' . get_permalink( $post->ID ) . '">Read more</a>';
+}
+?>
