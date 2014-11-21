@@ -11,7 +11,6 @@
       </ul>
       <ul class="footer-list">
         <a href="<?php echo site_url(); ?>/category/events"><li>Events</li></a>
-        <a href="<?php echo site_url(); ?>/category/listings/"><li>Listings</li></a>
         <a href="<?php echo site_url(); ?>/category/event-previews/"><li>Upcoming</li></a>
         <a href="<?php echo site_url(); ?>/category/event-reviews/"><li>Reviews</li></a>
       </ul>
