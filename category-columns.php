@@ -10,7 +10,6 @@
 		<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/category/column-archive">Archive</a></li>
 	</ul>
 </div>
-
 <div class="preview-stream">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="preview-stream__item">

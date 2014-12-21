@@ -6,7 +6,7 @@
 
 
 /*------------------------------------*\
-    #HOMEPAGE
+    #OLD-HOMEPAGE
 \*------------------------------------*/
 
 /**
@@ -86,6 +86,118 @@
 
 
 
+
+
+/*------------------------------------*\
+    #HOMEPAGE
+\*------------------------------------*/
+
+.home-reviews{
+	margin: 0 auto;
+	padding: 0 1em;
+	max-width: 1000px;
+}
+
+	.home-reviews__stream{
+		display: flex;
+	}
+
+	.home-reviews__item img:hover{
+		opacity: 0.3;
+	}
+
+.home-events{
+	margin: 4em auto 0;
+	max-width: 1000px;
+	display: flex;
+	@include border(divider-top);
+
+	@media screen and (max-width: $br-mobile){
+		display: block;
+	}
+}
+
+	.home-events > *{
+		flex: 1;
+		padding: 0 1em;
+	}
+
+	.home-upcoming__item{
+		
+		display: flex;
+
+		& > div:first-child{
+			width: 100px;
+			height: auto;
+		}
+
+		& > div:nth-child(2){
+			flex: 1;
+			padding: 0 0.5em;
+		}
+
+		h1{
+			margin: 0;
+			font-family: $titlefont;
+			font-size: 18px;
+		}
+
+		p{
+			margin: 0.5em 0;
+			padding: 0;
+		}
+	}
+
+	.home-event-reviews__item{
+		@extend .home-upcoming__item;
+	}
+
+.home-misc{
+	margin: 4em auto 0;
+	max-width: 1000px;
+	display: flex;
+	@include border(divider-top);
+
+	@media screen and (max-width: $br-mobile){
+		display: block;
+	}
+
+}
+
+	.home-misc > *{
+		flex: 1;
+		padding: 0 1em;
+	}
+
+	.home-columns__item{
+		background: $grey;
+		padding: 1em;
+		h1{
+			font-family: $titlefont;
+			margin: 0 auto 0.7em;
+			text-align: center;
+			font-size: 18px;
+		}
+
+		img:hover{
+			opacity: 0.3;
+		}
+	}
+
+	.home-interviews__item{
+		@extend .home-columns__item;
+	}
+
+.home-about{
+	margin: 4em auto 0;
+	max-width: 45em;
+	padding: 0 1em;
+	@include border(divider-top);
+
+	h1{
+		text-align: center;
+	}
+}
 
 
 /*------------------------------------*\
