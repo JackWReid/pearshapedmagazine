@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<?php get_template_part('partials/navigation/topnav/topnav-full'); ?>
+
 <div class="section-header">
 	<h1 class="section-header__title">Are you lost?</h1>
 </div>

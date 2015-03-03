@@ -26,7 +26,6 @@
       </ul>
       <ul class="footer-list">
         <a href="<?php echo site_url(); ?>/category/local-reviews/"><li>Columns</li></a>
-        <!--<a href="<?php echo site_url(); ?>/category/opinion/"><li>Opinion</li></a>-->
         <a href="<?php echo site_url(); ?>/category/listening_post/"><li>Listening Post</li></a>
         <a href="<?php echo site_url(); ?>/category/spotlight/"><li>Spotlight</li></a>
         <a href="<?php echo site_url(); ?>/category/column-archive/"><li>Archive</li></a>

@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     watch: {
         styles: {
             files: ['sass/**'],
-            tasks: ['sass'],
+            tasks: ['sass', 'autoprefixer'],
         }
     },
 
@@ -15,16 +15,24 @@ module.exports = function (grunt) {
                 style: 'compressed'
             },
             files: {
-                'style.css': 'sass/app.scss',
+                'sass/build.css': 'sass/app.scss',
             }
         }
+    },
+
+    autoprefixer: {
+      styles: {
+        src: 'sass/build.css',
+        dest: 'style.css',
+      },
     },
 
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('default', ['sass', 'autoprefixer']);
   grunt.registerTask('auto', ['watch']);
 };

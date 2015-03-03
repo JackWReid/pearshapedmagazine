@@ -1,11 +1,6 @@
-<?php
-/*
- * Template Name: Default Page
- *
- * @package WordPress
- * @subpackage pearshapedtheme
- */
-get_header(); ?>
+<?php get_header(); ?>
+<?php get_template_part('partials/navigation/topnav/topnav-full'); ?>
+
 <div class="section-header">
 	<h1 class="section-header__title"><?php the_title(); ?></h1>
 </div>

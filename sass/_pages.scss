@@ -307,7 +307,18 @@
 		}
 	}
 
+/**
+ * Some categories have information about section chiefs etc.
+ */
+.section-info{
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
 
+	.section-info p{
+		padding: 0 2rem;
+	}
 
 
 

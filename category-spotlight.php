@@ -1,14 +1,9 @@
 <?php get_header(); ?>
+<?php get_template_part('partials/navigation/topnav/topnav-full'); ?>
+
 <div class="section-header">
 	<h1 class="section-header__title">Spotlight</h1>
-
-	<ul class="category-toggle">
-		<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/category/columns">All</a></li>
-		<!--<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/category/opinion">Opinion</a></li>-->
-		<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/category/listening_post">Listening Post</a></li>
-		<li class="category-toggle__button_active"><a href="<?php echo site_url(); ?>/category/spotlight">Spotlight</a></li>
-		<li class="category-toggle__button"><a href="<?php echo site_url(); ?>/category/column-archive">Archive</a></li>
-	</ul>
+	<?php get_template_part('partials/navigation/subnav-columns/spotlight'); ?>
 </div>
 
 <div class="preview-stream">
