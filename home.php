@@ -147,7 +147,7 @@
 	
 </section>
 
-<section class="home-about">
+<section class="home-about" style="text-align: justify;">
 	<h1>About PearShaped</h1>
 	<p>PearShaped is an online music magazine run by students at the University of Exeter. Established to bring the city's music scene closer together, PearShaped is dedicated to keeping the student body informed of what's happening in the city.</p>
 	<p>Originally founded in 2013 by four first year English students (Colin Bugler, Tom Elliott, Matt Hacke, and Jack Reid), PearShaped began as a mission to make sure that nobody would have to hear about an amazing gig the previous week that they would have loved to go to, had they known about it. Hashed out first in the smokers' area of Timepiece and then semi-officially founded over a few beers at The Rusty Bike, the organisation quickly learned that Exeter's budding music journalists desperately wanted an outlet. PearShaped has quickly become a lightning rod for the most passionate music journalism in the city, covering both the vibrant local music scene and releases and news from the wider world.</p>
