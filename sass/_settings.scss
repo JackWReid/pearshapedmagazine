@@ -235,3 +235,7 @@ $titlefont: 'futura-alt', 'futura', 'futura-pt', arial, sans-serif;
 	}
 
 }
+
+@mixin fade{
+	transition: all .3s ease-in-out;
+}

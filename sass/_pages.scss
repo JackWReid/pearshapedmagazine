@@ -102,9 +102,13 @@
 		display: flex;
 	}
 
-	.home-reviews__item img:hover{
-		opacity: 0.3;
+	.home-reviews__item img{
+		@include fade;
 	}
+
+		.home-reviews__item img:hover{
+			opacity: 0.3;
+		}
 
 .home-events{
 	margin: 4em auto 0;
@@ -179,9 +183,13 @@
 			font-size: 18px;
 		}
 
-		img:hover{
-			opacity: 0.3;
-		}
+			img{
+				@include fade;
+			}
+
+				img:hover{
+					opacity: 0.3;
+				}
 	}
 
 	.home-interviews__item{
