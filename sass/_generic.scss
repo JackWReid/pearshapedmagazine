@@ -391,9 +391,10 @@ input:focus, select:focus, textarea:focus {
 	.thumbnail-grid__item{
 		width: 25%;
 		padding: 0.5em;
-		@include fade;
+		margin-bottom: -150px;
 		img{
 			max-width: 100%;
+			@include fade;
 		}
 		@media screen and (max-width: 800px){
 			width: 33.33%;
@@ -410,35 +411,28 @@ input:focus, select:focus, textarea:focus {
 		 * but are not wholly effective.
 		 */
 		.thumbnail-grid__item__meta{
-			display: none;
 			position: relative;
 			text-align: center;
 			padding: 1em;
-			margin-top: -15em;
+			opacity: 0;
+			@include fade;
+			transform: translateY(-230px);
 			h3{
 				font-size: 1.5em;
 			}
 			@media screen and (max-width: 953px){
-				margin-top: -11em;
+				transform: translateY(-210px);
 			}
 			@media screen and (max-width: 625px){
-				margin-top: -12em;
+				transform: translateY(-180px);
 			}
 		}
 
 		.thumbnail-grid__item:hover{
-			margin-bottom: 4.35em;
 			img{
 				opacity: 0.3;
 			}
-			
-			/**
-			 * #dud. Display: block switch appears to be redundant,
-			 * and if we stick to opacity we could wheedle in a
-			 * nice transition.
-			 */
 			.thumbnail-grid__item__meta{
-				display: block;
 				opacity: 1;
 			}
 
@@ -451,6 +445,10 @@ input:focus, select:focus, textarea:focus {
 		margin: 0;
 		font-size: 1.7em;
 	}
+}
+
+.thumbnail-grid-wrapper__interview .thumbnail-grid__item{
+	margin-bottom: -125px;
 }
 
 
