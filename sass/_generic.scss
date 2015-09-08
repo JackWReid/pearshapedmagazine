@@ -103,11 +103,11 @@ input:focus, select:focus, textarea:focus {
 }
 
 	ul.nav-bar__list{
-		@include flexbox;
-		@include flex-direction(row);
-		@include flex-justify(center);
-		@include flex-align(center);
-		@include flex-wrap;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 		list-style-type: none;
 		margin: 5px 0;
 		padding: 0;
@@ -244,9 +244,9 @@ input:focus, select:focus, textarea:focus {
  * .footer is grey panel, in which .footer-alt is centered.
  */
 .footer{
-	@include flexbox;
-	@include flex-justify(center);
-	@include flex-align(center);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-top: 50px;
 	padding-bottom: 20px;
 	
@@ -271,7 +271,7 @@ input:focus, select:focus, textarea:focus {
 	}
 
 	.footer-nav{
-		@include flexbox;
+		display: flex;
 	}
 
 	ul.footer-list{
@@ -377,8 +377,8 @@ input:focus, select:focus, textarea:focus {
 \*------------------------------------*/
 
 .thumbnail-grid{
-	@include flexbox;
-	@include flex-wrap;
+	display: flex;
+	flex-wrap: wrap;
 	margin: 0 auto 4em auto;
 }
 

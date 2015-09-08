@@ -219,7 +219,7 @@
 
 	.preview-stream__item{
 		padding: 1em;
-		@include flexbox;
+		display: flex;
 
 		.columns{
 			padding: 0.2em;
@@ -231,7 +231,7 @@
 	}
 
 	.preview-stream__item__image{
-		@include flex(1);
+		flex: 1;
 		padding: 0 1em;
 		@media screen and (max-width: $br-mobile){
 			display: none;
@@ -239,7 +239,7 @@
 	}
 
 	.preview-stream__item__info{
-		@include flex(2);
+		flex: 2;
 	}
 
 	.preview-stream__item__title{
