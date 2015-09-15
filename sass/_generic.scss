@@ -247,6 +247,7 @@ input:focus, select:focus, textarea:focus {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	margin-top: 50px;
 	padding-bottom: 20px;
 	
@@ -255,7 +256,21 @@ input:focus, select:focus, textarea:focus {
 	font-family: 'futura-alt';
 }
 
-	.footer-alt{
+	.footer__signup{
+		width: 100%;
+		padding: 20px;
+		color: white;
+		background: $green;
+		text-align: center;
+		font-size: 1.5em;
+		@include title;
+
+		a{
+			text-decoration: underline;
+		}
+	}
+
+	.footer__inner{
 		text-align: left;
 
 		h2{
@@ -270,11 +285,11 @@ input:focus, select:focus, textarea:focus {
 		}
 	}
 
-	.footer-nav{
+	.footer__inner__nav{
 		display: flex;
 	}
 
-	ul.footer-list{
+	.footer__inner__nav__list{
 		list-style: none;
 		padding: 0 10px;
 
