@@ -10,6 +10,7 @@
     "gulp-autoprefixer": "^3.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
+    "gulp-sftp": "^0.1.5",
     "gulp-watch": "^4.3.5"
   }
 }

@@ -2,7 +2,7 @@
 <?php get_template_part('partials/navigation/topnav/topnav-full'); ?>
 
 <section class="slider">
-	<?php echo do_shortcode("[metaslider id=2499]"); ?>
+	<?php echo do_shortcode("[metaslider id=5486]"); ?>
 </section>
 
 <section class="home-reviews">
