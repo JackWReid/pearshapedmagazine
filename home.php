@@ -9,7 +9,7 @@
 	<h1><a href="http://pearshapedexeter.com/category/reviews">Reviews</a></h1>
 	<div class="home-reviews__stream">
 
-		<?php $cat_id = 10;
+		<?php $cat_id = 12;
 		$latest_cat_post = new WP_Query( array(
 			'posts_per_page' => 4,
 			'category__in' => array($cat_id)
@@ -36,7 +36,7 @@
 		<h1><a href="http://pearshapedexeter.com/category/event-previews">Upcoming Gigs</a></h1>
 		<div class="home-upcoming__stream">
 
-			<?php $cat_id = 11;
+			<?php $cat_id = 16;
 			$latest_cat_post = new WP_Query( array(
 				'posts_per_page' => 4,
 				'category__in' => array($cat_id),
@@ -67,7 +67,7 @@
 	<div class="home-events__reviews">
 		<h1><a href="http://pearshapedexeter.com/category/event-reviews/">Live Reviews</a></h1>
 		<div class="home-event-reviews__stream">
-			<?php $cat_id = 12;
+			<?php $cat_id = 17;
 			$latest_cat_post = new WP_Query( array(
 				'posts_per_page' => 4,
 				'category__in' => array($cat_id)
@@ -124,7 +124,7 @@
 	<div class="home-interviews">
 		<h1><a href="http://pearshapedexeter.com/category/interviews/">Interviews</a></h1>
 		<div class="home-interviews__stream">
-			<?php $cat_id = 5;
+			<?php $cat_id = 6;
 			$latest_cat_post = new WP_Query( array(
 				'posts_per_page' => 1,
 				'category__in' => array($cat_id)
