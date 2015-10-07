@@ -233,6 +233,8 @@ input:focus, select:focus, textarea:focus {
  * .footer is grey panel, in which .footer-alt is centered.
  */
 .footer{
+	max-width: 100vw;
+	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -243,6 +245,10 @@ input:focus, select:focus, textarea:focus {
 	border-top: 1px solid $grey;
 	background: $grey;
 	font-family: 'futura-alt';
+
+	@media screen and (max-width: $br-tablet){
+		display: block;
+	}
 }
 
 	.footer__signup{
@@ -275,6 +281,8 @@ input:focus, select:focus, textarea:focus {
 	}
 
 	.footer__inner__nav{
+		max-width: 100vw;
+		overflow: hidden;
 		display: flex;
 	}
 

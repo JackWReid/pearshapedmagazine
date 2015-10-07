@@ -82,8 +82,8 @@
 		text-decoration: underline;
 	}
 
-	@media screen and (max-width: $br-top3rows){
-		margin: 125px auto 0 auto;
+	@media screen and (max-width: $br-tablet){
+		margin: 0 auto;
 	}
 }
 
@@ -162,6 +162,10 @@
 .related-posts{
 	margin-top: 40px;
 	border-top: 1px $grey solid;
+
+	@media screen and (max-width: $br-tablet){
+		display: none;
+	}
 }
 
 	h3.related_post_title{
