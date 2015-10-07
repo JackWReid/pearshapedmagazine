@@ -1,0 +1,60 @@
+/*====================================*\
+    #PRINT
+\*====================================*/
+
+
+
+
+/*------------------------------------*\
+    #GLOBAL
+\*------------------------------------*/
+
+@media print {
+	body{
+		font-family: $bodyfont;
+	}
+
+	body a{
+		color: inherit;
+	}
+
+	.nav-bar,
+	.nav-bar__minimal{
+		display: none;
+	}
+
+	.footer{
+		display: none;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+    #ARTICLES
+\*------------------------------------*/
+
+@media print {
+	.post-header{
+		max-width: 30em;
+		margin: 5em auto 3em;
+	}
+
+	.post-thumbnail{
+		display: none;
+	}
+
+	.post-body{
+		max-width: 30em;
+		margin: 0 auto;
+	}
+
+	.sidebar{
+		display: none;
+	}
+
+	.related-post{
+		display: none;
+	}
+}

@@ -16,6 +16,7 @@ gulp.task("styles", function() {
 gulp.task("deploy", function() {
 	return gulp.src([
 		"./*",
+		"./*/**",
 		"!./node_modules/**",
 		"!./sass/**",
 		"!./.sass-cache/**",
@@ -25,7 +26,7 @@ gulp.task("deploy", function() {
 			host: "178.62.95.105",
 			user: "root",
 			remotePath: "/var/www/html/wp-content/themes/pearshapedmagazine",
-			key: {location: "~/.ssh/id_rsa", passphrase: "Joe09051989"}
+			key: { location: "~/.ssh/id_rsa", passphrase: "Joe09051989" }
 		}));
 });
 
