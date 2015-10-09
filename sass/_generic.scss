@@ -86,13 +86,6 @@ input:focus, select:focus, textarea:focus {
 	width: 100%;
 	z-index: 3;
 
-	/**
-	 * This property doesn't work on most browsers yet, but is a g-
-	 * ood first catch. See .sticky for workaround.
-	 */
-	position: -webkit-sticky;
-	top: 0;
-
 	@include title;
 	text-align: center;
 	font-size: 1.2em;
@@ -278,6 +271,10 @@ input:focus, select:focus, textarea:focus {
 			padding: 0 10px;
 			font-family: 'futura-alt';
 		}
+
+		@media screen and (max-width: $br-mobile){
+			display: none;
+		}
 	}
 
 	.footer__inner__nav{
@@ -404,6 +401,11 @@ input:focus, select:focus, textarea:focus {
 		width: 25%;
 		padding: 0.5em;
 		margin-bottom: -150px;
+		overflow: hidden;
+		a{
+			max-height: 100%;
+			display: block;
+		}
 		img{
 			max-width: 100%;
 			@include fade;
@@ -423,6 +425,7 @@ input:focus, select:focus, textarea:focus {
 		 * but are not wholly effective.
 		 */
 		.thumbnail-grid__item__meta{
+			max-height: 100%;
 			position: relative;
 			text-align: center;
 			padding: 1em;

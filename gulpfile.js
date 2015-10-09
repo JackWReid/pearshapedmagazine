@@ -7,7 +7,7 @@ var sftp = require("gulp-sftp");
 
 gulp.task("styles", function() {
   return gulp.src("sass/app.scss")
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass({outputStyle: 'expanded'}))
     .pipe(autoprefixer())
     .pipe(rename("style.css"))
     .pipe(gulp.dest("."))
