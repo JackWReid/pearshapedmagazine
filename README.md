@@ -35,13 +35,13 @@ echo "</div>";
 ?>
 ```
 
-So here's the template code. Different category pages on PearShaped have different layouts but all of the same context, so I used partials to drop in different layouts within the same template context.
+So here's [the template code](https://github.com/JackWReid/pearshapedmagazine/blob/master/partials/loops/reviews.php). Different category pages on PearShaped have different layouts but all of the same context, so I used partials to drop in different layouts within the same template context.
 
 ```php
 <?php get_template_part('partials/loops/reviews'); ?>
 ```
 
-That's all it takes to drop in the grid layout, rather than say, the standard media object layout. From what I'd heard about Wordpress's verbosity up to this point I was pretty impressed that I could load partials like this.
+That's all it takes to [drop in the grid layout](https://github.com/JackWReid/pearshapedmagazine/blob/master/category-global-reviews.php#L9), rather than say, the standard media object layout. From what I'd heard about Wordpress's verbosity up to this point I was pretty impressed that I could load partials like this.
 
 ```html
 <div class="thumbnail-grid">
@@ -66,7 +66,7 @@ As you can see, I've been able to pare down the markup to something pretty slim 
 }
 ```
 
-Laying out stuff in a square grid isn't nearly as difficult as it used to be. What was a total pain, was trying to get the hover behaviour to work and be aligned properly.
+[Laying out stuff](https://github.com/JackWReid/pearshapedmagazine/blob/master/sass/_generic.scss#L388) in a square grid isn't nearly as difficult as it used to be. What was a total pain, was trying to get the hover behaviour to work and be aligned properly.
 
 ```scss
 .thumbnail-grid__item__meta{
@@ -98,6 +98,6 @@ Laying out stuff in a square grid isn't nearly as difficult as it used to be. Wh
 }
 ```
 
-As you can see, the styles for the meta-info are anything but simple. The switch works by flipping the opacity of the overlay element on, and we ensure that the titles remain within the square of the album artwork by using `translateY` in negative values, pushing them back up by about half of the cover height. That cover height changes though: when the viewport width is smaller, the grid drops down to three wide, and then two wide. That means the text has to be pushed further up the square to be centred. I found these breakpoints and values manually: resizing the viewport and waiting for the text to overflow, and knocking the text back up the right amount. That's how I ended up with these magic numbers.
+As you can see, [the styles](https://github.com/JackWReid/pearshapedmagazine/blob/master/sass/_generic.scss#L400) for the metadata are anything but simple. The switch works by flipping the opacity of the overlay element on, and we ensure that the titles remain within the square of the album artwork by using `translateY` in negative values, pushing them back up by about half of the cover height. That cover height changes though: when the viewport width is smaller, the grid drops down to three wide, and then two wide. That means the text has to be pushed further up the square to be centred. I found these breakpoints and values manually: resizing the viewport and waiting for the text to overflow, and knocking the text back up the right amount. That's how I ended up with these magic numbers.
 
 This is an example of ending up with a solution that works, but is kind of brittle and hideous. If I rebuilt this today (don't tempt me), I'd do things very differently.
