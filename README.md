@@ -1,8 +1,10 @@
 # PearShaped Magazine
 PearShaped Magazine is the official music magazine of the University of Exeter. I founded the magazine with some friends over the summer after my first year there. Now it's an institution at the university, with around thirty student volunteers keeping it running every year. It's a big Wordpress site.
 
-## Code Details
+## Installation & Development
+Clone the repo, `cd` in and run `npm install`. Pretty much the only things in the Gulpfile are the `styles` and `deploy` tasks. There's also `gulp watch`, which will just run the styles task on changes to the styles folder. If you want to get a proper development environment though, you'll need to drop this theme into a MAMP setup because, well it's a Wordpress theme and tooling for local Wordpress development is meh.
 
+## Code Details
 1. [That Review Grid](#that-review-grid)
 
 ### That Review Grid
