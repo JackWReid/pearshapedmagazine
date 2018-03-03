@@ -7,16 +7,14 @@
 
 	<div class="post-header">
 		<div itemprop="articleSection" class="post-category-info">
-
 			<?php the_category (' &gt; '); ?>
-
 		</div>
 
 		<h1 itemprop="name" itemprop="headline" class="post-title"><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h1>
 		<meta itemprop="dateCreated" content='<?php the_date(); ?>'>
 		<div class="giginfo">
-			<?php 
-			    $giginfo = get_post_meta($post->ID, 'giginfo', true); 
+			<?php
+			    $giginfo = get_post_meta($post->ID, 'giginfo', true);
 
 				if ($giginfo) {
 				    echo "<span class='giginfo-content'>" . $giginfo . "</span>";
@@ -43,8 +41,8 @@
 	<div class="post-body">
 
 		<div itemprop="about" itemprop="description" class="kicker">
-			<?php 
-			    $kicker = get_post_meta($post->ID, 'Kicker', true); 
+			<?php
+			    $kicker = get_post_meta($post->ID, 'Kicker', true);
 
 				if ($kicker) {
 				    echo $kicker;
@@ -53,12 +51,12 @@
 		</div>
 
 		<div itemprop="articleBody">
-		<?php the_content(); ?>
+			<?php the_content(); ?>
 		</div>
 
 		<div itemprop="offers" class="tickets">
-		<?php 
-		    $tickets = get_post_meta($post->ID, 'Tickets', true); 
+		<?php
+		    $tickets = get_post_meta($post->ID, 'Tickets', true);
 
 			if ($tickets) {
 			    echo "<span class='tickets-title'><a href='" . $tickets . "'>Buy Tickets</a></span>";
@@ -67,8 +65,8 @@
 		</div>
 
 		<div class="fans-of">
-		<?php 
-		    $fansof = get_post_meta($post->ID, 'fansof', true); 
+		<?php
+		    $fansof = get_post_meta($post->ID, 'fansof', true);
 
 			if ($fansof) {
 			    echo "<span class='fans-of-title'>Recommended for fans of: </span>" . $fansof;
@@ -77,8 +75,8 @@
 		</div>
 
 		<div class="picks">
-		<?php 
-		    $picks = get_post_meta($post->ID, 'Picks', true); 
+		<?php
+		    $picks = get_post_meta($post->ID, 'Picks', true);
 
 			if ($picks) {
 			    echo "<span class='picks-title'>Picks: </span>" . $picks;
@@ -87,8 +85,8 @@
 		</div>
 
 		<div class="rating">
-		<?php 
-		    $rating = get_post_meta($post->ID, 'Rating', true); 
+		<?php
+		    $rating = get_post_meta($post->ID, 'Rating', true);
 
 			if ($rating) {
 			    echo "Rating: " . $rating . "/5";
@@ -98,8 +96,8 @@
 
 	</div>
 	<div class="sidebar">
-		<?php 
-		    $sidebar = get_post_meta($post->ID, 'Sidebar', true); 
+		<?php
+		    $sidebar = get_post_meta($post->ID, 'Sidebar', true);
 
 				if ($sidebar) {
 				    echo $sidebar;
@@ -111,12 +109,20 @@
 		<?php wp_related_posts()?>
 
 		<div itemprop="keywords" class="post-tags"><?php the_tags(); ?></div>
-		
+
 	</div>
 </div>
+</div>
+
+<?php get_template_part('partials/footer'); ?>
+<script>
+	!function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+	arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+	d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+	insertBefore(d,q)}(window,document,'script','_gs');
+	_gs('GSN-746936-S');
+</script>
 
 <?php endwhile; else: ?>
 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 <?php endif; ?>
-</div>
-<?php get_footer(); ?>

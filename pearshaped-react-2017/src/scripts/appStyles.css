@@ -1,0 +1,10 @@
+.root {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.appTitle {
+  margin: 48px 0;
+  font-size: 48px;
+  line-height: 48px;
+}

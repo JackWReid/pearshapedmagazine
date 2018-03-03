@@ -1,0 +1,16 @@
+{
+  "name": "pearshapedmagazine",
+  "description": "The University of Exeter's music magazine.",
+  "version": "2.0.1",
+  "author": "Jack Reid",
+  "repository": "https://github.com/JackWReid/pearshapedmagazine",
+  "homepage": "http://pearshapedexeter.com",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-sftp": "^0.1.5",
+    "gulp-watch": "^4.3.5"
+  }
+}
