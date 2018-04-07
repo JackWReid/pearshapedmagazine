@@ -52,6 +52,8 @@
 
     <?php the_category (' &middot; '); ?>
 
+    <?php the_tags(' &middot; '); ?>
+
     <?php
       $sidebar = get_post_meta($post->ID, 'Sidebar', true);
       if ($sidebar) {
