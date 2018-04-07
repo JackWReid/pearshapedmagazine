@@ -1,8 +1,11 @@
 <nav class="nav-full">
   <div class="nav-full__masthead">
     <div class="nav-full__masthead__title">
-      <h1>PearShaped</h1>
-      <p>est. 2013</p>
+      <img class="nav-full__masthead__title__logo" src="/wp-content/uploads/2014/10/Large.png" alt="PearShaped Logo">
+      <div class="nav-full__masthead__title__text">
+        <h1>PearShaped</h1>
+        <p>est. 2013</p>
+      </div>
     </div>
     <p class="nav-full__masthead__summary">PearShaped is an online music magazine run by students at the University of Exeter. Established to bring the city's
       music scene closer together, PearShaped is dedicated to keeping the student body informed of what's happening in

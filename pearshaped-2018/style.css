@@ -49,18 +49,33 @@ h6 {
   border-bottom: 1px solid #000;
 }
 
-.nav-full__mastead__title {
+.nav-full__masthead__title {
   grid-area: title;
+  display: flex;
+  align-items: center;
   font-family: 'Futura';
 }
 
-.nav-full__masthead__title h1 {
+.nav-full__masthead__title__logo {
+  width: 4.5rem;
+  display: block;
+  flex-shrink: 0;
+  margin-right: 0.7rem;
+}
+
+@media screen and (max-width: 50rem) {
+  .nav-full__masthead__title__logo {
+    display: none;
+  }
+}
+
+.nav-full__masthead__title__text h1 {
   margin: 0;
   line-height: 1;
   font-size: 3em;
 }
 
-.nav-full__masthead__title p {
+.nav-full__masthead__title__text p {
   margin: 0;
   font-size: 0.8em;
   transform: translateX(0.4em);
@@ -143,6 +158,22 @@ h6 {
 
 .nav-compact li:first-of-type {
   color: #498c34;
+}
+
+/* not-found-page */
+
+.page-fourohfour {
+  display: grid;
+  grid-template-columns: 1fr 1fr 50rem 1fr 1fr;
+  grid-template-areas:
+    '. nav nav nav .'
+    '. . main . .';
+}
+
+@media screen and (max-width: 50rem) {
+  .page-fourohfour {
+    display: block;
+  }
 }
 
 /* article-page */
