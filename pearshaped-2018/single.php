@@ -50,16 +50,18 @@
 			}
     ?>
 
-    <?php the_category (' &middot; '); ?>
+    <div class="article-tags">
+      <?php the_tags(''); ?>
+    </div>
 
-    <?php the_tags(' &middot; '); ?>
-
-    <?php
-      $sidebar = get_post_meta($post->ID, 'Sidebar', true);
-      if ($sidebar) {
-        echo $sidebar;
-      }
-    ?>
+    <div class="article-player">
+      <?php
+        $sidebar = get_post_meta($post->ID, 'Sidebar', true);
+        if ($sidebar) {
+          echo $sidebar;
+        }
+      ?>
+    </div>
   </div>
 
   <?php endwhile; else: ?>
@@ -69,7 +71,7 @@
   </article>
 
   <aside class="recirc">
-    <h1>More Like This</h1>
+    <h1>More Posts</h1>
     <ul class="recirc-list">
   </aside>
 

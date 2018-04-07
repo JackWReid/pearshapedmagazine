@@ -288,7 +288,10 @@ article figure img {
 }
 
 .article-tags {
-  grid-area: tags;
+}
+
+.article-player {
+  margin-top: 1rem;
 }
 
 .recirc {

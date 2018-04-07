@@ -83,6 +83,36 @@
 			</ul>
 	</section>
 
+	<section class="post-list post-list--compact">
+		<header>
+				<h1>Gig Reviews</h1>
+			</header>
+			<ul>
+			<?php $cat_id = 17;
+				$latest_cat_post = new WP_Query(array(
+					'posts_per_page' => 4,
+					'category__in' => array($cat_id),
+					'order' => 'DESC'
+				));
+
+				if( $latest_cat_post->have_posts() ) :
+					while( $latest_cat_post->have_posts() ) :
+						$latest_cat_post->the_post();  ?>
+				<li>
+					<?php the_post_thumbnail('medium') ?>
+					<div>
+						<a href="<?php the_permalink(); ?>">
+							<h1><?php the_title(); ?></h1>
+							<p class="post-list__author"><?php echo get_post_meta($post->ID, 'Author', true); ?></p>
+							<p class="post-list__rating"><?php echo get_post_meta($post->ID, 'giginfo', true); ?></p>
+							<p class="post-list__excerpt"><?php echo get_post_meta($post->ID, 'Kicker', true); ?></p>
+						</a>
+					</div>
+				</li>
+				<?php endwhile; endif; ?>
+			</ul>
+	</section>
+
 	<section class="about">
 		<p>PearShaped is an online music magazine run by students at the University of Exeter. Established to bring the city's
 			music scene closer together, PearShaped is dedicated to keeping the student body informed of what's happening in

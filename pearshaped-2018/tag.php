@@ -5,6 +5,9 @@
 <?php get_template_part('partials/headers/compact'); ?>
 
 <section class="post-list grid-main">
+  <header>
+    <h1><?php single_cat_title(); ?></h1>
+  </header>
 	<ul>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <li>
