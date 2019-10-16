@@ -1,0 +1,11 @@
+.appSearch {
+  height: 24px;
+  margin-bottom: 24px;
+}
+
+.loadMore {
+  margin: 24px 0;
+  line-height: 24px;
+  font-size: 12px;
+  cursor: pointer;
+}
